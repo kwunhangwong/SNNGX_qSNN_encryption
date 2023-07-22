@@ -24,9 +24,9 @@ There are 3 attack methods in this repository and some pretrained binary weight 
 Usage: command [options] [arguments]
 ```
 
-Markdown | Less | Pretty
+Flag | MetaVar | Note
 --- | --- | ---
-*Still* | `renders` | **nicely**
+`-f`/`-foo` | `-f` | **nicely**
 1 | 2 | 3
 
 2. FGSM-based weight Attack:
