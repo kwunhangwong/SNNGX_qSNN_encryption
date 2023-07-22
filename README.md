@@ -8,6 +8,20 @@
 
 # Project Description
 
+The project creates BIT-flip attack over binarised weight of deep neural network and other machine learning models. 
+
+There are 3 attack methods in this repository and some pretrained binary models using NMNIST and MNIST.
+
+1. Random Flipping Attack:
+
+```
+Usage: command [options] [arguments]
+```
+
+2. FGSM-based weight Attack:
+
+3. Genetic Algorithm weight Attack:
+
 This project was supported by the University of Hong Kong, EEE. \
 Currently solely for internal usage.
 
