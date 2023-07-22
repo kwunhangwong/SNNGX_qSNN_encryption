@@ -27,7 +27,7 @@ Usage: command [options] [arguments]
 Flag | Metavar | Help
 --- | --- | ---
 `-b`/`--batch` | batch_size | **Batch size for dataset and model**
-`-nb`/`--numbit` | number_of_changed_BITS | **# of Random BITS flipped**
+`-nb`/`--numbit` | number_of_flipped_BITS | **# of Random BITS flipped**
 `-nt`/`--numtrial` | number_of_random_trials | **# of trial repetition**
 
 
