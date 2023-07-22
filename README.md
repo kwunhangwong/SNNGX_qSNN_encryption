@@ -8,8 +8,8 @@
 
 ## Project Description
 
-The project creates BIT-flip attack over binarised weight of deep \
-neural network and other machine learning models. 
+**The project creates BIT-flip attack over binarised weight of deep \
+neural network and other machine learning models.** 
 
 
 This project was supported by the University of Hong Kong, EEE. \
