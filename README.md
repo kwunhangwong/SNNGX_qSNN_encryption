@@ -8,7 +8,7 @@
 
 ## Project Description
 
-The project creates BIT-flip attack over binarised weight of deep \ 
+The project creates BIT-flip attack over binarised weight of deep \
 neural network and other machine learning models. 
 
 
