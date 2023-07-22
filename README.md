@@ -8,7 +8,7 @@
 
 # Project Description
 
-This project was supported by the University of Hong Kong, EEE. 
+This project was supported by the University of Hong Kong, EEE. \
 Currently solely for internal usage.
 
 
