@@ -8,7 +8,7 @@
 
 ## Description
 
-**This project creates BIT-flip attack against binarised weight of deep neural network and other machine learning models with minimum vulnerable BITs.** 
+**This project creates BIT-flip attack against binarised weight of deep neural network and other machine learning models with flipping minimum vulnerable BITs.** 
 
 
 This project was supported by the University of Hong Kong, EEE. \
