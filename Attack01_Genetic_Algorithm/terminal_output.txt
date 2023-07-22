@@ -1,0 +1,2010 @@
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+^[[B^[[B^[[B^[[B^[[B^[[B^[[BFinish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-24 18:33:59.004007
+Checking on testing data
+Got 6637/9984 with accuracy 66.48
+After Untargeted Attack: 66.48% Accuracy, BITS Flipped:5 out of 5120
+Time = 2:59:03.484674
+[4.83500000e+03 4.58100000e+03 4.34100000e+03 4.11900000e+03
+ 3.92600000e+03 3.75200000e+03 3.55657031e+03 3.37500000e+03
+ 3.20600000e+03 3.09078125e+03 2.96265625e+03 2.82871875e+03
+ 2.69779688e+03 2.59246094e+03 2.48335938e+03 2.36777344e+03
+ 2.25651562e+03 2.17267969e+03 2.11992188e+03 2.00062500e+03
+ 1.91603125e+03 1.83307812e+03 1.75957031e+03 1.64242969e+03
+ 1.57729688e+03 1.53664062e+03 1.41923438e+03 1.39862500e+03
+ 1.31068750e+03 1.25137500e+03 1.19923438e+03 1.17192188e+03
+ 1.10867969e+03 1.05568750e+03 1.01250000e+03 9.70453125e+02
+ 9.26890625e+02 8.91515625e+02 8.53070312e+02 8.12375000e+02
+ 7.70500000e+02 7.21296875e+02 6.81328125e+02 6.76281250e+02
+ 6.35976562e+02 6.13046875e+02 5.86406250e+02 5.57929688e+02
+ 5.32312500e+02 5.00109375e+02 4.67578125e+02 4.52625000e+02
+ 4.31312500e+02 4.10375000e+02 3.98437500e+02 3.73539062e+02
+ 3.58593750e+02 3.32906250e+02 3.23484375e+02 3.03875000e+02
+ 2.91093750e+02 2.81257812e+02 2.60804688e+02 2.54179688e+02
+ 2.46257812e+02 2.30750000e+02 2.24031250e+02 2.10851562e+02
+ 2.04140625e+02 1.92226562e+02 1.84093750e+02 1.72664062e+02
+ 1.65585938e+02 1.49625000e+02 1.45562500e+02 1.37914062e+02
+ 1.31750000e+02 1.24476562e+02 1.17070312e+02 1.12148438e+02
+ 1.06093750e+02 1.03500000e+02 8.73281250e+01 8.66953125e+01
+ 8.43750000e+01 8.25312500e+01 7.48125000e+01 7.10937500e+01
+ 6.97500000e+01 6.79218750e+01 6.41250000e+01 5.82187500e+01
+ 5.66406250e+01 5.31875000e+01 4.66171875e+01 4.62500000e+01
+ 4.42265625e+01 3.65000000e+01 3.65000000e+01 3.32812500e+01
+ 3.32812500e+01 3.00000000e+01 2.85156250e+01 2.82109375e+01
+ 2.27109375e+01 2.15156250e+01 1.99218750e+01 1.99218750e+01
+ 1.76953125e+01 1.62500000e+01 1.14843750e+01 1.14843750e+01
+ 1.14843750e+01 1.03593750e+01 4.17968750e+00 4.06250000e+00
+ 3.98437500e+00 3.63281250e+00 3.63281250e+00 3.63281250e+00
+ 3.63281250e+00 3.63281250e+00 3.63281250e+00 3.63281250e+00
+ 3.63281250e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00
+ 3.59375000e+00 3.59375000e+00 3.59375000e+00 3.59375000e+00]
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project/subproject_geneticBIT_Attack$ bash __te
+rminal.sh
+2023-06-24 21:05:49.874480
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 00:05:27.652113
+Checking on testing data
+Got 9010/9984 with accuracy 90.24
+After Untargeted Attack: 90.24% Accuracy, BITS Flipped:1 out of 5120
+Time = 2:59:37.777632
+[4.82400000e+03 4.57400000e+03 4.33500000e+03 4.12400000e+03
+ 3.92100000e+03 3.71800000e+03 3.54500000e+03 3.37492188e+03
+ 3.22792188e+03 3.09600000e+03 2.95994531e+03 2.86053906e+03
+ 2.72643750e+03 2.60950000e+03 2.54652344e+03 2.37125000e+03
+ 2.27062500e+03 2.20368750e+03 2.10839062e+03 2.03981250e+03
+ 1.92631250e+03 1.80766406e+03 1.75478906e+03 1.62337500e+03
+ 1.58376562e+03 1.47056250e+03 1.45189844e+03 1.39237500e+03
+ 1.31716406e+03 1.27135938e+03 1.21637500e+03 1.18259375e+03
+ 1.12340625e+03 1.06195312e+03 1.03068750e+03 9.97265625e+02
+ 9.53953125e+02 8.83062500e+02 8.65828125e+02 8.24226562e+02
+ 7.86546875e+02 7.30968750e+02 7.13460938e+02 6.78125000e+02
+ 6.60078125e+02 6.31125000e+02 6.00468750e+02 5.72593750e+02
+ 5.49000000e+02 5.18578125e+02 4.66828125e+02 4.65750000e+02
+ 4.44375000e+02 4.33031250e+02 4.10765625e+02 3.91234375e+02
+ 3.76734375e+02 3.35781250e+02 3.32921875e+02 3.26156250e+02
+ 3.08406250e+02 2.90937500e+02 2.82343750e+02 2.65890625e+02
+ 2.52656250e+02 2.40140625e+02 2.28023438e+02 2.20445312e+02
+ 2.05921875e+02 1.97296875e+02 1.85437500e+02 1.71421875e+02
+ 1.61804688e+02 1.57406250e+02 1.47703125e+02 1.46625000e+02
+ 1.36718750e+02 1.31085938e+02 1.08718750e+02 1.08718750e+02
+ 1.08718750e+02 1.03898438e+02 9.48750000e+01 9.23046875e+01
+ 8.62500000e+01 8.08593750e+01 7.60078125e+01 7.60078125e+01
+ 6.84140625e+01 6.78125000e+01 6.26250000e+01 5.81875000e+01
+ 5.35937500e+01 5.28750000e+01 4.69218750e+01 4.48437500e+01
+ 4.48437500e+01 4.21093750e+01 4.07578125e+01 3.87500000e+01
+ 3.71875000e+01 3.32812500e+01 3.00781250e+01 3.00781250e+01
+ 2.90468750e+01 2.80312500e+01 2.39062500e+01 2.18750000e+01
+ 2.18750000e+01 1.99218750e+01 1.90781250e+01 1.80781250e+01
+ 1.75000000e+01 1.65234375e+01 1.33437500e+01 1.13906250e+01
+ 5.78906250e+00 5.78906250e+00 5.78906250e+00 3.85937500e+00
+ 3.85937500e+00 3.85937500e+00 3.85937500e+00 9.29687500e-01
+ 9.29687500e-01 9.29687500e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01
+ 9.21875000e-01 9.21875000e-01 9.21875000e-01 9.21875000e-01]
+2023-06-25 00:06:19.022856
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 03:06:17.262050
+Checking on testing data
+Got 9064/9984 with accuracy 90.79
+After Untargeted Attack: 90.79% Accuracy, BITS Flipped:1 out of 5120
+Time = 2:59:58.239194
+[4.83200000e+03 4.58500000e+03 4.32900000e+03 4.15100000e+03
+ 3.90500000e+03 3.71500000e+03 3.53540625e+03 3.39000000e+03
+ 3.23407031e+03 3.08100000e+03 2.95140625e+03 2.86562500e+03
+ 2.69237500e+03 2.63296875e+03 2.50066406e+03 2.39667188e+03
+ 2.26230469e+03 2.21770312e+03 2.11323438e+03 2.00789844e+03
+ 1.93764844e+03 1.82639062e+03 1.73496094e+03 1.64090625e+03
+ 1.59198438e+03 1.55320312e+03 1.44403125e+03 1.41823438e+03
+ 1.32498438e+03 1.28092188e+03 1.22383594e+03 1.17426562e+03
+ 1.09028125e+03 1.05661719e+03 1.02314062e+03 9.71250000e+02
+ 9.27515625e+02 8.91554688e+02 8.49765625e+02 8.09960938e+02
+ 7.56234375e+02 7.33125000e+02 6.92148438e+02 6.56531250e+02
+ 6.25312500e+02 5.95945312e+02 5.74218750e+02 5.64250000e+02
+ 5.32109375e+02 5.06984375e+02 4.78898438e+02 4.45265625e+02
+ 4.33125000e+02 4.19390625e+02 3.96046875e+02 3.80625000e+02
+ 3.59109375e+02 3.42070312e+02 3.24515625e+02 3.19500000e+02
+ 3.01750000e+02 2.91703125e+02 2.71484375e+02 2.55562500e+02
+ 2.47593750e+02 2.40656250e+02 2.26984375e+02 2.17187500e+02
+ 2.11757812e+02 2.03437500e+02 1.88804688e+02 1.77007812e+02
+ 1.73750000e+02 1.59632812e+02 1.45515625e+02 1.44304688e+02
+ 1.36437500e+02 1.31398438e+02 1.20070312e+02 1.15945312e+02
+ 1.12359375e+02 1.05187500e+02 9.96875000e+01 9.33906250e+01
+ 9.17578125e+01 7.68281250e+01 7.68281250e+01 7.12031250e+01
+ 7.12031250e+01 6.97500000e+01 6.02187500e+01 6.02187500e+01
+ 5.66015625e+01 5.12500000e+01 5.06250000e+01 4.87109375e+01
+ 4.59375000e+01 4.45312500e+01 4.07578125e+01 3.94453125e+01
+ 3.72500000e+01 3.51562500e+01 3.33281250e+01 3.28515625e+01
+ 3.10546875e+01 2.83203125e+01 2.60312500e+01 2.28437500e+01
+ 2.16796875e+01 1.99062500e+01 1.89375000e+01 1.67578125e+01
+ 1.52500000e+01 1.26328125e+01 1.26328125e+01 1.13437500e+01
+ 9.49218750e+00 1.79687500e+00 1.79687500e+00 1.79687500e+00
+ 1.79687500e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00
+ 1.78125000e+00 1.78125000e+00 1.78125000e+00 1.78125000e+00]
+2023-06-25 03:07:10.080427
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 06:07:17.705919
+Checking on testing data
+Got 9033/9984 with accuracy 90.47
+After Untargeted Attack: 90.47% Accuracy, BITS Flipped:3 out of 5120
+Time = 3:00:07.625490
+[4.83200000e+03 4.57200000e+03 4.33300000e+03 4.13800000e+03
+ 3.91700000e+03 3.72000000e+03 3.54000000e+03 3.37100000e+03
+ 3.22903125e+03 3.09744531e+03 2.95750000e+03 2.85539062e+03
+ 2.67109375e+03 2.63355469e+03 2.48004688e+03 2.33034375e+03
+ 2.27800000e+03 2.17160156e+03 2.05059375e+03 1.95637500e+03
+ 1.85820312e+03 1.76607812e+03 1.70742188e+03 1.62370312e+03
+ 1.54203125e+03 1.49600000e+03 1.40490625e+03 1.34942188e+03
+ 1.28032812e+03 1.24136719e+03 1.16981250e+03 1.12225000e+03
+ 1.06312500e+03 1.04097656e+03 9.98789062e+02 9.51750000e+02
+ 9.00312500e+02 8.65937500e+02 8.16562500e+02 7.79414062e+02
+ 7.41726562e+02 7.12921875e+02 6.75234375e+02 6.40703125e+02
+ 6.22921875e+02 5.93789062e+02 5.63218750e+02 5.30765625e+02
+ 5.04593750e+02 4.88320312e+02 4.60625000e+02 4.41875000e+02
+ 4.25984375e+02 4.04273438e+02 3.87750000e+02 3.71250000e+02
+ 3.52265625e+02 3.33140625e+02 3.21679688e+02 3.05687500e+02
+ 2.90039062e+02 2.73062500e+02 2.64859375e+02 2.46507812e+02
+ 2.36593750e+02 2.29500000e+02 2.18796875e+02 2.06234375e+02
+ 1.96812500e+02 1.84250000e+02 1.80062500e+02 1.63312500e+02
+ 1.57523438e+02 1.51937500e+02 1.46625000e+02 1.34062500e+02
+ 1.29625000e+02 1.25375000e+02 1.18367188e+02 1.11328125e+02
+ 1.08367188e+02 1.04507812e+02 8.82578125e+01 8.82578125e+01
+ 8.47031250e+01 8.34843750e+01 7.52812500e+01 7.52812500e+01
+ 7.16875000e+01 6.57656250e+01 5.96250000e+01 5.96250000e+01
+ 5.94843750e+01 5.09765625e+01 5.09765625e+01 4.81250000e+01
+ 4.57031250e+01 4.48437500e+01 3.93125000e+01 3.69296875e+01
+ 3.28515625e+01 3.28515625e+01 3.26953125e+01 3.06796875e+01
+ 2.90468750e+01 2.71562500e+01 2.48750000e+01 2.39687500e+01
+ 2.02812500e+01 1.14843750e+01 1.14843750e+01 1.14843750e+01
+ 1.14843750e+01 9.57031250e+00 7.65625000e+00 7.65625000e+00
+ 7.62500000e+00 2.74218750e+00 2.71875000e+00 2.69531250e+00
+ 2.69531250e+00 2.69531250e+00 2.69531250e+00 2.69531250e+00
+ 2.69531250e+00 2.69531250e+00 2.67187500e+00 2.67187500e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00
+ 2.64843750e+00 2.64843750e+00 2.64843750e+00 2.64843750e+00]
+2023-06-25 06:08:08.932419
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 09:03:43.887717
+Checking on testing data
+Got 7498/9984 with accuracy 75.10
+After Untargeted Attack: 75.10% Accuracy, BITS Flipped:4 out of 5120
+Time = 2:55:34.955297
+[4.82800000e+03 4.57200000e+03 4.33000000e+03 4.11700000e+03
+ 3.91100000e+03 3.75000000e+03 3.52532812e+03 3.39320312e+03
+ 3.25825781e+03 3.06576562e+03 2.93071875e+03 2.82161719e+03
+ 2.72636719e+03 2.60191406e+03 2.53251562e+03 2.41400000e+03
+ 2.31087500e+03 2.20532812e+03 2.11093750e+03 2.03175000e+03
+ 1.95747656e+03 1.87933594e+03 1.73617188e+03 1.67786719e+03
+ 1.64114844e+03 1.49650000e+03 1.46540625e+03 1.41556250e+03
+ 1.33425000e+03 1.24366406e+03 1.24366406e+03 1.19368750e+03
+ 1.12500781e+03 1.10927344e+03 1.03359375e+03 1.00367188e+03
+ 9.37320312e+02 9.01125000e+02 8.58593750e+02 7.94226562e+02
+ 7.71937500e+02 7.30335938e+02 7.08007812e+02 6.60257812e+02
+ 6.42210938e+02 6.02656250e+02 5.77984375e+02 5.65296875e+02
+ 5.26093750e+02 5.21265625e+02 4.81445312e+02 4.64828125e+02
+ 4.37937500e+02 4.14187500e+02 4.03281250e+02 3.85937500e+02
+ 3.69687500e+02 3.45718750e+02 3.28125000e+02 3.19375000e+02
+ 3.05156250e+02 2.88867188e+02 2.75625000e+02 2.61406250e+02
+ 2.44125000e+02 2.35156250e+02 2.29125000e+02 2.13281250e+02
+ 1.99125000e+02 1.90570312e+02 1.82812500e+02 1.71843750e+02
+ 1.66460938e+02 1.56328125e+02 1.45234375e+02 1.39484375e+02
+ 1.33593750e+02 1.29984375e+02 1.21500000e+02 1.11781250e+02
+ 1.08937500e+02 1.00242188e+02 9.58125000e+01 8.84765625e+01
+ 8.84609375e+01 8.49843750e+01 7.96875000e+01 7.14843750e+01
+ 6.72421875e+01 6.43359375e+01 5.82187500e+01 5.64218750e+01
+ 5.28281250e+01 5.02031250e+01 4.47890625e+01 4.14375000e+01
+ 4.03281250e+01 3.67031250e+01 3.31093750e+01 3.27031250e+01
+ 2.88750000e+01 2.80234375e+01 2.46250000e+01 2.25312500e+01
+ 1.90781250e+01 1.90781250e+01 1.58203125e+01 1.43125000e+01
+ 1.27968750e+01 9.14062500e+00 3.43750000e+00 3.43750000e+00
+ 3.25000000e+00 3.25000000e+00 3.12500000e+00 3.09375000e+00
+ 3.09375000e+00 3.09375000e+00 2.84375000e+00 2.81250000e+00
+ 2.81250000e+00 2.81250000e+00 2.81250000e+00 2.81250000e+00
+ 2.81250000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00
+ 2.78125000e+00 2.78125000e+00 2.78125000e+00 2.78125000e+00]
+2023-06-25 09:04:35.360147
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 12:11:08.875765
+Checking on testing data
+Got 8287/9984 with accuracy 83.00
+After Untargeted Attack: 83.00% Accuracy, BITS Flipped:6 out of 5120
+Time = 3:06:33.515616
+[4.82800000e+03 4.56500000e+03 4.35000000e+03 4.11000000e+03
+ 3.91300000e+03 3.72100000e+03 3.54200000e+03 3.34700000e+03
+ 3.22664062e+03 3.07886719e+03 2.94023438e+03 2.81840625e+03
+ 2.69740625e+03 2.62722656e+03 2.44907031e+03 2.42653125e+03
+ 2.30567969e+03 2.21632031e+03 2.08468750e+03 2.00925000e+03
+ 1.93375000e+03 1.85888281e+03 1.75142188e+03 1.66665625e+03
+ 1.59911719e+03 1.53053125e+03 1.44921875e+03 1.39007812e+03
+ 1.33658594e+03 1.25518750e+03 1.18125000e+03 1.12689844e+03
+ 1.11701562e+03 1.07335156e+03 1.01937500e+03 9.86000000e+02
+ 9.44281250e+02 8.82515625e+02 8.56406250e+02 8.21312500e+02
+ 7.84687500e+02 7.47085938e+02 7.20070312e+02 6.86820312e+02
+ 6.40062500e+02 6.27203125e+02 5.97281250e+02 5.72640625e+02
+ 5.49312500e+02 5.13187500e+02 4.95703125e+02 4.74234375e+02
+ 4.29218750e+02 4.21093750e+02 4.04296875e+02 3.86296875e+02
+ 3.80015625e+02 3.60093750e+02 3.41718750e+02 3.15875000e+02
+ 3.13242188e+02 2.98640625e+02 2.88984375e+02 2.71195312e+02
+ 2.55562500e+02 2.43632812e+02 2.35195312e+02 2.27171875e+02
+ 2.11468750e+02 2.07304688e+02 1.99750000e+02 1.89484375e+02
+ 1.80062500e+02 1.77187500e+02 1.58406250e+02 1.58406250e+02
+ 1.46601562e+02 1.43179688e+02 1.33453125e+02 1.32718750e+02
+ 1.27367188e+02 1.19179688e+02 1.19179688e+02 1.13750000e+02
+ 1.08281250e+02 1.06914062e+02 9.86562500e+01 8.84531250e+01
+ 8.62500000e+01 7.87109375e+01 7.87109375e+01 7.76562500e+01
+ 7.48203125e+01 7.05312500e+01 6.73750000e+01 6.46250000e+01
+ 6.12812500e+01 5.65781250e+01 5.08750000e+01 5.07343750e+01
+ 4.77265625e+01 4.67421875e+01 4.16406250e+01 4.06093750e+01
+ 3.48906250e+01 3.48906250e+01 3.45312500e+01 3.29765625e+01
+ 2.54843750e+01 2.54843750e+01 2.37656250e+01 1.95937500e+01
+ 1.70859375e+01 1.61718750e+01 5.43750000e+00 5.39062500e+00
+ 5.39062500e+00 5.10937500e+00 5.10937500e+00 5.06250000e+00
+ 5.06250000e+00 5.06250000e+00 5.06250000e+00 5.06250000e+00
+ 5.06250000e+00 5.06250000e+00 5.06250000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00
+ 4.78125000e+00 4.78125000e+00 4.78125000e+00 4.78125000e+00]
+2023-06-25 12:12:02.584516
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 15:10:34.792347
+Checking on testing data
+Got 4932/9984 with accuracy 49.40
+After Untargeted Attack: 49.40% Accuracy, BITS Flipped:7 out of 5120
+Time = 2:58:32.207831
+[4.82900000e+03 4.57000000e+03 4.35100000e+03 4.13200000e+03
+ 3.92600000e+03 3.69060938e+03 3.56664844e+03 3.37300000e+03
+ 3.19000000e+03 3.07181250e+03 2.92804688e+03 2.80858594e+03
+ 2.73025000e+03 2.59939062e+03 2.50517188e+03 2.40860938e+03
+ 2.29567188e+03 2.17750000e+03 2.12160938e+03 2.01806250e+03
+ 1.85831250e+03 1.83402344e+03 1.74671875e+03 1.62750000e+03
+ 1.55837500e+03 1.51984375e+03 1.41882812e+03 1.37593750e+03
+ 1.32534375e+03 1.25688281e+03 1.21950000e+03 1.16629688e+03
+ 1.11796875e+03 1.04671875e+03 1.00296875e+03 9.57890625e+02
+ 9.09890625e+02 8.71171875e+02 8.34984375e+02 7.90562500e+02
+ 7.63437500e+02 7.48210938e+02 7.14437500e+02 6.83375000e+02
+ 6.33250000e+02 5.99437500e+02 5.76632812e+02 5.61093750e+02
+ 5.42968750e+02 5.17695312e+02 4.82625000e+02 4.76875000e+02
+ 4.56093750e+02 4.35460938e+02 4.13085938e+02 4.05375000e+02
+ 3.81718750e+02 3.67921875e+02 3.43437500e+02 3.23609375e+02
+ 3.08125000e+02 2.90250000e+02 2.85468750e+02 2.69312500e+02
+ 2.45781250e+02 2.37343750e+02 2.30750000e+02 2.17679688e+02
+ 2.07414062e+02 2.00250000e+02 1.86164062e+02 1.80468750e+02
+ 1.68625000e+02 1.51937500e+02 1.51937500e+02 1.42968750e+02
+ 1.26875000e+02 1.26875000e+02 1.24250000e+02 1.11851562e+02
+ 1.09054688e+02 1.05351562e+02 9.71953125e+01 9.51562500e+01
+ 8.72812500e+01 8.38125000e+01 7.10937500e+01 7.10937500e+01
+ 7.10937500e+01 6.77578125e+01 6.16875000e+01 6.00390625e+01
+ 5.12187500e+01 5.12187500e+01 4.92187500e+01 4.53984375e+01
+ 4.00000000e+01 4.00000000e+01 3.93750000e+01 3.56250000e+01
+ 3.37500000e+01 2.92968750e+01 2.83125000e+01 2.74921875e+01
+ 2.30078125e+01 2.30078125e+01 2.09218750e+01 2.01250000e+01
+ 1.95703125e+01 1.77343750e+01 1.46250000e+01 1.39375000e+01
+ 5.63281250e+00 4.64843750e+00 4.37500000e+00 4.04687500e+00
+ 4.04687500e+00 4.04687500e+00 4.04687500e+00 3.50000000e+00
+ 3.50000000e+00 3.50000000e+00 3.50000000e+00 3.50000000e+00
+ 3.50000000e+00 3.50000000e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00
+ 3.33593750e+00 3.33593750e+00 3.33593750e+00 3.33593750e+00]
+2023-06-25 15:11:27.088038
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 18:02:27.239494
+Checking on testing data
+Got 3917/9984 with accuracy 39.23
+After Untargeted Attack: 39.23% Accuracy, BITS Flipped:8 out of 5120
+Time = 2:51:00.151456
+[4.82200000e+03 4.58100000e+03 4.35700000e+03 4.11500000e+03
+ 3.91300000e+03 3.70400000e+03 3.53540625e+03 3.35900000e+03
+ 3.18400000e+03 3.07200000e+03 2.86200000e+03 2.70396094e+03
+ 2.69671875e+03 2.56960156e+03 2.40900000e+03 2.35451562e+03
+ 2.21881250e+03 2.17898438e+03 2.09100000e+03 2.00019531e+03
+ 1.90667969e+03 1.79134375e+03 1.71757031e+03 1.65564844e+03
+ 1.53166406e+03 1.46092188e+03 1.40520312e+03 1.34351562e+03
+ 1.30368750e+03 1.23082031e+03 1.19180469e+03 1.13589844e+03
+ 1.08421875e+03 1.03275000e+03 9.84937500e+02 9.04500000e+02
+ 8.98875000e+02 8.51062500e+02 8.18460938e+02 7.91648438e+02
+ 7.48148438e+02 7.08750000e+02 6.74187500e+02 6.28757812e+02
+ 6.28757812e+02 5.96953125e+02 5.70546875e+02 5.45781250e+02
+ 5.29359375e+02 5.07734375e+02 4.73296875e+02 4.60359375e+02
+ 4.29843750e+02 4.08164062e+02 3.91289062e+02 3.76820312e+02
+ 3.61617188e+02 3.49312500e+02 3.30687500e+02 3.17093750e+02
+ 2.98593750e+02 2.84625000e+02 2.72765625e+02 2.57367188e+02
+ 2.46750000e+02 2.30718750e+02 2.25328125e+02 2.10000000e+02
+ 2.02500000e+02 1.96625000e+02 1.82859375e+02 1.76859375e+02
+ 1.65234375e+02 1.59375000e+02 1.47703125e+02 1.42101562e+02
+ 1.23984375e+02 1.23984375e+02 1.23085938e+02 1.15593750e+02
+ 1.07187500e+02 1.05390625e+02 1.00125000e+02 9.64687500e+01
+ 9.31875000e+01 8.15546875e+01 8.10000000e+01 6.57421875e+01
+ 6.36796875e+01 5.51250000e+01 5.51250000e+01 5.51250000e+01
+ 5.24062500e+01 5.18906250e+01 4.79062500e+01 4.48906250e+01
+ 4.48437500e+01 3.85156250e+01 3.50000000e+01 3.46796875e+01
+ 3.15000000e+01 2.96875000e+01 2.82187500e+01 2.33437500e+01
+ 2.33437500e+01 1.83046875e+01 1.67968750e+01 1.57500000e+01
+ 6.50000000e+00 5.62500000e+00 5.43750000e+00 4.68750000e+00
+ 4.06250000e+00 4.06250000e+00 4.06250000e+00 4.06250000e+00
+ 4.06250000e+00 4.06250000e+00 4.06250000e+00 4.06250000e+00
+ 4.06250000e+00 4.06250000e+00 4.06250000e+00 4.06250000e+00
+ 4.06250000e+00 3.50000000e+00 3.37500000e+00 3.37500000e+00
+ 3.37500000e+00 3.37500000e+00 3.37500000e+00 3.37500000e+00
+ 3.37500000e+00 3.37500000e+00 3.37500000e+00 3.37500000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00
+ 3.31250000e+00 3.31250000e+00 3.31250000e+00 3.31250000e+00]
+2023-06-25 18:03:19.020145
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-25 20:58:10.649082
+Checking on testing data
+Got 3244/9984 with accuracy 32.49
+After Untargeted Attack: 32.49% Accuracy, BITS Flipped:9 out of 5120
+Time = 2:54:51.628934
+[4.81900000e+03 4.58300000e+03 4.32200000e+03 4.12000000e+03
+ 3.92700000e+03 3.73300000e+03 3.57269531e+03 3.39600000e+03
+ 3.21189844e+03 3.07429688e+03 2.97513281e+03 2.80933594e+03
+ 2.74071875e+03 2.55040625e+03 2.52697656e+03 2.41428906e+03
+ 2.34078125e+03 2.24031250e+03 2.12556250e+03 2.08912500e+03
+ 1.96110938e+03 1.87595312e+03 1.76239062e+03 1.69787500e+03
+ 1.61742188e+03 1.56721875e+03 1.50614062e+03 1.40668750e+03
+ 1.31382812e+03 1.24360938e+03 1.23635938e+03 1.16831250e+03
+ 1.12379688e+03 1.07737500e+03 9.77500000e+02 9.61875000e+02
+ 9.17062500e+02 8.70117188e+02 8.41687500e+02 7.96312500e+02
+ 7.53750000e+02 6.96468750e+02 6.92148438e+02 6.56390625e+02
+ 6.30156250e+02 5.93578125e+02 5.62898438e+02 5.48250000e+02
+ 5.31945312e+02 5.02500000e+02 4.79765625e+02 4.55625000e+02
+ 4.34531250e+02 4.03046875e+02 3.91000000e+02 3.69546875e+02
+ 3.45312500e+02 3.40359375e+02 3.24304688e+02 3.00687500e+02
+ 2.94257812e+02 2.70937500e+02 2.57765625e+02 2.49687500e+02
+ 2.32257812e+02 2.23617188e+02 2.12390625e+02 1.97859375e+02
+ 1.91585938e+02 1.79554688e+02 1.71578125e+02 1.67500000e+02
+ 1.58406250e+02 1.46601562e+02 1.43390625e+02 1.39000000e+02
+ 1.27218750e+02 1.19453125e+02 1.14562500e+02 1.09125000e+02
+ 1.04218750e+02 9.84687500e+01 9.14296875e+01 8.14453125e+01
+ 7.97812500e+01 7.43281250e+01 6.77578125e+01 6.49921875e+01
+ 6.49921875e+01 6.18984375e+01 6.01250000e+01 5.35937500e+01
+ 5.10312500e+01 4.82343750e+01 4.35703125e+01 4.15000000e+01
+ 3.25937500e+01 3.25937500e+01 3.25000000e+01 3.01875000e+01
+ 2.91015625e+01 2.36015625e+01 2.36015625e+01 2.36015625e+01
+ 2.13750000e+01 2.13750000e+01 1.95000000e+01 8.01562500e+00
+ 8.01562500e+00 2.88281250e+00 2.88281250e+00 2.88281250e+00
+ 2.88281250e+00 2.88281250e+00 2.88281250e+00 2.88281250e+00
+ 2.88281250e+00 2.88281250e+00 2.88281250e+00 2.88281250e+00
+ 2.88281250e+00 2.81250000e+00 2.81250000e+00 2.74218750e+00
+ 2.74218750e+00 2.74218750e+00 2.74218750e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.67187500e+00
+ 2.67187500e+00 2.67187500e+00 2.67187500e+00 2.60156250e+00
+ 2.60156250e+00 2.60156250e+00 2.60156250e+00 2.60156250e+00]
+2023-06-25 20:59:02.407260
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-06-26 00:01:24.950901
+Checking on testing data
+Got 6274/9984 with accuracy 62.84
+After Untargeted Attack: 62.84% Accuracy, BITS Flipped:10 out of 5120
+Time = 3:02:22.543638
+[4828.        4567.        4323.        4099.        3912.
+ 3727.        3551.53125   3373.        3199.8046875 3088.9453125
+ 2942.        2834.921875  2756.953125  2612.6875    2465.859375
+ 2377.875     2270.53125   2142.0703125 2076.3125    1956.9375
+ 1894.6875    1831.734375  1749.9375    1642.9296875 1594.8125
+ 1535.625     1476.875     1406.953125  1332.375     1288.8125
+ 1228.71875   1150.359375  1119.546875  1085.9375    1031.765625
+  997.875      949.546875   885.1484375  867.6640625  838.6875
+  767.625      742.796875   722.34375    680.         644.9375
+  627.8125     601.375      568.3359375  545.53125    525.59375
+  501.75       482.578125   464.3125     440.96875    417.421875
+  394.21875    378.421875   366.046875   347.234375   326.8671875
+  321.4375     301.890625   293.25       277.046875   264.5625
+  251.8125     251.4375     234.5625     226.921875   211.921875
+  202.34375    187.         182.203125   166.03125    163.875
+  156.421875   147.703125   142.375      137.         121.5
+  121.5        118.421875   112.9375     110.15625     99.140625
+   94.875       94.1875      89.0625      81.4453125   80.984375
+   74.375       74.375       70.5         63.609375    60.15625
+   60.15625     54.296875    51.0390625   48.8515625   47.40625
+   44.5234375   44.5234375   42.578125    38.5         38.5
+   36.5703125   36.5703125   33.984375    30.46875     28.703125
+   26.71875     25.375       24.9609375   23.25        19.6796875
+    8.4375       7.890625     7.109375     6.796875     6.796875
+    6.796875     6.796875     6.796875     6.796875     6.796875
+    6.796875     6.796875     6.640625     6.5625       6.484375
+    6.484375     6.484375     6.484375     6.484375     6.484375
+    6.484375     6.484375     6.484375     6.484375     6.484375
+    6.484375     6.484375     6.484375     6.484375     6.40625
+    6.40625      6.40625      6.40625      6.40625      6.40625
+    6.40625      6.40625      6.40625      6.40625      6.40625
+    6.40625      6.40625      6.40625      6.40625      6.40625  ]
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project/subproject_geneticBIT_Attack$ ls
+ep10_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep1_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep2_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep30_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep3_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep40_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep4_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep50lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep5lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep6_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep7_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep8_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep9_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+Genetic_Algorithm_BITver.py
+lay1mutate0.0005_100popAndfitnessL0plusL0Loss.csv
+lay1mutate0.0005.csv
+lay1mutate0.05_100popAndfitnessL0plusL0Loss.csv
+lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+_Loading_All_Model.py
+__main__.py
+__pycache__
+__terminal.sh
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project/subproject_geneticBIT_Attack$ ls
+ep10_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep1_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep2_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep30_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep3_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep40_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep4_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep50lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep5lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep6_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep7_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep8_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+ep9_lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+Genetic_Algorithm_BITver.py
+lay1mutate0.0005_100popAndfitnessL0plusL0Loss.csv
+lay1mutate0.0005.csv
+lay1mutate0.05_100popAndfitnessL0plusL0Loss.csv
+lay2mutate0.05_100popAndfitnessL0plusL0Loss.csv
+_Loading_All_Model.py
+__main__.py
+__pycache__
+__terminal.sh
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project/subproject_geneticBIT_Attack$ cd ../
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project$ ls
+Binary_CSNN_AvgPool.py                 ckpt_nmnist_snn_.t7
+Binary_CSNN_MaxPool.py                 CSNNmain_AvgPool.py
+Binary_SNN.py                          CSNNmain_MaxPool.py
+ckpt_newlr_nmnist_bsnn_v0act.t7        dataset
+ckpt_newlr_nmnist_bsnn_v1noAct.t7      NNI_based_SNN.py
+ckpt_newlr_nmnist_bsnn_v2quantizeN.t7  pretrained_models
+ckpt_newlr_nmnist_bsnn_v3_noAct_qN.t7  SNNmain.py
+ckpt_newlr_nmnist_conv_snn_AvgPool.t7  subproject_geneticBIT_Attack
+ckpt_newlr_nmnist_conv_snn_MaxPool.t7  subproject_randomBIT_flip
+ckpt_newlr_nmnist_snn_.t7              testing.py
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project$ tmux capture-pane -pS - > file
+(SNN_env) edwin@user-MS-7D70:~/code/BSNN_Project$ tmux capture-pane -pS -30000 > file.tx
+t
+
