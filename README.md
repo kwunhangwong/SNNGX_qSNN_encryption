@@ -6,17 +6,17 @@
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
 
 
-## Project Description
+## Description
 
-**The project creates BIT-flip attack against binarised weight of deep neural network and other machine learning models with minimum vulnerable BITs.** 
+**This project creates BIT-flip attack against binarised weight of deep neural network and other machine learning models with minimum vulnerable BITs.** 
 
 
 This project was supported by the University of Hong Kong, EEE. \
-Currently solely for internal usage.
+Currently restricted to internal usage only.
 
 ## Usage
 
-There are 3 attack methods in this repository and some pretrained binary models using NMNIST and MNIST.
+There are 3 attack methods in this repository and some pretrained binary weight models over NMNIST and MNIST.
 
 1. Random Flipping Attack:
 
