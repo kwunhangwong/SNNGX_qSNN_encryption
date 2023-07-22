@@ -8,7 +8,7 @@
 
 # Project Description
 
-The project creates BIT-flip attack over binarised weight of deep neural network and other machine learning models. 
+The project creates BIT-flip attack over binarised weight of deep \ neural network and other machine learning models. 
 
 There are 3 attack methods in this repository and some pretrained binary models using NMNIST and MNIST.
 
