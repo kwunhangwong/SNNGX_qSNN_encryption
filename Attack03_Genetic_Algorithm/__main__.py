@@ -20,18 +20,16 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--epsil',type=int,metavar='GA_epsilon',default=10,help = 'The final number of bits to be converge by GA') 
 parser.add_argument('--name',type=str,metavar='Documenting_fitness',default="unnamed") 
 
+###############
 parser.add_argument('--num_subset',type=int,metavar='Number of subset images',default=128, help = 'No. of Samples for calculating fitness function') 
 parser.add_argument('--mutate',type=float,metavar='GA_mutate_chance',default=0.005) 
 parser.add_argument('--gen',type=int,metavar='# GA_generations',default=160) 
 
+###############
 parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset and model') 
-
 parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
                     help= 'Please input: 1. "NMNIST" 2. "MNIST" only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
-
-parser.add_argument() 
-parser.add_argument() 
 
 ###############
 args = parser.parse_args()
@@ -47,6 +45,7 @@ batch_size = args.batch
 target_dataset = args.Dataset
 dataset_path = args.Dpath
 
+###############
 # Constant
 device = torch.device('cuda')
 print(f"Current device is {device}!!")
