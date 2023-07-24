@@ -59,4 +59,4 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../.
 
     else:
 
-        raise ValueError("Target dataset not recognized. (NMNIST/MNIST)")
+        raise ValueError("choose_dataset: Target dataset not recognized. (NMNIST/MNIST)")

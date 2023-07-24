@@ -1,5 +1,3 @@
-import tonic
-import tonic.transforms as transforms
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader  
@@ -32,6 +30,9 @@ parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIS
                     help= 'Please input: 1. "NMNIST" 2. "MNIST" only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
 
+parser.add_argument() 
+parser.add_argument() 
+
 ###############
 args = parser.parse_args()
 
@@ -47,26 +48,43 @@ target_dataset = args.Dataset
 dataset_path = args.Dpath
 
 # Constant
-weight_path = '../pretrained_binary_weights/pretrained_binarised-nmnist_snn_300e_a92.t7'
 device = torch.device('cuda')
-
 print(f"Current device is {device}!!")
 
 # MODEL 1
-snnn = NMNIST_model(batch_size=batch_size).to(device)
-checkpoint = torch.load(weight_path,map_location=device)
-snnn.load_state_dict(checkpoint['net'])
 
-# Dataset (TEST and Subset Loader)
-_ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+if (target_dataset == "NMNIST"):
 
-#print(f"Before Untargeted Attack: {check_accuracy(test_loader,snnn)*100}% Accuracy")
+    weight_path = '../pretrained_binary_weights/pretrained_binarised-nmnist_snn_300e_a92.t7'
+    model = NMNIST_model(batch_size=batch_size).to(device)
+    checkpoint = torch.load(weight_path,map_location=device)
+    model.load_state_dict(checkpoint['net'])
+
+    # Dataset (TEST and Subset Loader)
+    _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+
+elif (target_dataset == "MNIST"):
+
+    weight_path = '../pretrained_binary_weights/pretrained_binarised-mnist_ann_300e.t7'
+    model = MNIST_model().to(device)
+    checkpoint = torch.load(weight_path,map_location=device)
+    model.load_state_dict(checkpoint['net'])
+
+    # Dataset (TEST and Subset Loader)
+    _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+
+else:
+    raise ValueError("GA main: Target dataset not recognized. (NMNIST/MNIST)")
+
+
+#print(f"Before Untargeted Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
 start = datetime.datetime.now()
 print(datetime.datetime.now())
 
 with torch.no_grad():   #no need to cal grad
-    Untargeted_attack = GA_BIT_flip_Untargeted(snnn, UNTARGETED_loader, 
+    Untargeted_attack = GA_BIT_flip_Untargeted(model, UNTARGETED_loader, 
                                                epsil=epsil, mutate_chance=mutate_chance, n_generations=n_generations,
                                                BITS_by_layer=True, layer_type=nn.Linear, layer_idx=2)
     adv_model, advBIT, numBIT ,fitness = Untargeted_attack.main()
