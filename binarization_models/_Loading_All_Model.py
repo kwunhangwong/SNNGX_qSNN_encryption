@@ -9,11 +9,11 @@ DECAY = 0.3
 alpha = 0.5
 
 #Forward Model
-class SNN_model(nn.Module):
+class NMNIST_model(nn.Module):
     
     def __init__(self,input_size=2*34*34,num_classes=10,batch_size=64,
                  T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-        super(SNN_model,self).__init__()
+        super(NMNIST_model,self).__init__()
 
         self.batch_size = batch_size
         self.T_BIN = T_BIN
@@ -63,9 +63,9 @@ def mem_update(fc, x, volt, spike):
     return volt, spike
 
 
-class ANN_model(nn.Module):
+class MNIST_model(nn.Module):
     def __init__(self,num_classes=10):
-        super(ANN_model, self).__init__()
+        super(MNIST_model, self).__init__()
         self.fc1 = BiLinear(784, 1000)  # 28*28=784 input features, 128 output features
         self.fc2 = BiLinear(1000, 512,binary_act=True)
         self.fc3 = BiLinear(512, num_classes,binary_act=True)  # 128 input features, 10 output features (one for each class)
@@ -80,27 +80,23 @@ class ANN_model(nn.Module):
 
 #Model evaluation
 def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+    # Verify on any dataset
     print("Checking on testing data")
-    
+    # Checking
     num_correct = 0
     num_sample = 0
     model.eval()  
-
     with torch.no_grad():   #no need to cal grad
         for image,label in loader:
             image= image.to(device)
             label= label.to(device)
-            
             # T x N x 2312 => N x 2312
             out_firing = model(image)
-
             #64x10 output
             _ , prediction = out_firing.max(1)  #64x1 (value in 2nd dimension)
             num_correct += (prediction==label).sum()
             num_sample += prediction.size(0)  #64 (value in 1st dimension)
-            
         print(f'Got {num_correct}/{num_sample} with accuracy {float(num_correct)/float(num_sample)*100:.2f}')
-        
     model.train() #Set back to train mode
     return num_correct/num_sample    
 
