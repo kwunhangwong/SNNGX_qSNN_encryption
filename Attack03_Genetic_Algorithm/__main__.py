@@ -9,9 +9,9 @@ from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted, UNTARGETED_loader
 
 import sys
 sys.path.append('../binarization_models')
-from _Loading_All_Model import *
-from _Loading_All_Model import * 
 
+from _Loading_All_Dataset import *
+from _Loading_All_Model import * 
 
 ###############
 parser = argparse.ArgumentParser()
@@ -21,12 +21,12 @@ parser.add_argument('--epsil',type=int,metavar='GA_epsilon',default=10,help = 'T
 parser.add_argument('--name',type=str,metavar='Documenting_fitness',default="unnamed") 
 
 ###############
-parser.add_argument('--num_subset',type=int,metavar='Number of subset images',default=128, help = 'No. of Samples for calculating fitness function') 
+parser.add_argument('--subset',type=int,metavar='Number of subset images',default=128, help = 'No. of Samples for calculating fitness function') 
 parser.add_argument('--mutate',type=float,metavar='GA_mutate_chance',default=0.005) 
 parser.add_argument('--gen',type=int,metavar='# GA_generations',default=160) 
 
 ###############
-parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset and model') 
+parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset, model, GA-subset') 
 parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
                     help= 'Please input: 1. "NMNIST" 2. "MNIST" only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
@@ -37,7 +37,7 @@ args = parser.parse_args()
 epsil = args.epsil
 name = args.name
 
-num_images = args.num_subset
+num_images = args.subset
 mutate_chance = args.mutate
 n_generations = args.gen
 
@@ -78,7 +78,7 @@ else:
     raise ValueError("GA main: Target dataset not recognized. (NMNIST/MNIST)")
 
 
-#print(f"Before Untargeted Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
+print(f"Before Untargeted Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
 start = datetime.datetime.now()
 print(datetime.datetime.now())
 
