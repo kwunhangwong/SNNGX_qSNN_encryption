@@ -285,10 +285,10 @@ def UNTARGETED_loader(test_set,num_images:int=128,batch_size:int=64,is_ANN=False
 
     if is_ANN:
         # No need tonic pad_fn
-        UNTARGETED_loader = DataLoader(UNTARGETED_subset, 
+        UNTARGETED_loader = DataLoader(dataset = UNTARGETED_subset, 
                                        batch_size=batch_size, 
-                                       shuffle=False)
-
+                                       shuffle = False,
+                                       drop_last = True)
     else:
         # Create a DataLoader for the subset
         UNTARGETED_loader = DataLoader(

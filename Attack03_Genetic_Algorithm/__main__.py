@@ -4,12 +4,17 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader  
 
-from _Loading_All_Model import SNN_model, ActivationFun, act_fun, mem_update, check_accuracy
-from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted, UNTARGETED_loader
-
 import datetime
 import argparse
 import csv
+from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted, UNTARGETED_loader
+
+import sys
+sys.path.append('../binarization_models')
+
+from _Loading_All_Model import *
+
+
 
 parser = argparse.ArgumentParser()
 
