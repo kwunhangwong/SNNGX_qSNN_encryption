@@ -7,6 +7,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader, Subset
 
 import tonic
+import torchvision
 
 class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     
@@ -275,21 +276,22 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         return self.model, self.L1_BIT(Curr_Pop[0]), len(Curr_Pop[0]), np.array(gen_evolution_score)
     
 
-def UNTARGETED_loader(test_set,num_images:int=128,batch_size:int=64,is_ANN=False):
+def UNTARGETED_loader(target:str,num_images:int=128,batch_size:int=64,T_BIN:int=15,dataset_path = "../../BSNN_Project/N-MNIST_TRAINING/dataset"):
 
-    # Select 100 random samples from the NMNIST test dataset
-    num_samples = num_images
-    num_total_samples = len(test_set)
-    random_indices = random.sample(range(num_total_samples), num_samples)
-    UNTARGETED_subset = Subset(test_set, random_indices)
+    if (target == "NMNIST"):
+        #############################################
+        sensor_size = tonic.datasets.NMNIST.sensor_size
+        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
+                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        test_set = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=False)
 
-    if is_ANN:
-        # No need tonic pad_fn
-        UNTARGETED_loader = DataLoader(dataset = UNTARGETED_subset, 
-                                       batch_size=batch_size, 
-                                       shuffle = False,
-                                       drop_last = True)
-    else:
+        #############################################
+        num_samples = num_images
+        num_total_samples = len(test_set)
+        random_indices = random.sample(range(num_total_samples), num_samples)
+        UNTARGETED_subset = Subset(test_set, random_indices)
+
+        #############################################
         # Create a DataLoader for the subset
         UNTARGETED_loader = DataLoader(
             dataset = UNTARGETED_subset, 
@@ -299,7 +301,34 @@ def UNTARGETED_loader(test_set,num_images:int=128,batch_size:int=64,is_ANN=False
             drop_last=True
         )
 
-    return UNTARGETED_loader
+        return UNTARGETED_loader
+
+    elif (target == "MNIST"):
+        ############################################
+        transform = torchvision.transforms.Compose([
+                    torchvision.transforms.ToTensor(),  # convert PIL image to PyTorch tensor
+                    torchvision.transforms.Normalize((0.5,), (0.5,))
+                    ])  
+        test_set = torchvision.datasets.MNIST(root=dataset_path, train=False, download=True, transform=transform)
+        
+        ############################################
+        num_samples = num_images
+        num_total_samples = len(test_set)
+        random_indices = random.sample(range(num_total_samples), num_samples)
+        UNTARGETED_subset = Subset(test_set, random_indices)
+
+        ############################################
+        # No need tonic pad_fn
+        UNTARGETED_loader = DataLoader(dataset = UNTARGETED_subset, 
+                                       batch_size=batch_size, 
+                                       shuffle = False,
+                                       drop_last = True)        
+
+        return UNTARGETED_loader
+    
+    else:
+
+        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/MNIST)")
 
 
 def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, BITS_by_layer=False):
