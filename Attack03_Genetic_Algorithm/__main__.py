@@ -11,52 +11,55 @@ from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted, UNTARGETED_loader
 
 import sys
 sys.path.append('../binarization_models')
-
 from _Loading_All_Model import *
 from _Loading_All_Model import * 
 
 
-
+###############
 parser = argparse.ArgumentParser()
 
 # Required input: num_bit
+parser.add_argument('--epsil',type=int,metavar='GA_epsilon',default=10,help = 'The final number of bits to be converge by GA') 
 parser.add_argument('--name',type=str,metavar='Documenting_fitness',default="unnamed") 
-parser.add_argument('--epsil',type=int,metavar='GA_epsilon',default=100) 
+
+parser.add_argument('--num_subset',type=int,metavar='Number of subset images',default=128, help = 'No. of Samples for calculating fitness function') 
 parser.add_argument('--mutate',type=float,metavar='GA_mutate_chance',default=0.005) 
-parser.add_argument('--gen',type=int,metavar='# GA_generations ',default=10) 
+parser.add_argument('--gen',type=int,metavar='# GA_generations',default=160) 
+
+parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset and model') 
+
+parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
+                    help= 'Please input: 1. "NMNIST" 2. "MNIST" only, their corresponding models will be selected automatically') 
+parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
+
+###############
 args = parser.parse_args()
 
-name = args.name
 epsil = args.epsil
+name = args.name
+
+num_images = args.num_subset
 mutate_chance = args.mutate
 n_generations = args.gen
 
-# Constant
-batch_size = 64
+batch_size = args.batch
+target_dataset = args.Dataset
+dataset_path = args.Dpath
 
+# Constant
+weight_path = '../pretrained_binary_weights/pretrained_binarised-nmnist_snn_300e_a92.t7'
 device = torch.device('cuda')
+
 print(f"Current device is {device}!!")
 
 # MODEL 1
-snnn = SNN_model(batch_size=batch_size).to(device)
-checkpoint = torch.load('../pretrained_models/pre_trained_binarised-nmnist_snn_300e_a92.t7',map_location=device)
+snnn = NMNIST_model(batch_size=batch_size).to(device)
+checkpoint = torch.load(weight_path,map_location=device)
 snnn.load_state_dict(checkpoint['net'])
 
-# Dataset (UNTARGETED and TEST Loader)
-sensor_size = tonic.datasets.NMNIST.sensor_size
-frame_transform = transforms.Compose([transforms.Denoise(filter_time=10000),
-                                      transforms.ToFrame(sensor_size=sensor_size, n_time_bins=15)])
-    
-testset = tonic.datasets.NMNIST(save_to="../dataset", transform=frame_transform, train=False)
-test_loader = DataLoader(
-    dataset = testset,
-    batch_size= batch_size,
-    collate_fn= tonic.collation.PadTensors(batch_first=False),
-    shuffle = True,
-    drop_last=True
-)
-
-UNTARGETED_loader = UNTARGETED_loader(test_set=testset,batch_size=batch_size,is_ANN=False)
+# Dataset (TEST and Subset Loader)
+_ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
 
 #print(f"Before Untargeted Attack: {check_accuracy(test_loader,snnn)*100}% Accuracy")
 start = datetime.datetime.now()
@@ -74,7 +77,6 @@ print(f"After Untargeted Attack: {check_accuracy(test_loader,adv_model)*100:.2f}
 print(f"Time = {end-start}")
 
 print(fitness)
-
 
 # Save file 
 with open(name + '.csv', 'w', newline='') as file:

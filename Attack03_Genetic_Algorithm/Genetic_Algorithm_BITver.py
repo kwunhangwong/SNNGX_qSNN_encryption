@@ -13,7 +13,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     
     def __init__(self, model:nn.Module, UNTARGETED_loader:DataLoader,   # Accepted input: only Single 4-D neuromorphic Data
                  epsil=5000, n_generations=25, population_size=100,      # epsil = L1/Hamming Distance bound
-                 retain_best=0.6, mutate_chance=0.005, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+                 retain_best=0.6, mutate_chance=0.05, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
                  BITS_by_layer=False, layer_type:nn.Module=None, layer_idx:int=None):  
         
         # Initialization

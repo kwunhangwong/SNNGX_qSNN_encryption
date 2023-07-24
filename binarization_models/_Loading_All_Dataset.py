@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 # PLEASE Input your path to your dataset
 # dataset_path = "./dataset" #DEFAULT
 
-def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = "../../BSNN_Project/N-MNIST_TRAINING/dataset"):
+def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../../BSNN_Project/N-MNIST_TRAINING/dataset'):
 
     if (target == "NMNIST"):
 
