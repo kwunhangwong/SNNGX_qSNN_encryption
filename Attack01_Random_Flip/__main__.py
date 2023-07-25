@@ -37,7 +37,7 @@ dataset_path = args.Dpath
 
 ###############
 # Constant
-device = torch.device('cuda')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Current device is {device}!!")
 
 # MODEL 1
