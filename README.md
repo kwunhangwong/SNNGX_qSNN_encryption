@@ -14,8 +14,7 @@ There are 3 attack methods in this repository and some pretrained binary weight 
 
 Apart from random flipping tests, we proposed two more optimzation methods to attck the most vulnerable bits in the binarised ANN/SNN models: FGSM-based attack (gradient) and Genetic Algorithm-based attack (non-gradient) respectively. 
 
-![attack methods]((https://github.com/u3556440/SNN_security/assets/56315946/048b3b29-6fbb-426c-9c17-3ef3aa7bf551))
-
+![FGSM_GA_illustration_v2](https://github.com/u3556440/SNN_security/assets/56315946/976bca55-fb5a-4f1a-bd0e-18a3aa95ad84)
 
 This project was supported by the University of Hong Kong, EEE. \
 Currently restricted to internal usage only.
