@@ -27,6 +27,7 @@ Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash comman
 1. Random Flipping Attack:
 
 ```
+cd Attack01_Random_Flip
 python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
 
@@ -42,14 +43,34 @@ Flag | Metavar | Help
 2. FGSM-based weight Attack:
 
 ```
-Usage: command [options] [arguments]
+cd Attack02_FGSM_Attack
+python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
+
+Flag | Metavar | Help
+--- | --- | --- 
+`-b`/`--batch` | batch_size | Batch size for dataset and model
+`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
+`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
+`--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
+`--Dpath` | Dataset_Path | Please input your local path to the dataset
+
 
 3. Genetic Algorithm weight Attack:
 
 ```
-Usage: command [options] [arguments]
+cd Attack03_Genetic_Algorithm
+python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
+
+Flag | Metavar | Help
+--- | --- | --- 
+`-b`/`--batch` | batch_size | Batch size for dataset and model
+`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
+`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
+`--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
+`--Dpath` | Dataset_Path | Please input your local path to the dataset
+
 
 
 
