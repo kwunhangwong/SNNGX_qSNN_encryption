@@ -13,3 +13,7 @@ python3 __main__.py -nb 90
 python3 __main__.py -nb 100
 
 
+
+python3 __main__.py -nb 100 -nt 50 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+
+
