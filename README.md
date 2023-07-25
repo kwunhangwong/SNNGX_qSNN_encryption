@@ -21,7 +21,8 @@ Currently restricted to internal usage only.**
 
 ## Usage
 
-*Dataset is not included in our repository. Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash commands.*
+*Dataset is not included in our repository. \
+Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash commands.*
 
 1. Random Flipping Attack:
 
