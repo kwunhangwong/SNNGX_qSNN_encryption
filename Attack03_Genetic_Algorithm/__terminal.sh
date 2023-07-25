@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # NMNIST (Need to modify All layer attack or by layer attack in the main algorithm) (Default: Layer 2, Layer type: nn.Linear)
 python3 __main__.py --epsil 1 --name "ep_10lay2_NMNIST" --subset 128 --mutate 0.05 --gen 160 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
 python3 __main__.py --epsil 2 --name "ep_10lay2_NMNIST" --subset 128 --mutate 0.05 --gen 160 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'

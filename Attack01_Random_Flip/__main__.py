@@ -1,16 +1,18 @@
-from Loading_model import SNN_model, ActivationFun, act_fun, mem_update, check_accuracy, VTH, DECAY, alpha
-from Random_flipping import Random_flipping_all_Layers, Random_flipping_single_layer
-
-import tonic
-import tonic.transforms as transforms
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader  
+
 import datetime
-import csv
-
 import argparse
+import csv
+from Random_Flipping_BITver import Random_flipping_all_Layers, Random_flipping_single_layer
 
+import sys
+sys.path.append('../binarization_models')
+
+from _Loading_All_Dataset import *
+from _Loading_All_Model import * 
+
+###############
 parser = argparse.ArgumentParser()
 
 # Required input: num_bit
@@ -25,29 +27,7 @@ random_trial = args.numtrial
 
 # Dataset - NMNIST
 # 2 x 34 x 34
-sensor_size = tonic.datasets.NMNIST.sensor_size
-frame_transform = transforms.Compose([transforms.Denoise(filter_time=10000),
-                                      transforms.ToFrame(sensor_size=sensor_size, n_time_bins=15)])
-    
-trainset = tonic.datasets.NMNIST(save_to="../dataset",transform=frame_transform, train=True)
-testset = tonic.datasets.NMNIST(save_to="../dataset", transform=frame_transform, train=False)
 
-#collation整理 => pad out填充 shorting recordings to have same dimension
-train_loader = DataLoader(
-    dataset = trainset,
-    batch_size= batch_size,
-    collate_fn= tonic.collation.PadTensors(batch_first=False),
-    shuffle = True,
-    drop_last=True
-)
-
-test_loader = DataLoader(
-    dataset = testset,
-    batch_size= batch_size,
-    collate_fn= tonic.collation.PadTensors(batch_first=False),
-    shuffle = True,
-    drop_last=True
-)
 
 # MODEL 1: Binarised SNN (type fc)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
