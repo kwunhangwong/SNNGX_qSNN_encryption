@@ -26,16 +26,16 @@ Currently restricted to internal usage only.**
 1. Random Flipping Attack:
 
 ```
-Usage: python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
+python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
 
 Flag | Metavar | Help
 --- | --- | --- 
-`-b`/`--batch` | batch_size | **Batch size for dataset and model**
-`-nb`/`--numbit` | number_of_flipped_BITS | **# of Random BITS flipped**
-`-nt`/`--numtrial` | number_of_random_trials | **# of trial repetition**
-`--Dataset` | Dataset_Target | **Available Dataset: NMNIST/MNIST**
-`--Dpath` | Dataset_Path | **Please input your local path to the dataset**
+`-b`/`--batch` | batch_size | Batch size for dataset and model
+`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
+`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
+`--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
+`--Dpath` | Dataset_Path | Please input your local path to the dataset
 
 
 2. FGSM-based weight Attack:
