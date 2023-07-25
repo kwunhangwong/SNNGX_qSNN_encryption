@@ -19,7 +19,7 @@ parser.add_argument('--expected_bit',type=int,metavar='expected-number_of_change
 parser.add_argument('--topk',type=int,metavar='top k of bits with greatest gradient to be flipped',default=10,help='Flipping process with FGSM-based theory') 
 
 ###############
-parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset and model') 
+parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset, model and FGSM samples') 
 parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
                     help= 'Please input: 1. "NMNIST" 2. "MNIST" only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
@@ -49,6 +49,7 @@ if (target_dataset == "NMNIST"):
 
     # Dataset (TEST and Subset Loader)
     train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, iteration=10,is_ANN=False)
 
 elif (target_dataset == "MNIST"):
 
@@ -59,6 +60,7 @@ elif (target_dataset == "MNIST"):
 
     # Dataset (TEST and Subset Loader)
     train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, iteration=10,is_ANN=True)
 
 else:
     raise ValueError("Random Flipping main: Target dataset not recognized. (NMNIST/MNIST)")
@@ -68,7 +70,7 @@ print(f"Before Untargeted FGSM-Attack: {check_accuracy(test_loader,model)*100}% 
 start = datetime.datetime.now()
 print(datetime.datetime.now())
 
-# Using Train_loader for FGSM attacks
+# Using first batach of train_loader for FGSM attacks
 for _, (data, target) in enumerate(train_loader):
     # Get First Batch of train_loader
     data = data.float().to(device)
@@ -77,8 +79,7 @@ for _, (data, target) in enumerate(train_loader):
     _, target = model(data).max(1)
     break
 
-# Attack finding minimum 10 bitflip
-FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, iteration=10)
+# Attack finding minimum bitflip
 bit_flipped, numlayer_weight = FGSM_attack.progressive_bit_search(data,target)
 
 print(f'Total BITS flipped: {bit_flipped}')  

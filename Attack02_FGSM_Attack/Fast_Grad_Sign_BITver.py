@@ -2,13 +2,15 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F 
 import operator
+import numpy as np
 
 class FGSM_Untargeted_BIT_flip():
 
-    def __init__(self, model:nn.Module, k_top=5, expected_bits=20, iteration=10):
+    def __init__(self, model:nn.Module, k_top=5, expected_bits=20, iteration=10, is_ANN=False):
         
         # import Model 
         self.model = model
+        self.is_ANN = is_ANN
         self.model.eval()
 
         # Finding top k vulnerable BITS, suggested expected bits = k_top*4 in 10 iter
@@ -32,7 +34,7 @@ class FGSM_Untargeted_BIT_flip():
         # Find largest gradient: Floating point 32 value
         w_grad_topk, w_idx_topk = layer.weight.grad.detach().abs().view(-1).topk(self.k_top)
         w_grad_topk = layer.weight.grad.detach().view(-1)[w_idx_topk]              # Extract signed gradient value
-
+        # print(w_grad_topk)
         # Ensure Max gradient is not zero
         if w_grad_topk.abs().max().item() == 0:  # ensure the max grad is not zero
             print(f"The max grad is zero, iteration:{self.iteration}, layer:{layer}")
@@ -64,13 +66,16 @@ class FGSM_Untargeted_BIT_flip():
         # Return raw tensor
         return model_weight  #attack_weight 1D tensor
 
-    #   I DONT UNDERSTAND WHY he used eval here, how to calculate gradient?
     def progressive_bit_search(self, data, target):
 
-        criterion = nn.MSELoss()
-        labels_onehot = F.one_hot(target, 10).float()
+        if self.is_ANN:
+            criterion = nn.CrossEntropyLoss()
+            labels_onehot = target
 
-        # Gradient calculate w.r.t. target label
+        else: 
+            criterion = nn.MSELoss()
+            labels_onehot = F.one_hot(target, 10).float()
+
         out_firing = self.model(data)        
         self.loss = criterion(out_firing, labels_onehot)
 
@@ -89,19 +94,20 @@ class FGSM_Untargeted_BIT_flip():
             # iterate all the quantized conv and linear layer
             for name, layer in self.model.named_modules():
                 if isinstance(layer, nn.Conv2d) or isinstance(layer, nn.Linear):
-
+                    
+                    with torch.set_grad_enabled(True):
                     # BIT Flip with largest gradient
-                    clean_weight = layer.weight.data.detach().clone()
+                        clean_weight = layer.weight.data.clone()
 
-                    self.flip_bit(layer)
+                        self.flip_bit(layer)
 
-                    # Change the weight to attacked weight and get loss
-                    out_firing = self.model(data) 
-                    self.loss_dict[name] = criterion(out_firing, labels_onehot).item()
+                        # Change the weight to attacked weight and get loss
+                        out_firing = self.model(data) 
+                        self.loss_dict[name] = criterion(out_firing, labels_onehot).item()
 
-                    # change the weight back to the clean weight (zero grad)
-                    #layer.weight.data = nn.Parameter(clean_weight)
-                    layer.weight.data = (clean_weight)
+                        # change the weight back to the clean weight (zero grad)
+                        #layer.weight.data = nn.Parameter(clean_weight)
+                        layer.weight.data = (clean_weight)
 
              # after going through all the layer, now we find the layer with max loss
              # itemgetter(1) is used to extract the second element (i.e., the loss value) from 
@@ -118,21 +124,22 @@ class FGSM_Untargeted_BIT_flip():
                 clean_weight = layer.weight.data.clone().view(-1)
                 for i in range(self.iteration):
 
-                    layer.weight.grad.data.zero_()
+                    with torch.set_grad_enabled(True):
+                        # layer.weight.grad.data.zero_()
+                        self.model.zero_grad()
 
-                    out_firing = self.model(data)        
-                    self.loss = criterion(out_firing, labels_onehot)
-                    self.loss.backward()
+                        out_firing = self.model(data)     
+                        self.loss = criterion(out_firing, labels_onehot)
+                        self.loss.backward()
 
-                    print(self.loss.item())
-                    self.loss_dict[max_loss_module] = self.loss.item()
-                    
-                    attack_weight = self.flip_bit(layer)
+                        print(self.loss.item())
+                        self.loss_dict[max_loss_module] = self.loss.item()
+                        
+                        attack_weight = self.flip_bit(layer)
 
-                    if (clean_weight != attack_weight).sum() >= self.expected_bits:
-                        print(f"iteration :{i}")
-                        break
+                        if (clean_weight != attack_weight).sum() >= self.expected_bits:
+                            print(f"iteration :{i}")
+                            break
 
         print(self.loss_dict)
         return (clean_weight != attack_weight).sum() , len(clean_weight)
-    
