@@ -54,8 +54,8 @@ python3 __main__.py [-b] [--expected_bit] [--topk] [--Dataset] [--Dpath]
 Flag | Metavar | Help
 --- | --- | --- 
 `-b`/`--batch` | batch_size | Batch size for dataset, model and FGSM samples
-`--expected_bit` | expected number of flipped BITS | indeterministic flipping result 
-`--topk` | top k bits | selecting k bits of largest gradient to apply FGSM
+`--expected_bit` | expected_number_of_flipped_BITS | indeterministic flipping result 
+`--topk` | top_k_bits | selecting k bits of largest gradient to apply FGSM
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
 
