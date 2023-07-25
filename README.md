@@ -48,14 +48,14 @@ Flag | Metavar | Help
 cd Attack02_FGSM_Attack
 ```
 ```
-python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
+python3 __main__.py [-b] [--expected_bit] [--topk] [--Dataset] [--Dpath]
 ```
 
 Flag | Metavar | Help
 --- | --- | --- 
-`-b`/`--batch` | batch_size | Batch size for dataset and model
-`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
-`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
+`-b`/`--batch` | batch_size | Batch size for dataset, model and FGSM samples
+`--expected_bit` | expected number of flipped BITS | indeterministic flipping result 
+`--topk` | top k bits | selecting k bits of largest gradient to apply FGSM
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
 
@@ -66,18 +66,16 @@ Flag | Metavar | Help
 cd Attack03_Genetic_Algorithm
 ```
 ```
-python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
+python3 __main__.py [-b] [--epsil] [--name] [--subset] [--mutate] [--gen] [--Dataset] [--Dpath]
 ```
 
 Flag | Metavar | Help
 --- | --- | --- 
 `-b`/`--batch` | batch_size | Batch size for dataset and model
-`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
-`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
+`--epsil` | number_of_flipped_BITS | # of Random BITS flipped
+`--name` | number_of_flipped_BITS | # of Random BITS flipped
+`--subset` | number_of_random_trials | # of trial repetition
+`--mutate` | Dataset_Target | Available Dataset: NMNIST/MNIST
+`--gen` | Dataset_Path | Please input your local path to the dataset
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
-
-
-
-
-
