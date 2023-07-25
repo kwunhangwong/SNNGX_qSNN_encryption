@@ -28,6 +28,9 @@ Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash comman
 
 ```
 cd Attack01_Random_Flip
+```
+
+```
 python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
 
