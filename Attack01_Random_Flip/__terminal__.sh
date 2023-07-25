@@ -1,19 +1,25 @@
 #!/bin/bash
 
-python3 __main__.py -nb 10
-python3 __main__.py -nb 10
-python3 __main__.py -nb 20
-python3 __main__.py -nb 30
-python3 __main__.py -nb 40
-python3 __main__.py -nb 50
-python3 __main__.py -nb 60
-python3 __main__.py -nb 70
-python3 __main__.py -nb 80
-python3 __main__.py -nb 90
-python3 __main__.py -nb 100
+# NMNIST (random Flipping 100 times) (Need to modify in __main__.py for flipping all layers/one layer)
+python3 __main__.py -nb 10 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 20 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 30 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 40 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 50 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 60 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 70 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 80 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 90 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 100 -nt 100 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
 
-
-
-python3 __main__.py -nb 100 -nt 50 -b 64 --Dataset "NMNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
-
-
+# MNIST (random Flipping 100 times) (Need to modify in __main__.py for flipping all layers/one layer)
+python3 __main__.py -nb 10 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 20 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 30 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 40 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 50 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 60 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 70 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 80 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 90 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'
+python3 __main__.py -nb 100 -nt 100 -b 64 --Dataset "MNIST" --Dpath '../../BSNN_Project/N-MNIST_TRAINING/dataset'

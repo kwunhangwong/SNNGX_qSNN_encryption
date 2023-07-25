@@ -18,6 +18,8 @@ Currently restricted to internal usage only.
 
 There are 3 attack methods in this repository and some pretrained binary weight models over NMNIST and MNIST.
 
+### Dataset is not included in our repository. Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash commands.
+
 1. Random Flipping Attack:
 
 ```
