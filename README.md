@@ -19,6 +19,12 @@
 **This project was supported by the University of Hong Kong, EEE. \
 Currently restricted to internal usage only.**
 
+## Quick Start
+
+```
+git clone https://github.com/u3556440/SNN_security.git
+```
+
 ## Usage
 
 *Dataset is not included in our repository. \
