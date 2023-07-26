@@ -71,11 +71,11 @@ python3 __main__.py [-b] [--epsil] [--name] [--subset] [--mutate] [--gen] [--Dat
 
 Flag | Metavar | Help
 --- | --- | --- 
-`-b`/`--batch` | batch_size | Batch size for dataset and model
-`--epsil` | number_of_flipped_BITS | # of Random BITS flipped
-`--name` | number_of_flipped_BITS | # of Random BITS flipped
-`--subset` | number_of_random_trials | # of trial repetition
-`--mutate` | Dataset_Target | Available Dataset: NMNIST/MNIST
-`--gen` | Dataset_Path | Please input your local path to the dataset
+`-b`/`--batch` | batch_size | Batch size for dataset, model, GA-subset
+`--epsil` | GA_epsilon | Final number of bits to be converged by GA
+`--name` | Documenting_fitness | Recording the best fitness function per generation 
+`--subset` | number_of_subset_images | No. of Samples for calculating fitness loss function
+`--mutate` | GA_mutate_chance | pixel-wise mutation probability (p=0.05) 
+`--gen` | GA_generations | # of GA_generations
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
