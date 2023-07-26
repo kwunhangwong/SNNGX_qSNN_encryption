@@ -41,6 +41,11 @@ Flag | Metavar | Help
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
 
+You may wish to modify the follwing # commented code in __main__.py to change the search space 
+from all layer to single target layer, and vice versa.
+
+![searchSpace_random_flipping](https://github.com/u3556440/SNN_security/assets/56315946/bead64b1-8743-4b46-930f-82a63cfdfbd3)
+
 
 2. FGSM-based weight Attack:
 
@@ -79,3 +84,8 @@ Flag | Metavar | Help
 `--gen` | GA_generations | # of GA_generations
 `--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
 `--Dpath` | Dataset_Path | Please input your local path to the dataset
+
+You may wish to modify the follwing # commented code in __main__.py to change the search space 
+from all layer to single target layer, and vice versa.
+
+![searchSpace_GA](https://github.com/u3556440/SNN_security/assets/56315946/75ded59a-1b0e-4cc4-b63f-4ccce4139782)
