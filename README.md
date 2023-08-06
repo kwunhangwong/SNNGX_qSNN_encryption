@@ -20,7 +20,7 @@ Currently restricted to internal usage only.**
 ## Quick Start
 
 ```
-git clone https://github.com/u3556440/SNN_security.git
+git clone https://github.com/u3556440/qSNN_encryption.git
 ```
 
 ## Usage
