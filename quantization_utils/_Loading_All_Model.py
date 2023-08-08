@@ -1,0 +1,160 @@
+import torch
+import torch.nn as nn         
+import torch.nn.functional as F
+
+# SNN Hyperparameters
+VTH = 0.3
+DECAY = 0.3
+alpha = 0.5
+
+#Forward Model
+class NMNIST_model(nn.Module):
+    
+    def __init__(self,input_size=2*34*34,num_classes=10,batch_size=64,
+                 T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+        super(NMNIST_model,self).__init__()
+
+        self.batch_size = batch_size
+        self.T_BIN = T_BIN
+        self.device = device
+        
+        self.fc1 = nn.Linear(input_size, 512 , bias = False)
+        self.fc2 = nn.Linear(512, num_classes , bias = False)
+
+    def forward(self,input):
+
+        # Reseting Neurons
+        h1_volt = h1_spike = h1_sumspike = torch.zeros(self.batch_size, 512, device=self.device)
+        h2_volt = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 10, device=self.device)
+
+        for i in range(self.T_BIN): # Every single piece of t belongs to T
+
+            x = input[i,:,:,:,:].reshape(self.batch_size, -1)
+
+            h1_volt, h1_spike = mem_update(self.fc1, x, h1_volt, h1_spike)
+            h1_sumspike = h1_sumspike + h1_spike
+
+            h2_volt, h2_spike = mem_update(self.fc2, h1_spike, h2_volt, h2_spike)
+            h2_sumspike = h2_sumspike + h2_spike
+
+        outputs = h2_sumspike / self.T_BIN
+        return outputs
+    
+
+class ActivationFun(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, input):
+        ctx.save_for_backward(input)
+        return input.gt(VTH).float()      # torch.gt(a,b) compare a and b : return 1/0 spike
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        input, = ctx.saved_tensors
+        grad_input = grad_output.clone()
+        temp = abs(input - VTH) < alpha/2    # lens = alpha/2
+        return grad_input * temp.float() / alpha  # intensify spiking output (Wu et. 2018 w/o 2*len) 
+
+act_fun = ActivationFun.apply
+
+def mem_update(fc, x, volt, spike):
+    volt = volt * DECAY * (1 - spike) + fc(x)
+    spike = act_fun(volt)
+    return volt, spike
+
+
+class MNIST_model(nn.Module):
+    def __init__(self,num_classes=10):
+        super(MNIST_model, self).__init__()
+        self.fc1 = nn.Linear(784, 1000)  # 28*28=784 input features, 128 output features
+        self.fc2 = nn.Linear(1000, 512)
+        self.fc3 = nn.Linear(512, num_classes)  # 128 input features, 10 output features (one for each class)
+        
+    def forward(self, x):
+        x = x.view(x.shape[0],-1)
+        x = self.fc1(x)  # apply ReLU activation to the first layer
+        x = self.fc2(x)  # apply ReLU activation to the first layer
+        x = self.fc3(x)  # output layer
+        return x
+
+
+class DVS128_Model(nn.Module):
+
+    def __init__(self,in_channels=2,num_classes=11,batch_size=8,
+                 T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+        super(DVS128_Model,self).__init__()
+
+        self.batch_size = batch_size
+        self.T_BIN = T_BIN
+        self.device = device
+
+        self.pool  = nn.MaxPool2d(2,2)
+
+        self.conv0 = nn.Conv2d(in_channels, 64, kernel_size=3, stride=1, padding=1, bias=False)  #128x128 
+        self.conv1 = nn.Conv2d( 64 , 128, kernel_size=3,  stride=1, padding=1, bias=False)        #64x64 
+        self.conv2 = nn.Conv2d( 128 , 128, kernel_size=3, stride=1, padding=1, bias=False)       #32x32
+        self.conv3 = nn.Conv2d( 128 , 256, kernel_size=3, stride=2, padding=1, bias=False)       #16x16
+
+        self.fc1   = nn.Linear(4 * 4 * 256, 1024, bias = False)  # 4096*1024 
+        self.fc2   = nn.Linear(1024, num_classes, bias = False) 
+
+    def forward(self,input):
+
+        # Reseting Neurons
+        c0_mem = c0_spike = torch.zeros(self.batch_size, 64, 128, 128,device=self.device)
+        c1_mem = c1_spike = torch.zeros(self.batch_size, 128, 64, 64, device=self.device) 
+        c2_mem = c2_spike = torch.zeros(self.batch_size, 128, 32, 32, device=self.device)
+        c3_mem = c3_spike = torch.zeros(self.batch_size, 256, 8, 8,   device=self.device)
+
+        h1_mem = h1_spike = torch.zeros(self.batch_size, 1024, device=self.device)
+        h2_mem = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 11, device=self.device)
+
+        for i in range(self.T_BIN): # Every single piece of t belongs to T
+            # .view change shape/dtype of tensor #####  -1 squeeze all dimension to 1 
+            # #1 tensor(N,P,H,W,T) to vector, #2 vector to tensor(N,-1)
+            x = input[i,:,:,:,:].to(self.device)
+
+            c0_mem, c0_spike = mem_update(self.conv0, x, c0_mem, c0_spike)
+            p0_spike = self.pool(c0_spike)
+            
+            c1_mem, c1_spike = mem_update(self.conv1, p0_spike, c1_mem, c1_spike) 
+            p1_spike = self.pool(c1_spike) 
+
+            c2_mem, c2_spike = mem_update(self.conv2, p1_spike, c2_mem, c2_spike) 
+            p2_spike = self.pool(c2_spike) 
+
+            c3_mem, c3_spike = mem_update(self.conv3, p2_spike, c3_mem, c3_spike) 
+            p3_spike = self.pool(c3_spike) 
+
+            x = p3_spike.view(self.batch_size, -1)
+
+            h1_mem, h1_spike = mem_update(self.fc1, x, h1_mem, h1_spike)
+            h2_mem, h2_spike = mem_update(self.fc2, h1_spike, h2_mem, h2_spike)
+            h2_sumspike += h2_spike
+
+        # Where SumSpike = (N,#neurons) (2D matrix)/scalar 
+        outputs = h2_sumspike / self.T_BIN
+        # print(torch.mean(outputs,dim=0))
+        return outputs
+
+
+#Model evaluation
+def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+    # Verify on any dataset
+    print("Checking on testing data")
+    # Checking
+    num_correct = 0
+    num_sample = 0
+    model.eval()  
+    with torch.no_grad():   #no need to cal grad
+        for image,label in loader:
+            image= image.to(device)
+            label= label.to(device)
+            # T x N x 2312 => N x 2312
+            out_firing = model(image)
+            #64x10 output
+            _ , prediction = out_firing.max(1)  #64x1 (value in 2nd dimension)
+            num_correct += (prediction==label).sum()
+            num_sample += prediction.size(0)  #64 (value in 1st dimension)
+        print(f'Got {num_correct}/{num_sample} with accuracy {float(num_correct)/float(num_sample)*100:.2f}')
+    model.train() #Set back to train mode
+    return num_correct/num_sample    

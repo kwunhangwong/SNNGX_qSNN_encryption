@@ -56,6 +56,33 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../.
             shuffle=False)
         
         return train_loader, test_loader
+    
+    elif (target == "DVS128_Gesture"):
+
+        sensor_size = tonic.datasets.DVSGesture.sensor_size
+        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
+                                            tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+            
+        trainset = tonic.datasets.DVSGesture(save_to=dataset_path,transform=frame_transform, train=True)
+        testset = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
+
+        train_loader = DataLoader(
+            dataset = trainset,
+            batch_size= batch_size,
+            collate_fn= tonic.collation.PadTensors(batch_first=False),
+            shuffle = True,
+            drop_last=True
+        )
+
+        test_loader = DataLoader(
+            dataset = testset,
+            batch_size= batch_size,
+            collate_fn= tonic.collation.PadTensors(batch_first=False),
+            shuffle = False,
+            drop_last=True
+        )
+
+        return train_loader, test_loader
 
     else:
 
