@@ -77,11 +77,11 @@ class MNIST_model(nn.Module):
         return x
 
 
-class DVS128_Model(nn.Module):
+class DVS128_model(nn.Module):
 
     def __init__(self,in_channels=2,num_classes=11,batch_size=8,
                  T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-        super(DVS128_Model,self).__init__()
+        super(DVS128_model,self).__init__()
 
         self.batch_size = batch_size
         self.T_BIN = T_BIN

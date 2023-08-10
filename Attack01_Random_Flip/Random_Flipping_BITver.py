@@ -2,28 +2,35 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-def Random_flipping_all_Layers(num:int, model:torch.nn.Module):
+import sys
+sys.path.append('../quantization_utils')
 
+from quantization import *
+
+def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
+
+    dim_storage = []
     BIT_array = []
     list_sep = []
-    list_cont = 0
 
     for weight in model.parameters():
 
-            # Transform to array
-            weight1d = (weight.reshape(-1).detach()).tolist()
+        # Transform to array (3D matrix => 1D matrix)
+        weight = weight.data
+        weight1d, bit_shape = quantize_to_binary(weight, qbits)
+        dim_storage += [bit_shape]
 
-            # All layer weights matrix collapse to one 1d array
-            BIT_array += weight1d
+        # All layer weights matrix collapse to one 1d array
+        BIT_array += weight1d.tolist()
 
-            # TAIL positsion of curr layer (not HEAD of next layer)   
-            list_cont += len(weight1d)
-            list_sep += [list_cont]
-    
+        # TAIL positsion of curr layer (not HEAD of next layer)   
+        list_sep += [len(BIT_array)]
+
     new_BIT = np.array(BIT_array).astype(np.float32)
 
     # Generate an array of integers from 0 to 1,000,000 BITS
     integers = np.arange(len(new_BIT))
+    print(f"This model has: {len(new_BIT)} BITS in total")
 
     # Shuffle the array in place
     np.random.shuffle(integers)
@@ -35,20 +42,19 @@ def Random_flipping_all_Layers(num:int, model:torch.nn.Module):
     head = 0
     for layer_idx, weight in enumerate(model.parameters()):
 
-            # Recover 1d array to 2d matrix
+            # Recover 1d array into some layers of 1d array
             tail = list_sep[layer_idx]
+            layer_weight = torch.from_numpy(new_BIT[head:tail])
 
-            layer_weight = new_BIT[head:tail]
-            layer_weight = torch.from_numpy(layer_weight)
-            
             # White-Box: Update weights
-            weight.data = torch.nn.Parameter(layer_weight.reshape(weight.shape[0],weight.shape[1]))
+            quantized_f = binary_to_weight32(weight, qbits, layer_weight, dim_storage[layer_idx])
+            weight.data = quantized_f
             head = tail
 
     return model
 
 
-def Random_flipping_single_layer(num:int, model:nn.Module, layer_type:nn.Module, layer_idx:int):
+def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type:nn.Module, layer_idx:int):
 
     layer_cnt = 0 
     target_layer = None
@@ -62,12 +68,13 @@ def Random_flipping_single_layer(num:int, model:nn.Module, layer_type:nn.Module,
         print("The current layer is:", target_layer)
 
         # Transform to array
-        weight = target_layer.weight
-        weight1d = (weight.reshape(-1).detach()).tolist()
-        new_BIT = np.array(weight1d).astype(np.float32)
+        weight = target_layer.weight.data
+        weight1d, bit_shape = quantize_to_binary(weight, qbits)
+        new_BIT = weight1d.numpy().astype(np.float32)
 
         # Generate an array of integers from 0 to 1,000,000 BITS
         integers = np.arange(len(new_BIT))
+        print(f"This layer has: {len(new_BIT)} BITS in total")
 
         # Shuffle the array in place
         np.random.shuffle(integers)
@@ -78,7 +85,8 @@ def Random_flipping_single_layer(num:int, model:nn.Module, layer_type:nn.Module,
 
         # White-Box: Update weights
         weight1d = torch.from_numpy(new_BIT)
-        target_layer.weight.data = torch.nn.Parameter(weight1d.reshape(target_layer.weight.shape[0],target_layer.weight.shape[1]))
+        quantized_f = binary_to_weight32(weight, qbits, weight1d, bit_shape)
+        target_layer.weight.data = quantized_f
 
         return model
 
