@@ -13,19 +13,20 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     BIT_array = []
     list_sep = []
 
-    for weight in model.parameters():
+    for name, module in model.named_modules():
+        if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
+            print(name)
+            # Transform to array (3D matrix => 1D matrix)
+            weight = module.weight.data
+            weight1d, bit_shape = quantize_to_binary(weight, qbits)
+            dim_storage += [bit_shape]
 
-        # Transform to array (3D matrix => 1D matrix)
-        weight = weight.data
-        weight1d, bit_shape = quantize_to_binary(weight, qbits)
-        dim_storage += [bit_shape]
+            # All layer weights matrix collapse to one 1d array
+            BIT_array += weight1d.tolist()
 
-        # All layer weights matrix collapse to one 1d array
-        BIT_array += weight1d.tolist()
-
-        # TAIL positsion of curr layer (not HEAD of next layer)   
-        list_sep += [len(BIT_array)]
-
+            # TAIL positsion of curr layer (not HEAD of next layer)   
+            list_sep += [len(BIT_array)]
+            
     new_BIT = np.array(BIT_array).astype(np.float32)
 
     # Generate an array of integers from 0 to 1,000,000 BITS

@@ -7,10 +7,11 @@ import csv
 from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted, UNTARGETED_loader
 
 import sys
-sys.path.append('../binarization_models')
+sys.path.append('../quantization_utils')
 
-from _Loading_All_Dataset import *
-from _Loading_All_Model import * 
+from _Loading_All_Model import *
+from _Loading_All_Dataloader import * 
+from quantization import *
 
 ###############
 parser = argparse.ArgumentParser()
