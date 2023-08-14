@@ -1,5 +1,4 @@
 import torch
-
 import datetime
 import argparse
 from Fast_Grad_Sign_BITver import FGSM_Untargeted_BIT_flip
@@ -44,33 +43,47 @@ print(f"Current device is {device}!!")
 # MODEL 1
 if (target_dataset == "NMNIST"):
 
-    weight_path = '../pretrained_binary_weights/pretrained_binarised-nmnist_snn_300e_a92.t7'
+    weight_path = '../pretrained_weights_float32/pre_trained_normal-nmnist_snn_300e.t7'
     model = NMNIST_model(batch_size=batch_size).to(device)
+    checkpoint = torch.load(weight_path,map_location=device)
+    model.load_state_dict(checkpoint['net'])
+    quantize_weights_nbits(model,quantized_bit)
 
     # Dataset (TEST and Subset Loader)
     train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, iteration=10,is_ANN=False)
+    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, qbits=quantized_bit,is_ANN=False)
 
 elif (target_dataset == "MNIST"):
 
     weight_path = '../pretrained_binary_weights/pretrained_binarised-mnist_ann_300e.t7'
     model = MNIST_model().to(device)
+    checkpoint = torch.load(weight_path,map_location=device)
+    model.load_state_dict(checkpoint['net'])
+    quantize_weights_nbits(model,quantized_bit)
 
     # Dataset (TEST and Subset Loader)
     train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, iteration=10,is_ANN=True)
+    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, qbits=quantized_bit,is_ANN=True)
+
+elif (target_dataset == "DVS128_Gesture"):
+
+    weight_path = '../pretrained_weights_float32/pretrained_DVS_csnn_128e_91a.t7'
+    model = DVS128_model().to(device)
+    checkpoint = torch.load(weight_path,map_location=device)
+    model.load_state_dict(checkpoint['net'])
+    quantize_weights_nbits(model,quantized_bit)
+
+    # Dataset (TEST and Subset Loader)
+    train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    FGSM_attack = FGSM_Untargeted_BIT_flip(model, k_top=topk,expected_bits=expected_bit, qbits=quantized_bit,is_ANN=True)
+
 
 else:
     raise ValueError("Random Flipping main: Target dataset not recognized. (NMNIST/MNIST)")
 
 
-# quantized the model first after loading 
-checkpoint = torch.load(weight_path,map_location=device)
-model.load_state_dict(checkpoint['net'])
-quantize_weights_nbits(model,quantized_bit)
-
 # Start testing before FGSM attack
-print(f"Before Untargeted FGSM-Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
+#print(f"Before Untargeted FGSM-Attack: {check_accuracy(test_loader,model)*100:.2f}% Accuracy")
 start = datetime.datetime.now()
 print(datetime.datetime.now())
 
