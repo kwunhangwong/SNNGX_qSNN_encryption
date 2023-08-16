@@ -47,7 +47,11 @@ class FGSM_Untargeted_BIT_flip():
 
             ##### Flip only 2nd bit #####
             new_pos_begin = (float32_pos[i]-1)*self.qbits +1
-            end_pos_begin = (float32_pos[i]-1)*self.qbits +2          
+            end_pos_begin = (float32_pos[i]-1)*self.qbits +2
+
+            ##### Flip only qth bit #####
+            # new_pos_begin = (float32_pos[i])*self.qbits -2 
+            # end_pos_begin = (float32_pos[i])*self.qbits -1           
 
             sequence = torch.arange(new_pos_begin, end_pos_begin)
             sequence_quantized = torch.cat((sequence_quantized, sequence), dim=0)
@@ -90,7 +94,6 @@ class FGSM_Untargeted_BIT_flip():
         # weight1d[q_w_idx_topk] = (((grad_mask ^ model_weight_topk)-1)*-1).to(torch.float)  #                       final_weight: 1, 1, 0, 0
         weight1d[q_w_idx_topk] = (grad_mask ^ model_weight_topk).to(torch.float) 
         weight1d[weight1d.eq(0)]= -1                                              # return from 0.,1. to -1., +1.   
-        # weight1d[(w_idx_topk-1)*self.qbits] *= -1
         model_weight = binary_to_weight32(model_weight, self.qbits, weight1d, bit_shape)
 
         # Update_weight in this layer 
@@ -114,41 +117,35 @@ class FGSM_Untargeted_BIT_flip():
             criterion = nn.MSELoss()
             labels_onehot = F.one_hot(target, 10).float()
 
-        out_firing = self.model(data)   
-        self.loss = criterion(out_firing, labels_onehot)
-
-        for layer in self.model.modules():
-            if isinstance(layer, nn.Conv2d) or isinstance(layer, nn.Linear):
-                if layer.weight.grad is not None:
-                    layer.weight.grad.data.zero_()
-
-        self.loss.backward()
-
         # Cross-layer search attack
-        loss_max = self.loss.item()
         max_loss_module = ''
-        while loss_max <= self.loss.item():
 
-            # iterate all the quantized conv and linear layer
-            for name, layer in self.model.named_modules():
-                if isinstance(layer, nn.Conv2d) or isinstance(layer, nn.Linear):
-                    
-                    # BIT Flip with largest gradient
-                    clean_weight = layer.weight.data.clone()
+        # iterate all the quantized conv and linear layer
+        for name, layer in self.model.named_modules():
+            if isinstance(layer, nn.Conv2d) or isinstance(layer, nn.Linear):
+                print(name)
+                # BIT Flip with largest gradient
+                self.model.zero_grad()
+                clean_weight = layer.weight.data.clone()
 
-                    self.flip_bit(layer)
+                # Change the weight to attacked weight and get loss
+                out_firing = self.model(data)
+                self.loss = criterion(out_firing, labels_onehot)
+                self.loss.backward()
+                print(self.loss.item())
 
-                    # Change the weight to attacked weight and get loss
-                    out_firing = self.model(data) 
-                    self.loss_dict[name] = criterion(out_firing, labels_onehot).item()
+                self.flip_bit(layer)
 
-                    # change the weight back to the clean weight (zero grad)
-                    layer.weight.data = (clean_weight)
+                out_firing = self.model(data)   
+                self.loss = criterion(out_firing, labels_onehot)
+                self.loss_dict[name] = self.loss.item()
 
-            max_loss_module = max(self.loss_dict.items(), key=operator.itemgetter(1))[0]
-            loss_max = self.loss_dict[max_loss_module]          #   max_loss_module is a "name" e.g. nn.Linear
+                print(self.loss.item())
+                layer.weight.data = (clean_weight)
 
-        #check_accuracy(test_loader,self.model)
+        max_loss_module = max(self.loss_dict.items(), key=operator.itemgetter(1))[0]
+        print(max_loss_module)
+
         # Targeting at maximum loss layer
         for name, layer in self.model.named_modules():
             if (name == max_loss_module):
@@ -158,25 +155,22 @@ class FGSM_Untargeted_BIT_flip():
 
                 for i in range(self.iteration):
 
-                    with torch.set_grad_enabled(True):
-                        # layer.weight.grad.data.zero_()
-                        self.model.zero_grad()
+                    self.model.zero_grad()
 
-                        out_firing = self.model(data)     
-                        self.loss = criterion(out_firing, labels_onehot)
-                        self.loss.backward()
+                    out_firing = self.model(data)     
+                    self.loss = criterion(out_firing, labels_onehot)
 
-                        print(self.loss.item())
-                        self.loss_dict[max_loss_module] = self.loss.item()
-                        
-                        attack_weight = self.flip_bit(layer)
-                        self.k_top += 1
+                    self.loss.backward()
+                    self.loss_dict[max_loss_module] = self.loss.item()
+                    
+                    attack_weight = self.flip_bit(layer)
+                    self.k_top += 3
 
-                        print(f"Bits flipped: {(clean_weight != attack_weight).sum()}")
+                    print(f"Bits flipped: {(clean_weight != attack_weight).sum()}")
 
-                        if (clean_weight != attack_weight).sum() >= self.expected_bits:
-                            print(f"iteration :{i}")
-                            break
+                    if (clean_weight != attack_weight).sum() >= self.expected_bits:
+                        print(f"iteration :{i}")
+                        break
 
         print(self.loss_dict)
         return (clean_weight != attack_weight).sum() , len(clean_weight)

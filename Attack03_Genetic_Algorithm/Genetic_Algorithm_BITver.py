@@ -1,20 +1,21 @@
-import random
 import numpy as np
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F 
-from torch.utils.data import DataLoader, Subset
+from torch.utils.data import DataLoader
 
-import tonic
-import torchvision
+import sys
+
+sys.path.append('../quantization_utils')
+from quantization import *
 
 class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     
     def __init__(self, model:nn.Module, UNTARGETED_loader:DataLoader,   # Accepted input: only Single 4-D neuromorphic Data
                  epsil=5000, n_generations=25, population_size=100,      # epsil = L1/Hamming Distance bound
                  retain_best=0.6, mutate_chance=0.05, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
-                 BITS_by_layer=False, layer_type:nn.Module=None, layer_idx:int=None):  
+                 BITS_by_layer:bool=False, layer_type:nn.Module=None, layer_idx:int=None, qbits:int=8):  
         
         # Initialization
         self.model = model.to(device)
@@ -33,9 +34,12 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
 
         # Weights (list_sep => (By_layer)type:nn.Module or (All_layer)type:np)
         self.BITS_by_layer = BITS_by_layer
-        self.BIT_array, self.list_sep, self.target_layer = BITS_To_1D(model, BITS_by_layer=BITS_by_layer, layer_type=layer_type, layer_idx=layer_idx)
+        self.qbits = qbits
+        self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, layer_type=layer_type, 
+                                                                                layer_idx=layer_idx, qbits=self.qbits,
+                                                                                BITS_by_layer=BITS_by_layer)
 
-        # Targeted Attack
+        # Untargeted Attack
         self.UNTARGETED_loader = UNTARGETED_loader
     
 
@@ -69,38 +73,39 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     def updateWeight(self, new_BIT:np):
         
         if (self.BITS_by_layer):
+
             # White-Box: Update weights
+            weight = self.target_layer.weight.data
+
             layer_weight = new_BIT.astype(np.float32)
             weight1d = torch.from_numpy(layer_weight)
-            if isinstance(self.target_layer, nn.Linear):
-                self.target_layer.weight.data = weight1d.reshape(self.target_layer.weight.shape[0],self.target_layer.weight.shape[1]).to(self.device)
-            elif isinstance(self.target_layer, nn.Conv2d):
-                self.target_layer.weight.data = weight1d.reshape(self.target_layer.weight.shape[0],self.target_layer.weight.shape[1],
-                                                                 self.target_layer.weight.shape[2],self.target_layer.weight.shape[3]).to(self.device)
+
+            quantized_f = binary_to_weight32(weight, self.qbits, weight1d, self.dim_storage)
+
+            if isinstance(self.target_layer, nn.Linear) or isinstance(self.target_layer, nn.Conv2d):
+                self.target_layer.weight.data = quantized_f.to(self.device)
             else: 
                 print("Failure: updateWeight(self, newBIT)")
-
+        
         else: 
             head = 0
+            pos = 0
 
-            for layer_idx, layer in enumerate(self.model.modules()):
+            for module in self.model.children():
 
-                # Recover 1d array to 2d matrix
-                tail = self.list_sep[layer_idx]
+                # White-Box: Update weights
+                weight = module.weight.data
+
+                # Recover 1d array into some layers of 1d array
+                tail = self.list_sep[pos]
                 layer_weight = new_BIT[head:tail].astype(np.float32)
                 layer_weight = torch.from_numpy(layer_weight)
 
                 # White-Box: Update weights
-                if isinstance(layer, nn.Linear):
-                    layer.weight.data = layer_weight.reshape(layer.weight.shape[0],layer.weight.shape[1])
-                elif isinstance(layer, nn.Conv2d):
-                    layer.weight.data = layer_weight.reshape(layer.weight.shape[0],layer.weight.shape[1],
-                                                             layer.weight.shape[2],layer.weight.shape[3])
-
-                else:
-                    print("Please ensure all your input layer is of type: nn.Linear/nn.Conv2d!!")
-
+                quantized_f = binary_to_weight32(weight, self.qbits, layer_weight, self.dim_storage[pos])
+                module.weight.data = quantized_f
                 head = tail
+                pos+=1
 
         return None
 
@@ -145,7 +150,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
             # Testing with 128 random image
             self.updateWeight(Pop[i])
             Loss = self.check_accuracy()
-            # print(Loss)
+            print(Loss)
             ####################################
 
             ####################################
@@ -274,64 +279,8 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         self.updateWeight(Curr_Pop[0])
         
         return self.model, self.L1_BIT(Curr_Pop[0]), len(Curr_Pop[0]), np.array(gen_evolution_score)
-    
 
-def UNTARGETED_loader(target:str,num_images:int=128,batch_size:int=64,T_BIN:int=15,dataset_path = "../../BSNN_Project/N-MNIST_TRAINING/dataset"):
-
-    if (target == "NMNIST"):
-        #############################################
-        sensor_size = tonic.datasets.NMNIST.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
-                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
-        test_set = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=False)
-
-        #############################################
-        num_samples = num_images
-        num_total_samples = len(test_set)
-        random_indices = random.sample(range(num_total_samples), num_samples)
-        UNTARGETED_subset = Subset(test_set, random_indices)
-
-        #############################################
-        # Create a DataLoader for the subset
-        UNTARGETED_loader = DataLoader(
-            dataset = UNTARGETED_subset, 
-            batch_size= batch_size, 
-            collate_fn= tonic.collation.PadTensors(batch_first=False),
-            shuffle = False,
-            drop_last=True
-        )
-
-        return UNTARGETED_loader
-
-    elif (target == "MNIST"):
-        ############################################
-        transform = torchvision.transforms.Compose([
-                    torchvision.transforms.ToTensor(),  # convert PIL image to PyTorch tensor
-                    torchvision.transforms.Normalize((0.5,), (0.5,))
-                    ])  
-        test_set = torchvision.datasets.MNIST(root=dataset_path, train=False, download=True, transform=transform)
-        
-        ############################################
-        num_samples = num_images
-        num_total_samples = len(test_set)
-        random_indices = random.sample(range(num_total_samples), num_samples)
-        UNTARGETED_subset = Subset(test_set, random_indices)
-
-        ############################################
-        # No need tonic pad_fn
-        UNTARGETED_loader = DataLoader(dataset = UNTARGETED_subset, 
-                                       batch_size=batch_size, 
-                                       shuffle = False,
-                                       drop_last = True)        
-
-        return UNTARGETED_loader
-    
-    else:
-
-        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/MNIST)")
-
-
-def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, BITS_by_layer=False):
+def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, qbits:int, BITS_by_layer=False):
 
     # BITS for One Layer
     if (BITS_by_layer):
@@ -347,34 +296,39 @@ def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, BITS_by_lay
             print("The current layer is:", target_layer)
 
             # Transform to array
-            weight = target_layer.weight
-            weight1d = (weight.reshape(-1).detach()).tolist()
-            new_BIT = np.array(weight1d).astype(np.float32)
+            weight = target_layer.weight.data
+            weight1d, bit_shape = quantize_to_binary(weight, qbits)
+            new_BIT = weight1d.numpy().astype(np.float32)
 
-            return new_BIT, None, target_layer
+            return new_BIT, bit_shape, None, target_layer
 
         else:
             print("No layer found in the model.")
 
     # BITS for All Layer 
     else:  
+
+        dim_storage = []
         BIT_array = []
         list_sep = []
-        list_cont = 0
 
-        for weight in model.parameters():
+        for name, module in model.named_children():
+            if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
+                print(name)
+                # Transform to array (3D matrix => 1D matrix)
+                weight = module.weight.data
+                weight1d, bit_shape = quantize_to_binary(weight, qbits)
+                dim_storage += [bit_shape]
 
-            # Transform to array
-            weight1d = (weight.reshape(-1).detach()).tolist()
+                # All layer weights matrix collapse to one 1d array
+                BIT_array += weight1d.tolist()
 
-            # All layer weights matrix collapse to one 1d array
-            BIT_array += weight1d
-
-            # TAIL positsion of curr layer (not HEAD of next layer)   
-            list_cont += len(weight1d)
-            list_sep += [list_cont]
-    
+                # TAIL positsion of curr layer (not HEAD of next layer)   
+                list_sep += [len(BIT_array)]
+                
         new_BIT = np.array(BIT_array).astype(np.float32)
         list_sep = np.array(list_sep).astype(np.int32)
 
-        return new_BIT, list_sep, None
+        return new_BIT, dim_storage, list_sep, None
+
+

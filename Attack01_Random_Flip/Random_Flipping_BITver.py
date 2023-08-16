@@ -13,9 +13,8 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     BIT_array = []
     list_sep = []
 
-    for name, module in model.named_modules():
+    for name, module in model.named_children():
         if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
-            print(name)
             # Transform to array (3D matrix => 1D matrix)
             weight = module.weight.data
             weight1d, bit_shape = quantize_to_binary(weight, qbits)
@@ -39,19 +38,23 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     # Select the first (input) elements of the shuffled array
     random_pos = integers[:num]
     new_BIT[random_pos] *= -1
-    
-    head = 0
-    for layer_idx, weight in enumerate(model.parameters()):
 
+    head = 0
+    pos = 0
+    for name, module in model.named_children():
+        if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
+
+            weight = module.weight.data
             # Recover 1d array into some layers of 1d array
-            tail = list_sep[layer_idx]
+            tail = list_sep[pos]
             layer_weight = torch.from_numpy(new_BIT[head:tail])
 
             # White-Box: Update weights
-            quantized_f = binary_to_weight32(weight, qbits, layer_weight, dim_storage[layer_idx])
-            weight.data = quantized_f
+            quantized_f = binary_to_weight32(weight, qbits, layer_weight, dim_storage[pos])
+            module.weight.data = quantized_f
+            
             head = tail
-
+            pos+=1
     return model
 
 
