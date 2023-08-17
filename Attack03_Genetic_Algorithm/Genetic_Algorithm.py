@@ -38,9 +38,6 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, layer_type=layer_type, 
                                                                                 layer_idx=layer_idx, qbits=self.qbits,
                                                                                 BITS_by_layer=BITS_by_layer)
-        
-        # Reduced BIT length
-        self.reduced_BIT_array = Only_kBits(self.BIT_array, qbits)
 
         # Untargeted Attack
         self.UNTARGETED_loader = UNTARGETED_loader
@@ -52,7 +49,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         for i in range(self.population_size):
 
             # Part Two (All flipped weight)
-            BIT_array_adv = self.reduced_BIT_array.copy()
+            BIT_array_adv = self.BIT_array.copy()
             BIT_array_adv *= -1
             BIT_array_adv = self.reduced_mutation(BIT_array_adv)
             adam_and_eve.append(BIT_array_adv)
@@ -63,7 +60,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     def reduced_mutation(self, BIT_array_adv:np): #np.type
 
         # mask equal*1, not equal*-1*0.05(chance)
-        mutate_mask = np.equal(self.reduced_BIT_array,BIT_array_adv).astype(int)   #1111110000000
+        mutate_mask = np.equal(self.BIT_array,BIT_array_adv).astype(int)   #1111110000000
         flipping_position = np.random.binomial(1, self.mutate_chance,len(BIT_array_adv)) * -1  
         mutate_mask[mutate_mask==0] = flipping_position[mutate_mask==0]    #111111000-100-1
         mutate_mask[mutate_mask==0] = 1                                    #111111111-111-1
@@ -81,8 +78,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
             weight = self.target_layer.weight.data
 
             layer_weight = new_BIT.astype(np.float32)
-            layer_weight = self.Only_kBits_Recov(layer_weight)
-            weight1d = torch.from_numpy(layer_weight).to(self.device)
+            weight1d = torch.from_numpy(layer_weight)
 
             quantized_f = binary_to_weight32(weight, self.qbits, weight1d, self.dim_storage)
 
@@ -103,8 +99,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
                 # Recover 1d array into some layers of 1d array
                 tail = self.list_sep[pos]
                 layer_weight = new_BIT[head:tail].astype(np.float32)
-                layer_weight = self.Only_kBits_Recov(layer_weight)
-                layer_weight = torch.from_numpy(layer_weight).to(self.device)
+                layer_weight = torch.from_numpy(layer_weight)
 
                 # White-Box: Update weights
                 quantized_f = binary_to_weight32(weight, self.qbits, layer_weight, self.dim_storage[pos])
@@ -116,7 +111,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
 
     
     def L1_BIT(self, adv_BIT):
-        return np.not_equal(self.reduced_BIT_array,adv_BIT).astype(int).sum()
+        return np.not_equal(self.BIT_array,adv_BIT).astype(int).sum()
 
 
     #Model evaluation
@@ -155,7 +150,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
             # Testing with 128 random image
             self.updateWeight(Pop[i])
             Loss = self.check_accuracy()
-            # print(Loss)
+            print(Loss)
             ####################################
 
             ####################################
@@ -197,7 +192,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
 
         """
         # K1-point Cross-over
-        K1 = int(len(self.reduced_BIT_array)/2)
+        K1 = int(len(self.BIT_array)/2)
         child1, child2 = np.copy(mom), np.copy(dad)
         child1[:K1] = dad[:K1]
         child2[:K1] = mom[:K1]
@@ -205,15 +200,15 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
 
         """
         # K2-point Cross-over
-        K1 = int(len(self.reduced_BIT_array)/3)
-        K2 = int(len(self.reduced_BIT_array)/3)*2
+        K1 = int(len(self.BIT_array)/3)
+        K2 = int(len(self.BIT_array)/3)*2
         child1, child2 = np.copy(mom), np.copy(dad)
         child1[K1:K2] = dad[K1:K2]
         child2[K1:K2] = mom[K1:K2]
         """
         
         # Binomial Kn-point Cross-over
-        select_mask = np.random.binomial(1, 0.5, size=len(self.reduced_BIT_array)).astype('bool')
+        select_mask = np.random.binomial(1, 0.5, size=len(self.BIT_array)).astype('bool')
         child1, child2 = np.copy(mom), np.copy(dad)
         child1[select_mask] = dad[select_mask]
         child2[select_mask] = mom[select_mask]
@@ -221,23 +216,6 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         
         return child1, child2
     
-    def Only_kBits_Recov(self,r_adv_Arr:np): 
-
-        pos_array = np.arange(len(self.BIT_array))
-        adv_Array = self.BIT_array.copy()
-
-        # Only Sign bit 0,4,8
-        adv_Array[(pos_array % self.qbits == 0)] = r_adv_Arr
-
-        # Only Largest bit
-        # adv_Array[(pos_array % self.qbits == 1)] = r_adv_Arr
-
-        # Most critical 2 bits (Sign & Largest)
-        # adv_Array[np.logical_or((pos_array % self.qbits == 0),(pos_array % self.qbits == 1))] = r_adv_Arr
-
-        return adv_Array
-
-
 
     def main(self):
         
@@ -320,7 +298,7 @@ def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, qbits:int, 
             # Transform to array
             weight = target_layer.weight.data
             weight1d, bit_shape = quantize_to_binary(weight, qbits)
-            new_BIT = weight1d.to('cpu').numpy().astype(np.float32)
+            new_BIT = weight1d.numpy().astype(np.float32)
 
             return new_BIT, bit_shape, None, target_layer
 
@@ -352,23 +330,5 @@ def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, qbits:int, 
         list_sep = np.array(list_sep).astype(np.int32)
 
         return new_BIT, dim_storage, list_sep, None
-
-# Concern only worst precision bits, 
-# n bits -> k most critical bits (from left), k ∈ [1,n]
-def Only_kBits(BIT_array:np,qbits:int):
-    pos_array = np.arange(len(BIT_array))
-    
-    # Only Sign bit 0,4,8
-    selected_elements = BIT_array[(pos_array % qbits == 0)]
-
-    # Only Largest bit
-    # selected_elements = BIT_array[(pos_array % qbits == 1)]
-
-    # Most critical 2 bits (Sign & Largest)
-    # selected_elements = BIT_array[np.logical_or((pos_array % qbits == 0),(pos_array % qbits == 1))]
-
-    return selected_elements
-
-
 
 

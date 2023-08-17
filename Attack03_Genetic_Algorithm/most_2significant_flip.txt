@@ -1,0 +1,2001 @@
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.96875
+binary_to_weight32: -8.0
+0.9375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+Finish Gen: 151
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+Finish Gen: 152
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+Finish Gen: 153
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+Finish Gen: 154
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+Finish Gen: 155
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+Finish Gen: 156
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+Finish Gen: 157
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9375
+Finish Gen: 158
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+Finish Gen: 159
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.953125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+0.9609375
+binary_to_weight32: -8.0
+0.9453125
+binary_to_weight32: -8.0
+2023-08-17 19:51:58.758890
+Checking on testing data
+Got 9678/9984 with accuracy 96.94
+After Untargeted Attack: 96.94% Accuracy, BITS Flipped:10 out of 10240
+Time = 2:44:33.984394
+[9.67000000e+03 9.16800000e+03 8.72600000e+03 8.26200000e+03
+ 7.81300000e+03 7.43200000e+03 7.07500000e+03 6.73000000e+03
+ 6.37400000e+03 6.05300000e+03 5.76600000e+03 5.59436719e+03
+ 5.34132031e+03 5.15521875e+03 4.85203125e+03 4.71325000e+03
+ 4.44398438e+03 4.42360156e+03 4.23146875e+03 4.16022656e+03
+ 3.98331250e+03 3.88462500e+03 3.81631250e+03 3.56621094e+03
+ 3.38860938e+03 3.38860938e+03 3.17240625e+03 3.15875000e+03
+ 3.07863281e+03 2.95322656e+03 2.69638281e+03 2.69638281e+03
+ 2.63387500e+03 2.47428906e+03 2.43840625e+03 2.37352344e+03
+ 2.30625000e+03 2.20876562e+03 2.08710938e+03 2.06681250e+03
+ 1.94134375e+03 1.81012500e+03 1.78498438e+03 1.74937500e+03
+ 1.71281250e+03 1.58862500e+03 1.55210156e+03 1.50664062e+03
+ 1.41644531e+03 1.37131250e+03 1.33619531e+03 1.30162500e+03
+ 1.24218750e+03 1.19519531e+03 1.12947656e+03 1.10687500e+03
+ 1.06190625e+03 1.03116406e+03 9.99882812e+02 9.46093750e+02
+ 8.93921875e+02 8.93921875e+02 8.42695312e+02 8.42695312e+02
+ 8.19882812e+02 8.02507812e+02 7.71015625e+02 7.32046875e+02
+ 6.82500000e+02 6.45312500e+02 6.27843750e+02 5.99437500e+02
+ 5.88234375e+02 5.67656250e+02 5.39156250e+02 5.36460938e+02
+ 5.15562500e+02 4.90843750e+02 4.72906250e+02 4.51718750e+02
+ 4.26765625e+02 4.26304688e+02 4.07000000e+02 4.02765625e+02
+ 3.82429688e+02 3.72968750e+02 3.56906250e+02 3.35296875e+02
+ 3.30468750e+02 3.15046875e+02 3.07335938e+02 3.04093750e+02
+ 2.88437500e+02 2.78906250e+02 2.71226562e+02 2.52062500e+02
+ 2.44664062e+02 2.34968750e+02 2.32390625e+02 2.24218750e+02
+ 2.15015625e+02 2.06718750e+02 1.95140625e+02 1.86468750e+02
+ 1.80304688e+02 1.80265625e+02 1.71000000e+02 1.64187500e+02
+ 1.62890625e+02 1.50445312e+02 1.47835938e+02 1.38523438e+02
+ 1.38523438e+02 1.18750000e+02 1.18750000e+02 1.18750000e+02
+ 1.14843750e+02 1.14125000e+02 1.08843750e+02 1.03898438e+02
+ 9.67343750e+01 9.54062500e+01 9.22500000e+01 9.19218750e+01
+ 8.26953125e+01 8.26953125e+01 8.26953125e+01 7.56640625e+01
+ 7.48203125e+01 7.30312500e+01 6.88750000e+01 6.88593750e+01
+ 6.37812500e+01 6.30000000e+01 5.41875000e+01 5.23125000e+01
+ 5.23125000e+01 5.21015625e+01 4.84375000e+01 4.27968750e+01
+ 4.27968750e+01 4.11796875e+01 3.51562500e+01 3.11250000e+01
+ 2.91796875e+01 2.53906250e+01 2.35312500e+01 2.14843750e+01
+ 9.53125000e+00 9.53125000e+00 9.45312500e+00 9.45312500e+00
+ 9.45312500e+00 9.45312500e+00 9.45312500e+00 9.45312500e+00
+ 9.45312500e+00 9.45312500e+00 9.45312500e+00 9.45312500e+00]
+(SNN_env) edwin@user-MS-7D70:~/code/qSNN_encryption/Attack03_Genetic_Algorithm$ tmux capture-pane -pS -5000 > MNIST_activity.txt
+
+

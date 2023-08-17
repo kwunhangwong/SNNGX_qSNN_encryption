@@ -54,6 +54,8 @@ def quantize_to_binary(weight, nbits):
     weight_max = torch.max(weight)
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
 
+    # print(f"quantize_to_binary: {fixed_exp}")
+
     # quantize to binary
     binary = float2bin(weight,fixed_exp,nbits).to(torch.int8)
 
@@ -74,6 +76,8 @@ def binary_to_weight32(weight, nbits, input_tensor, bit_shape):
     # get weights exponential (weight = layer.weight.data)
     weight_max = torch.max(weight)
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
+
+    # print(f"binary_to_weight32: {fixed_exp}")
 
     # change the bin tensor from {-1,+1} to {0,1}
     input_tensor = ((input_tensor + 1)/2).to(torch.int8)
