@@ -23,11 +23,13 @@ parser.add_argument('-q','--qbit',type=int,metavar='target_quantized_bits',defau
 
 ###############
 parser.add_argument('--subset',type=int,metavar='Number of subset images',default=128, help = 'No. of Samples for calculating fitness function') 
+parser.add_argument('-ub','--ubatch',type=int,metavar='Untargeted batch_size',default=64,help='For GA-subset only') 
+
 parser.add_argument('--mutate',type=float,metavar='GA_mutate_chance',default=0.005) 
 parser.add_argument('--gen',type=int,metavar='# GA_generations',default=160) 
 
 ###############
-parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataset, model, GA-subset') 
+parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help='For dataloader, model only') 
 parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
                     help= 'Please input: 1. "NMNIST" 2. "MNIST" 3. DVS_Gesture only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
@@ -40,6 +42,8 @@ name = args.name
 quantized_bit = args.qbit
 
 num_images = args.subset
+attack_batch = args.ubatch
+
 mutate_chance = args.mutate
 n_generations = args.gen
 
@@ -64,19 +68,7 @@ if (target_dataset == "NMNIST"):
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
-
-elif (target_dataset == "MNIST"):
-
-    weight_path = 'Please load an MNIST weight into the directory'
-    model = MNIST_model().to(device)
-    checkpoint = torch.load(weight_path,map_location=device)
-    model.load_state_dict(checkpoint['net'])
-    quantize_weights_nbits(model,quantized_bit)
-
-    # Dataset (TEST and Subset Loader)
-    _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=attack_batch,T_BIN=15,dataset_path =dataset_path)
 
 elif (target_dataset == "DVS128_Gesture"):
 
@@ -88,10 +80,10 @@ elif (target_dataset == "DVS128_Gesture"):
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=attack_batch,T_BIN=15,dataset_path =dataset_path)
 
 else:
-    raise ValueError("GA main: Target dataset not recognized. (NMNIST/MNIST)")
+    raise ValueError("GA main: Target dataset not recognized. (NMNIST/DVSGesture)")
 
 
 print(f"Before Untargeted Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
