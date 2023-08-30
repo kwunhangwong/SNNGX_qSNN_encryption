@@ -27,6 +27,8 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
             list_sep += [len(BIT_array)]
             
     new_BIT = np.array(BIT_array).astype(np.float32)
+    raw_BIT = new_BIT.copy()
+    new_BIT = Only_kBits(new_BIT,qbits)
 
     # Generate an array of integers from 0 to 1,000,000 BITS
     integers = np.arange(len(new_BIT))
@@ -39,6 +41,8 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     random_pos = integers[:num]
     new_BIT[random_pos] *= -1
 
+    new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
+
     head = 0
     pos = 0
     for name, module in model.named_children():
@@ -47,7 +51,7 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
             weight = module.weight.data
             # Recover 1d array into some layers of 1d array
             tail = list_sep[pos]
-            layer_weight = torch.from_numpy(new_BIT[head:tail])
+            layer_weight = torch.from_numpy(new_BIT[head:tail]).to(torch.device('cuda'))
 
             # White-Box: Update weights
             quantized_f = binary_to_weight32(weight, qbits, layer_weight, dim_storage[pos])
@@ -74,7 +78,10 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         # Transform to array
         weight = target_layer.weight.data
         weight1d, bit_shape = quantize_to_binary(weight, qbits)
-        new_BIT = weight1d.numpy().astype(np.float32)
+        new_BIT = weight1d.to(torch.device('cpu')).numpy().astype(np.float32)
+
+        raw_BIT = new_BIT.copy()
+        new_BIT = Only_kBits(new_BIT,qbits)
 
         # Generate an array of integers from 0 to 1,000,000 BITS
         integers = np.arange(len(new_BIT))
@@ -88,7 +95,9 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         new_BIT[random_pos] *= -1
 
         # White-Box: Update weights
-        weight1d = torch.from_numpy(new_BIT)
+        new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
+
+        weight1d = torch.from_numpy(new_BIT).to(torch.device('cuda'))
         quantized_f = binary_to_weight32(weight, qbits, weight1d, bit_shape)
         target_layer.weight.data = quantized_f
 
@@ -96,3 +105,35 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
 
     else:
         print("No layer found in the model.")
+
+
+def Only_kBits(BIT_array:np,qbits:int):
+    pos_array = np.arange(len(BIT_array))
+    
+    # Only Sign bit 0,4,8
+    selected_elements = BIT_array[(pos_array % qbits == 0)]
+
+    # Only Largest bit
+    # selected_elements = BIT_array[(pos_array % qbits == 1)]
+
+    # Most critical 2 bits (Sign & Largest)
+    # selected_elements = BIT_array[np.logical_or((pos_array % qbits == 0),(pos_array % qbits == 1))]
+
+    return selected_elements
+
+
+def Only_kBits_Recov(raw_Arr,r_adv_Arr:np,qbits): 
+
+    pos_array = np.arange(len(raw_Arr))
+    adv_Array = raw_Arr.copy()
+
+    # Only Sign bit 0,4,8
+    adv_Array[(pos_array % qbits == 0)] = r_adv_Arr
+
+    # Only Largest bit
+    # adv_Array[(pos_array % self.qbits == 1)] = r_adv_Arr
+
+    # Most critical 2 bits (Sign & Largest)
+    # adv_Array[np.logical_or((pos_array % self.qbits == 0),(pos_array % self.qbits == 1))] = r_adv_Arr
+
+    return adv_Array

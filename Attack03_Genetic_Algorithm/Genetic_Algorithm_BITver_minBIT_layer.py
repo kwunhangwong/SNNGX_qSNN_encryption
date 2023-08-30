@@ -15,8 +15,8 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
     def __init__(self, model:nn.Module, UNTARGETED_loader:DataLoader,   # Accepted input: only Single 4-D neuromorphic Data
                  epsil=5000, n_generations=25, population_size=100,      # epsil = L1/Hamming Distance bound
                  retain_best=0.6, mutate_chance=0.05, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
-                 BITS_by_layer:bool=False, layer_type:nn.Module=None, layer_idx:int=None, qbits:int=8):  
-        
+                 BITS_by_layer:bool=False, qbits:int=8):  
+
         # Initialization
         self.model = model.to(device)
         self.epsil = epsil
@@ -35,9 +35,8 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         # Weights (list_sep => (By_layer)type:nn.Module or (All_layer)type:np)
         self.BITS_by_layer = BITS_by_layer
         self.qbits = qbits
-        self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, layer_type=layer_type, 
-                                                                                layer_idx=layer_idx, qbits=self.qbits,
-                                                                                BITS_by_layer=BITS_by_layer)
+        self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, qbits=self.qbits,
+                                                                                        BITS_by_layer=BITS_by_layer)
         
         # Reduced BIT length
         self.reduced_BIT_array = Only_kBits(self.BIT_array, qbits)
@@ -92,12 +91,12 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
                 print("Failure: updateWeight(self, newBIT)")
         
         else: 
+            
             head = 0
             pos = 0
-
             for module in self.model.children():
                 if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
-
+                    
                     # White-Box: Update weights
                     weight = module.weight.data
 
@@ -115,9 +114,10 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
                     # White-Box: Update weights
                     quantized_f = binary_to_weight32(weight, self.qbits, weight1d, self.dim_storage[pos])
                     module.weight.data = quantized_f
+
+                    # update positional array
                     head = tail
                     pos+=1
-
 
         return None
 
@@ -309,20 +309,24 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         
         return self.model, self.L1_BIT(Curr_Pop[0]), len(Curr_Pop[0]), np.array(gen_evolution_score)
 
-def BITS_To_1D(model:nn.Module, layer_type:nn.Module, layer_idx:int, qbits:int, BITS_by_layer=False):
+def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False):
 
-    # BITS for One Layer
+    # BITS for smallest weight Layer
     if (BITS_by_layer):
-        layer_cnt = 0 
+        min_cnt = float('inf')
         target_layer = None
-        for child in model.children():
-            if isinstance(child, layer_type):
-                layer_cnt += 1
-                if (layer_cnt==layer_idx):
+        for name,child in model.named_children():
+            if isinstance(child, nn.Linear) or isinstance(child, nn.Conv2d):
+                print(name)
+                print("::")
+                layer_cnt = len(child.weight.data.view(-1))
+                print(layer_cnt)
+                if (layer_cnt < min_cnt):
+                    min_cnt = layer_cnt
                     target_layer = child
 
         if target_layer is not None:
-            print("The current layer is:", target_layer)
+            print("The minimum bits layer is:", target_layer)
 
             # Transform to array
             weight = target_layer.weight.data

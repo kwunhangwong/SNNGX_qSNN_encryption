@@ -140,6 +140,31 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
 
         return UNTARGETED_loader
     
+    elif (target == "DVS128_Gesture"):
+        #############################################
+        sensor_size = tonic.datasets.DVSGesture.sensor_size
+        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
+                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        test_set = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
+            
+        #############################################
+        num_samples = num_images
+        num_total_samples = len(test_set)
+        random_indices = random.sample(range(num_total_samples), num_samples)
+        UNTARGETED_subset = Subset(test_set, random_indices)
+
+        #############################################
+        # Create a DataLoader for the subset
+        UNTARGETED_loader = DataLoader(
+            dataset = UNTARGETED_subset, 
+            batch_size= batch_size, 
+            collate_fn= tonic.collation.PadTensors(batch_first=False),
+            shuffle = False,
+            drop_last=True
+        )
+
+        return UNTARGETED_loader
+    
     else:
 
         raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/MNIST)")

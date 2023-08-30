@@ -87,10 +87,10 @@ for i in range(random_trial):
     print(f"Flipping {i+1}th times: ")
 
     # All Layer
-    model = Random_flipping_all_Layers(num_bit,model,quantized_bit).to(device)
+    # model = Random_flipping_all_Layers(num_bit,model,quantized_bit).to(device)
 
     # Single Layer
-    # model = Random_flipping_single_layer(num_bit,model,quantized_bit,nn.Linear,2).to(device)
+    model = Random_flipping_single_layer(num_bit,model,quantized_bit,nn.Linear,1).to(device)
 
     acc_list+=[check_accuracy(test_loader,model).item()]
 
@@ -104,7 +104,7 @@ print(end)
 print(f'Time: {end-start}')
 
 # Save file 
-name = f'flipping_{num_bit}_bit_Alllayer'
+name = f'flipping_{num_bit}_bit_layer2'
 
 with open(name + '.csv', 'w', newline='') as file:
     writer = csv.writer(file)

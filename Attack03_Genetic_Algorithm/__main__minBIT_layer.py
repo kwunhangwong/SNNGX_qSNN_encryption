@@ -4,7 +4,7 @@ import torch.nn as nn
 import datetime
 import argparse
 import csv
-from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted
+from Attack03_Genetic_Algorithm.Genetic_Algorithm_BITver_minBIT_layer import GA_BIT_flip_Untargeted
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]= "1"
@@ -92,7 +92,7 @@ print(datetime.datetime.now())
 with torch.no_grad():   #no need to cal grad
     Untargeted_attack = GA_BIT_flip_Untargeted(model, UNTARGETED_loader, 
                                                epsil=epsil, mutate_chance=mutate_chance, n_generations=n_generations,
-                                               BITS_by_layer=True, layer_type=nn.Conv2d, layer_idx=1, qbits=quantized_bit)
+                                               BITS_by_layer=True, qbits=quantized_bit)
     adv_model, advBIT, numBIT ,fitness = Untargeted_attack.main()
     
 end = datetime.datetime.now()
