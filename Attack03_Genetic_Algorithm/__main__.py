@@ -3,7 +3,6 @@ import torch.nn as nn
 
 import datetime
 import argparse
-import csv
 from Genetic_Algorithm_BITver import GA_BIT_flip_Untargeted
 
 import os
@@ -92,7 +91,7 @@ print(datetime.datetime.now())
 with torch.no_grad():   #no need to cal grad
     Untargeted_attack = GA_BIT_flip_Untargeted(model, UNTARGETED_loader, 
                                                epsil=epsil, mutate_chance=mutate_chance, n_generations=n_generations,
-                                               BITS_by_layer=True, layer_type=nn.Conv2d, layer_idx=1, qbits=quantized_bit)
+                                               BITS_by_layer=True, layer_type=nn.Linear, layer_idx=2, qbits=quantized_bit)
     adv_model, advBIT, numBIT ,fitness = Untargeted_attack.main()
     
 end = datetime.datetime.now()
@@ -102,7 +101,16 @@ print(f"Time = {end-start}")
 
 print(fitness)
 
-# Save file 
-with open(name + '.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(fitness)
+# Save adversarial model
+print("Adversarial model success......")
+names = target_dataset
+state = {
+    'net': model.state_dict(),
+    'advBIT': advBIT,
+    'numBIT': numBIT,
+    'fitness_score': fitness,
+}
+
+if (check_accuracy(test_loader,adv_model)*100<35):
+    torch.save(state, './flipped_8samples' + names +'.t7')
+

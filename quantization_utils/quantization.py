@@ -36,7 +36,7 @@ def quantize_weights_nbits(model, nbits):
             print(f"The current layer is: {name}: ")
             weight = module.weight.data
             # step size
-            weight_max = torch.max(weight)
+            weight_max = torch.max(torch.abs(weight))
             fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
 
             # quantize to binary, and back to floating pt
@@ -51,7 +51,7 @@ def quantize_weights_nbits(model, nbits):
 def quantize_to_binary(weight, nbits):
 
     # get weights exponential 
-    weight_max = torch.max(weight)
+    weight_max = torch.max(torch.abs(weight))
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
 
     # print(f"quantize_to_binary: {fixed_exp}")
@@ -61,6 +61,7 @@ def quantize_to_binary(weight, nbits):
 
     # return the shape of the binary vector
     bit_shape = binary.shape
+    print(f'the current bit_shape: {bit_shape}')
 
     # number of weights * nbits
     all_binary_tensor = binary.view(-1).detach().clone()
@@ -74,7 +75,7 @@ def quantize_to_binary(weight, nbits):
 def binary_to_weight32(weight, nbits, input_tensor, bit_shape):
 
     # get weights exponential (weight = layer.weight.data)
-    weight_max = torch.max(weight)
+    weight_max = torch.max(torch.abs(weight))
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
 
     # print(f"binary_to_weight32: {fixed_exp}")

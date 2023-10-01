@@ -3,8 +3,7 @@ import torch.nn as nn
 
 import datetime
 import argparse
-import csv
-from Attack03_Genetic_Algorithm.Genetic_Algorithm_BITver_minBIT_layer import GA_BIT_flip_Untargeted
+from Genetic_Algorithm_BITver_minBIT_layer import GA_BIT_flip_Untargeted
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]= "1"
@@ -97,12 +96,20 @@ with torch.no_grad():   #no need to cal grad
     
 end = datetime.datetime.now()
 print(datetime.datetime.now())
-print(f"After Untargeted Attack: {check_accuracy(test_loader,adv_model)*100:.2f}% Accuracy, BITS Flipped:{advBIT} out of {numBIT}")
+final_result = check_accuracy(test_loader,adv_model)
+print(f"After Untargeted Attack: {final_result*100:.2f}% Accuracy, BITS Flipped:{advBIT} out of {numBIT}")
 print(f"Time = {end-start}")
 
 print(fitness)
 
-# Save file 
-with open(name + '.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(fitness)
+# Save adversarial model
+print("Adversarial model saving......")
+names = target_dataset
+state = {
+    'net': model.state_dict(),
+    'advBIT': advBIT,
+    'numBIT': numBIT,
+    'fitness_score': fitness,
+}
+if (final_result*100 <30):
+    torch.save(state, './flipped_' + names +'.t7')

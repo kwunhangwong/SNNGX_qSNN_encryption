@@ -37,7 +37,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
         self.qbits = qbits
         self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, qbits=self.qbits,
                                                                                         BITS_by_layer=BITS_by_layer)
-        
+
         # Reduced BIT length
         self.reduced_BIT_array = Only_kBits(self.BIT_array, qbits)
 
@@ -162,7 +162,7 @@ class GA_BIT_flip_Untargeted: #Untargeted: Gen 25, eps = 5000, 100/10000
             # Testing with 128 random image
             self.updateWeight(Pop[i])
             Loss = self.check_accuracy()
-            # print(Loss)
+            print(Loss)
             ####################################
 
             ####################################
@@ -317,8 +317,6 @@ def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False):
         target_layer = None
         for name,child in model.named_children():
             if isinstance(child, nn.Linear) or isinstance(child, nn.Conv2d):
-                print(name)
-                print("::")
                 layer_cnt = len(child.weight.data.view(-1))
                 print(layer_cnt)
                 if (layer_cnt < min_cnt):

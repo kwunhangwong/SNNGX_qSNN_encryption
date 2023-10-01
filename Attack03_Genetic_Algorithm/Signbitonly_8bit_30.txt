@@ -1,0 +1,1887 @@
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 04:28:33.248947
+Checking on testing data
+Got 1967/10000 with accuracy 19.67
+After Untargeted Attack: 19.67% Accuracy, BITS Flipped:36 out of 5120
+Time = 0:09:58.790904
+[4830.  4573.  4335.  4100.  3900.  3709.  3504.  3345.  3186.  3030.
+ 2867.  2721.  2569.  2463.  2357.  2240.  2128.  2046.  1978.  1846.
+ 1844.  1754.  1735.  1647.  1430.  1430.  1430.  1354.  1327.  1327.
+ 1320.  1275.  1248.  1093.  1093.  1093.  1045.  1045.  1001.   959.
+  915.   864.   859.   823.   788.   759.   730.   700.   676.   638.
+  610.   578.   572.   545.   534.   513.   490.   490.   468.   448.
+  434.   421.   407.   395.   395.   374.   358.   340.   330.   319.
+  307.   303.   288.   275.   264.   254.   253.   253.   230.   225.
+  213.   210.   200.   197.   188.   174.   174.   173.   162.   160.
+  157.   147.   142.   137.   131.   130.   125.   120.   117.   109.
+  109.   103.   100.    95.    91.    91.    87.    85.5   81.    74.
+   74.    73.    68.    68.    65.    64.    60.    60.    60.    58.
+   55.    52.    52.    49.    35.    30.    25.    15.    10.     5.
+    5.     5.     5.     0.     0.     0.     0.     0.     0.     0.
+    0.     0.     0.     0.     0.     0.     0.     0.     0.     0.
+    0.     0.     0.     0.     0.     0.     0.     0.     0.     0. ]
+Adversarial model success......
+Checking on testing data
+Got 1967/10000 with accuracy 19.67
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 04:31:10.161041
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 04:41:26.568420
+Checking on testing data
+Got 7558/10000 with accuracy 75.58
+After Untargeted Attack: 75.58% Accuracy, BITS Flipped:36 out of 5120
+Time = 0:10:16.407378
+[4826.    4582.    4346.    4109.    3901.    3688.    3508.    3323.
+ 3155.    2987.    2839.    2709.    2581.    2436.    2334.    2267.
+ 2193.    2083.    2003.    1888.    1826.    1736.    1710.    1670.
+ 1647.    1571.    1511.    1450.    1398.    1352.    1283.    1228.
+ 1228.    1170.    1149.    1091.    1044.    1041.     981.     945.
+  913.     902.     851.     844.     791.     753.     718.     708.
+  684.     664.     640.     612.     593.     585.     555.     533.
+  511.     496.     484.     471.     447.     436.     413.     404.
+  384.     376.     358.     350.     342.     342.     329.625  311.
+  311.     301.5    276.     276.     266.     262.     258.75   253.
+  245.     236.25   225.     220.5    209.25   206.25   187.875  187.875
+  185.625  176.625  173.25   169.875  158.75   155.     150.     143.75
+  138.75   135.     129.375  119.25   116.25   111.375  106.25   102.5
+  101.25   100.      93.75    90.      85.25    83.75    81.25    78.75
+   77.      72.875   40.      35.      35.      35.      25.      25.
+   20.      20.      20.      20.      20.      20.      20.      20.
+   15.      15.      15.      15.      15.      15.      15.      15.
+   15.      15.      15.      15.      15.      15.      15.      15.
+   15.      15.      15.      15.      15.      15.      15.      15.
+   15.      15.      15.      15.      15.      15.      15.      15.   ]
+Adversarial model success......
+Checking on testing data
+Got 7558/10000 with accuracy 75.58
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 04:43:59.162094
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 04:58:51.694040
+Checking on testing data
+Got 3778/10000 with accuracy 37.78
+After Untargeted Attack: 37.78% Accuracy, BITS Flipped:50 out of 5120
+Time = 0:14:52.531947
+[4816.   4573.   4337.   4112.   3902.   3698.   3506.   3300.   3162.
+ 3004.   2834.   2696.   2571.   2453.   2334.   2258.   2136.   2043.
+ 1952.   1941.   1852.   1757.   1723.   1659.   1593.   1535.   1484.
+ 1415.   1405.   1346.   1252.   1232.   1157.   1140.   1118.   1063.
+ 1045.   1008.    974.    931.    877.    855.    834.    788.    788.
+  771.    731.    693.    655.    646.    623.    591.    569.    558.
+  535.    517.    492.    473.    451.    435.    424.    399.    392.
+  375.    354.    342.    339.    328.    312.    297.    286.    272.
+  262.    252.    243.    230.    221.    211.    200.    198.    187.
+  180.    176.    170.    157.    157.    152.    144.    144.    135.
+  131.    131.    125.    120.    114.    112.    105.    100.     95.
+   90.     81.     81.     81.     75.     72.     69.     66.     64.
+   63.     25.     25.     12.5    12.5    12.5    12.5     6.25    0.
+    0.      0.      0.      0.      0.      0.      0.      0.      0.
+    0.      0.      0.      0.      0.      0.      0.      0.      0.
+    0.      0.      0.      0.      0.      0.      0.      0.      0.
+    0.      0.      0.      0.      0.      0.      0.      0.      0.
+    0.      0.      0.      0.      0.      0.      0.  ]
+Adversarial model success......
+Checking on testing data
+Got 3778/10000 with accuracy 37.78
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 05:01:16.923195
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 05:12:42.395128
+Checking on testing data
+Got 9096/10000 with accuracy 90.96
+After Untargeted Attack: 90.96% Accuracy, BITS Flipped:36 out of 5120
+Time = 0:11:25.471934
+[4831.    4586.    4340.    4115.    3906.    3703.    3525.    3344.
+ 3187.    3020.    2836.    2726.    2593.    2477.    2342.    2240.
+ 2129.    2035.    1980.    1849.    1846.    1704.    1704.    1603.
+ 1540.    1505.    1453.    1384.    1289.    1289.    1257.    1257.
+ 1205.    1151.    1087.    1062.    1011.     991.     953.     914.
+  874.125  836.     823.     809.     771.     743.     725.     711.
+  680.     654.     648.     614.     596.     574.875  570.375  550.
+  527.625  514.125  491.625  481.5    467.     445.     432.     428.75
+  412.5    405.     394.875  372.375  357.75   342.     324.     324.
+  298.125  296.25   277.875  267.75   256.5    252.     242.5    237.5
+  221.625  221.625  220.5    196.875  182.25   182.25   182.25   177.5
+  168.75   165.375  158.75   155.25   151.25   130.5    130.5    126.25
+  122.625  122.625  120.     113.75   111.25   101.75   100.375   91.25
+   90.75    50.      43.75    37.5     37.5     31.25    31.25    31.25
+   31.25    31.25    31.25    25.      25.      18.75    18.75    18.75
+   18.75    18.75    18.75    12.5     12.5     12.5     12.5     12.5
+   12.5     12.5     12.5     12.5     12.5     12.5     12.5     12.5
+   12.5     12.5     12.5     12.5     12.5     12.5     12.5     12.5
+   12.5     12.5     12.5     12.5     12.5     12.5     12.5     12.5
+   12.5     12.5     12.5     12.5     12.5     12.5     12.5     12.5  ]
+Adversarial model success......
+Checking on testing data
+Got 9096/10000 with accuracy 90.96
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 05:15:22.852476
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 05:24:01.108401
+Checking on testing data
+Got 4160/10000 with accuracy 41.60
+After Untargeted Attack: 41.60% Accuracy, BITS Flipped:43 out of 5120
+Time = 0:08:38.255929
+[4820.    4575.    4321.    4109.    3883.    3681.    3503.    3316.
+ 3154.    2991.    2855.    2715.    2575.    2434.    2316.    2220.
+ 2117.    2067.    2017.    1875.    1809.    1730.    1701.    1630.
+ 1630.    1565.    1414.    1414.    1382.    1301.    1247.    1242.
+ 1194.    1164.    1147.    1108.    1068.     997.     957.     904.
+  904.     855.     836.     806.     753.     730.     705.     693.
+  671.     632.     630.     594.     578.     566.     538.     514.
+  492.     489.     468.     441.     427.     419.     406.     397.
+  376.     360.     353.     337.     326.     317.     308.     296.
+  288.     270.     269.     245.     244.     233.     224.     220.
+  209.     209.     203.     203.     186.     186.     179.     177.
+  163.     163.     158.     156.375  147.     144.     138.     132.
+  126.     124.     124.     117.     114.     111.     108.      94.5
+   94.5     90.      90.      90.      88.      74.      74.      74.
+   74.      71.      71.      43.75    43.75    43.75    31.25    12.5
+   12.5     12.5     12.5     12.5      6.25     6.25     6.25     6.25
+    6.25     6.25     6.25     6.25     6.25     6.25     6.25     6.25
+    6.25     6.25     6.25     6.25     6.25     6.25     6.25     6.25
+    6.25     6.25     6.25     6.25     6.25     0.       0.       0.
+    0.       0.       0.       0.       0.       0.       0.       0.   ]
+Adversarial model success......
+Checking on testing data
+Got 4160/10000 with accuracy 41.60
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 05:26:29.763842
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 05:39:11.527319
+Checking on testing data
+Got 8681/10000 with accuracy 86.81
+After Untargeted Attack: 86.81% Accuracy, BITS Flipped:49 out of 5120
+Time = 0:12:41.763477
+[4833.    4581.    4334.    4110.    3885.    3704.    3515.    3328.
+ 3128.    3005.    2844.    2697.    2560.    2435.    2363.    2261.
+ 2188.    2096.    2024.    1959.    1863.    1832.    1750.    1683.
+ 1608.    1559.    1498.    1421.    1397.    1347.    1277.    1216.
+ 1170.    1127.    1094.    1039.    1039.    1025.     980.     921.
+  902.25   870.     837.     811.     792.     758.     734.     712.
+  689.     652.     614.     614.     593.     579.375  547.     532.
+  532.     481.     481.     464.     440.     433.     427.     398.
+  398.     381.     363.     357.     346.     318.     317.25   301.
+  301.     288.     282.     268.     262.     244.     235.125  235.125
+  227.25   218.     218.     213.     197.     192.375  184.     173.
+  173.     160.875  160.875  148.     148.     138.375  138.375  127.5
+  127.5    127.5    114.75   113.75   111.375  109.125  108.625  100.375
+   97.625   43.75    43.75    43.75    37.5     37.5     25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.
+   25.      25.      25.      25.      25.      25.      25.      25.   ]
+Adversarial model success......
+Checking on testing data
+Got 8681/10000 with accuracy 86.81
+(SNN_env) edwin@user-MS-7D70:~/code/qSNN_encryption/Attack03_Genetic_Algorithm$ bash __terminal__.sh
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 12:33:12.603975
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 12:43:00.665210
+Checking on testing data
+Got 5546/10000 with accuracy 55.46
+After Untargeted Attack: 55.46% Accuracy, BITS Flipped:29 out of 5120
+Time = 0:09:48.061234
+[4.8240e+03 4.5570e+03 4.3310e+03 4.1200e+03 3.9020e+03 3.6940e+03
+ 3.5130e+03 3.3290e+03 3.1620e+03 3.0190e+03 2.8540e+03 2.7130e+03
+ 2.5860e+03 2.4460e+03 2.3340e+03 2.2480e+03 2.1290e+03 2.0490e+03
+ 1.9520e+03 1.8930e+03 1.8210e+03 1.7320e+03 1.6960e+03 1.6250e+03
+ 1.5220e+03 1.5060e+03 1.4480e+03 1.4330e+03 1.3450e+03 1.3400e+03
+ 1.2740e+03 1.2190e+03 1.1910e+03 1.1380e+03 1.1030e+03 1.0530e+03
+ 1.0090e+03 9.6400e+02 9.2200e+02 9.0900e+02 8.8000e+02 8.3900e+02
+ 8.0800e+02 7.8200e+02 7.4400e+02 7.1900e+02 6.9200e+02 6.6900e+02
+ 6.4000e+02 6.1900e+02 5.8200e+02 5.5700e+02 5.5100e+02 5.2400e+02
+ 5.0500e+02 4.8700e+02 4.5700e+02 4.4500e+02 4.2600e+02 4.0600e+02
+ 3.9200e+02 3.9200e+02 3.7000e+02 3.5900e+02 3.4200e+02 3.3600e+02
+ 3.1900e+02 3.1100e+02 3.0700e+02 2.9200e+02 2.7800e+02 2.6900e+02
+ 2.5800e+02 2.4800e+02 2.4200e+02 2.1100e+02 2.1100e+02 2.0700e+02
+ 2.0400e+02 1.9900e+02 1.9500e+02 1.8700e+02 1.8100e+02 1.6800e+02
+ 1.6700e+02 1.5800e+02 1.5000e+02 1.4500e+02 1.3900e+02 1.3400e+02
+ 1.2300e+02 1.2300e+02 1.2000e+02 1.1400e+02 1.0700e+02 1.0125e+02
+ 9.5625e+01 9.5000e+01 9.2000e+01 8.4375e+01 8.3000e+01 8.1000e+01
+ 7.8000e+01 7.2000e+01 6.5250e+01 6.5250e+01 6.3000e+01 6.3000e+01
+ 5.9000e+01 5.6000e+01 5.3000e+01 5.3000e+01 5.3000e+01 5.2875e+01
+ 5.1750e+01 4.7000e+01 4.6000e+01 4.6000e+01 4.3000e+01 3.6000e+01
+ 3.6000e+01 2.2500e+01 3.7500e+00 3.7500e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00
+ 0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00]
+Adversarial model success......
+Checking on testing data
+Got 5546/10000 with accuracy 55.46
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 12:45:31.887686
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 12:57:21.907158
+Checking on testing data
+Got 8280/10000 with accuracy 82.80
+After Untargeted Attack: 82.80% Accuracy, BITS Flipped:29 out of 5120
+Time = 0:11:50.019472
+[4829.    4578.    4305.    4106.    3889.    3713.    3500.    3346.
+ 3171.    3029.    2894.    2727.    2602.    2451.    2334.    2215.
+ 2108.    2014.    1918.    1871.    1819.    1741.    1690.    1610.
+ 1553.    1486.    1450.    1426.    1350.    1310.    1247.    1214.
+ 1159.    1119.    1076.    1043.    1006.     974.     934.     897.
+  897.     877.     861.     808.     808.     763.     721.125  705.
+  705.     682.     665.     637.     637.     619.875  588.     588.
+  564.75   540.     522.     481.     478.125  462.375  444.375  433.125
+  424.125  402.75   387.     372.375  365.625  347.625  328.5    312.75
+  300.375  290.25   262.125  262.125  248.625  246.375  231.75   220.5
+  218.25   207.     204.75   196.875  178.875  175.5    172.125  156.375
+  151.875  151.875  144.     138.375  138.375  130.5    114.75   114.75
+  111.375  111.375  106.875  105.75    95.625   90.      90.      73.125
+   73.125   73.125   73.125   67.5     67.5     66.25    56.25    56.25
+   56.25    56.25    56.25    53.625   30.      26.25    26.25    11.25
+   11.25    11.25     7.5      7.5      7.5      7.5      7.5      7.5
+    7.5      7.5      7.5      7.5      7.5      7.5      7.5      7.5
+    7.5      7.5      7.5      7.5      7.5      7.5      7.5      7.5
+    7.5      7.5      7.5      7.5      7.5      7.5      7.5      7.5
+    7.5      7.5      7.5      7.5      7.5      7.5      7.5      7.5  ]
+Adversarial model success......
+Checking on testing data
+Got 8280/10000 with accuracy 82.80
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 12:59:42.783926
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 13:11:23.319953
+Checking on testing data
+Got 9807/10000 with accuracy 98.07
+After Untargeted Attack: 98.07% Accuracy, BITS Flipped:28 out of 5120
+Time = 0:11:40.536027
+[4811.    4562.    4318.    4100.    3884.    3662.    3501.    3338.
+ 3168.    2997.    2859.    2700.    2582.    2464.    2348.    2234.
+ 2179.    2112.    2023.    1929.    1855.    1825.    1772.    1772.
+ 1705.    1625.    1611.    1490.    1470.    1445.    1392.    1348.
+ 1327.    1238.    1232.    1168.    1107.    1092.    1081.    1062.
+ 1032.     966.     935.     909.     868.     852.     782.     779.
+  740.     712.     702.     698.     668.     640.     608.     608.
+  568.     562.     532.     523.     508.     499.     456.     440.
+  440.     427.     406.     398.     388.125  386.     366.     352.
+  351.     345.     325.     320.     271.     271.     271.     271.
+  271.     268.875  259.     252.     237.375  230.625  221.625  219.
+  219.     211.25   203.75   202.5    190.125  190.125  178.5    170.
+  169.5    162.5    154.     143.75   142.     129.375  128.     118.
+  110.     100.      98.      90.      84.      76.      62.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.
+   30.      30.      30.      30.      30.      30.      30.      30.   ]
+Adversarial model success......
+Checking on testing data
+Got 9807/10000 with accuracy 98.07
+Current device is cuda!!
+The current layer is: fc1:
+finished quantized fc1 weights to 8 BITs
+The current layer is: fc2:
+finished quantized fc2 weights to 8 BITs
+Checking on testing data
+Got 9811/10000 with accuracy 98.11
+Before Untargeted Attack: 98.10999298095703% Accuracy
+2023-08-31 13:14:06.531447
+The current layer is: Linear(in_features=512, out_features=10, bias=False)
+the current bit_shape: torch.Size([10, 512, 8])
+Finish Gen: 0
+Finish Gen: 1
+Finish Gen: 2
+Finish Gen: 3
+Finish Gen: 4
+Finish Gen: 5
+Finish Gen: 6
+Finish Gen: 7
+Finish Gen: 8
+Finish Gen: 9
+Finish Gen: 10
+Finish Gen: 11
+Finish Gen: 12
+Finish Gen: 13
+Finish Gen: 14
+Finish Gen: 15
+Finish Gen: 16
+Finish Gen: 17
+Finish Gen: 18
+Finish Gen: 19
+Finish Gen: 20
+Finish Gen: 21
+Finish Gen: 22
+Finish Gen: 23
+Finish Gen: 24
+Finish Gen: 25
+Finish Gen: 26
+Finish Gen: 27
+Finish Gen: 28
+Finish Gen: 29
+Finish Gen: 30
+Finish Gen: 31
+Finish Gen: 32
+Finish Gen: 33
+Finish Gen: 34
+Finish Gen: 35
+Finish Gen: 36
+Finish Gen: 37
+Finish Gen: 38
+Finish Gen: 39
+Finish Gen: 40
+Finish Gen: 41
+Finish Gen: 42
+Finish Gen: 43
+Finish Gen: 44
+Finish Gen: 45
+Finish Gen: 46
+Finish Gen: 47
+Finish Gen: 48
+Finish Gen: 49
+Finish Gen: 50
+Finish Gen: 51
+Finish Gen: 52
+Finish Gen: 53
+Finish Gen: 54
+Finish Gen: 55
+Finish Gen: 56
+Finish Gen: 57
+Finish Gen: 58
+Finish Gen: 59
+Finish Gen: 60
+Finish Gen: 61
+Finish Gen: 62
+Finish Gen: 63
+Finish Gen: 64
+Finish Gen: 65
+Finish Gen: 66
+Finish Gen: 67
+Finish Gen: 68
+Finish Gen: 69
+Finish Gen: 70
+Finish Gen: 71
+Finish Gen: 72
+Finish Gen: 73
+Finish Gen: 74
+Finish Gen: 75
+Finish Gen: 76
+Finish Gen: 77
+Finish Gen: 78
+Finish Gen: 79
+Finish Gen: 80
+Finish Gen: 81
+Finish Gen: 82
+Finish Gen: 83
+Finish Gen: 84
+Finish Gen: 85
+Finish Gen: 86
+Finish Gen: 87
+Finish Gen: 88
+Finish Gen: 89
+Finish Gen: 90
+Finish Gen: 91
+Finish Gen: 92
+Finish Gen: 93
+Finish Gen: 94
+Finish Gen: 95
+Finish Gen: 96
+Finish Gen: 97
+Finish Gen: 98
+Finish Gen: 99
+Finish Gen: 100
+Finish Gen: 101
+Finish Gen: 102
+Finish Gen: 103
+Finish Gen: 104
+Finish Gen: 105
+Finish Gen: 106
+Finish Gen: 107
+Finish Gen: 108
+Finish Gen: 109
+Finish Gen: 110
+Finish Gen: 111
+Finish Gen: 112
+Finish Gen: 113
+Finish Gen: 114
+Finish Gen: 115
+Finish Gen: 116
+Finish Gen: 117
+Finish Gen: 118
+Finish Gen: 119
+Finish Gen: 120
+Finish Gen: 121
+Finish Gen: 122
+Finish Gen: 123
+Finish Gen: 124
+Finish Gen: 125
+Finish Gen: 126
+Finish Gen: 127
+Finish Gen: 128
+Finish Gen: 129
+Finish Gen: 130
+Finish Gen: 131
+Finish Gen: 132
+Finish Gen: 133
+Finish Gen: 134
+Finish Gen: 135
+Finish Gen: 136
+Finish Gen: 137
+Finish Gen: 138
+Finish Gen: 139
+Finish Gen: 140
+Finish Gen: 141
+Finish Gen: 142
+Finish Gen: 143
+Finish Gen: 144
+Finish Gen: 145
+Finish Gen: 146
+Finish Gen: 147
+Finish Gen: 148
+Finish Gen: 149
+Finish Gen: 150
+Finish Gen: 151
+Finish Gen: 152
+Finish Gen: 153
+Finish Gen: 154
+Finish Gen: 155
+Finish Gen: 156
+Finish Gen: 157
+Finish Gen: 158
+Finish Gen: 159
+2023-08-31 13:24:15.548110
+Checking on testing data
+Got 3929/10000 with accuracy 39.29
+After Untargeted Attack: 39.29% Accuracy, BITS Flipped:30 out of 5120
+Time = 0:10:09.016664
+[4836.    4570.    4308.    4094.    3891.    3701.    3509.    3315.
+ 3163.    2997.    2838.    2699.    2568.    2445.    2336.    2206.
+ 2123.    2049.    1955.    1877.    1824.    1755.    1660.    1619.
+ 1559.    1529.    1433.    1406.    1357.    1305.    1221.    1205.
+ 1181.    1131.    1084.    1046.    1013.     969.     926.     895.
+  869.     852.     812.     773.     768.     741.     708.     684.
+  683.     646.     625.     619.     588.     557.     534.     515.
+  494.     472.     452.     439.     415.     409.     397.     375.
+  375.     365.     348.     332.     326.     313.     301.     286.
+  278.     267.     257.     245.     236.     218.     216.     211.
+  202.     197.     193.     181.     171.     168.     168.     162.
+  147.     143.     138.     134.     124.     122.625  113.     112.
+  101.     101.      98.      93.      92.      87.      85.      77.
+   77.      77.      75.      68.      66.      66.      65.      62.
+   60.      56.      56.      54.      51.      48.      47.      47.
+   46.      44.      43.      40.      30.      30.      30.      30.
+   11.25     7.5      0.       0.       0.       0.       0.       0.
+    0.       0.       0.       0.       0.       0.       0.       0.
+    0.       0.       0.       0.       0.       0.       0.       0.
+    0.       0.       0.       0.       0.       0.       0.       0.   ]
+Adversarial model success......
+Checking on testing data
+Got 3929/10000 with accuracy 39.29
+
