@@ -7,40 +7,7 @@ VTH = 0.3
 DECAY = 0.3
 alpha = 0.5
 
-#Forward Model
-class NMNIST_model(nn.Module):
-    
-    def __init__(self,input_size=2*34*34,num_classes=10,batch_size=64,
-                 T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-        super(NMNIST_model,self).__init__()
-
-        self.batch_size = batch_size
-        self.T_BIN = T_BIN
-        self.device = device
-        
-        self.fc1 = nn.Linear(input_size, 512 , bias = False)
-        self.fc2 = nn.Linear(512, num_classes , bias = False)
-
-    def forward(self,input):
-
-        # Reseting Neurons
-        h1_volt = h1_spike = h1_sumspike = torch.zeros(self.batch_size, 512, device=self.device)
-        h2_volt = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 10, device=self.device)
-
-        for i in range(self.T_BIN): # Every single piece of t belongs to T
-
-            x = input[i,:,:,:,:].reshape(self.batch_size, -1)
-
-            h1_volt, h1_spike = mem_update(self.fc1, x, h1_volt, h1_spike)
-            h1_sumspike = h1_sumspike + h1_spike
-
-            h2_volt, h2_spike = mem_update(self.fc2, h1_spike, h2_volt, h2_spike)
-            h2_sumspike = h2_sumspike + h2_spike
-
-        outputs = h2_sumspike / self.T_BIN
-        return outputs
-    
-
+# SNN surrogate gradient
 class ActivationFun(torch.autograd.Function):
     @staticmethod
     def forward(ctx, input):
@@ -61,20 +28,38 @@ def mem_update(fc, x, volt, spike):
     spike = act_fun(volt)
     return volt, spike
 
+# Forward Model (FC,CSNN)
+class NMNIST_model(nn.Module):
+    
+    def __init__(self,input_size=2*34*34,num_classes=10,batch_size=64,
+                 T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+        super(NMNIST_model,self).__init__()
 
-class MNIST_model(nn.Module):
-    def __init__(self,num_classes=10):
-        super(MNIST_model, self).__init__()
-        self.fc1 = nn.Linear(784, 1000)  # 28*28=784 input features, 128 output features
-        self.fc2 = nn.Linear(1000, 512)
-        self.fc3 = nn.Linear(512, num_classes)  # 128 input features, 10 output features (one for each class)
+        self.batch_size = batch_size
+        self.T_BIN = T_BIN
+        self.device = device
         
-    def forward(self, x):
-        x = x.view(x.shape[0],-1)
-        x = self.fc1(x)  # apply ReLU activation to the first layer
-        x = self.fc2(x)  # apply ReLU activation to the first layer
-        x = self.fc3(x)  # output layer
-        return x
+        self.fc1 = nn.Linear(input_size, 512 , bias = False)
+        self.fc2 = nn.Linear(512, num_classes , bias = False)
+
+    def forward(self,input):
+
+        # Reseting Neurons
+        h1_volt = h1_spike = h1_sumspike = torch.zeros(self.batch_size, 512, device=self.device)
+        h2_volt = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 10, device=self.device)
+
+        for i in range(self.T_BIN): 
+
+            x = input[i,:,:,:,:].reshape(self.batch_size, -1)
+
+            h1_volt, h1_spike = mem_update(self.fc1, x, h1_volt, h1_spike)
+            h1_sumspike = h1_sumspike + h1_spike
+
+            h2_volt, h2_spike = mem_update(self.fc2, h1_spike, h2_volt, h2_spike)
+            h2_sumspike = h2_sumspike + h2_spike
+
+        outputs = h2_sumspike / self.T_BIN
+        return outputs
 
 
 class DVS128_model(nn.Module):
@@ -108,9 +93,7 @@ class DVS128_model(nn.Module):
         h1_mem = h1_spike = torch.zeros(self.batch_size, 1024, device=self.device)
         h2_mem = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 11, device=self.device)
 
-        for i in range(self.T_BIN): # Every single piece of t belongs to T
-            # .view change shape/dtype of tensor #####  -1 squeeze all dimension to 1 
-            # #1 tensor(N,P,H,W,T) to vector, #2 vector to tensor(N,-1)
+        for i in range(self.T_BIN): 
             x = input[i,:,:,:,:].to(self.device)
 
             c0_mem, c0_spike = mem_update(self.conv0, x, c0_mem, c0_spike)
@@ -131,17 +114,13 @@ class DVS128_model(nn.Module):
             h2_mem, h2_spike = mem_update(self.fc2, h1_spike, h2_mem, h2_spike)
             h2_sumspike += h2_spike
 
-        # Where SumSpike = (N,#neurons) (2D matrix)/scalar 
         outputs = h2_sumspike / self.T_BIN
-        # print(torch.mean(outputs,dim=0))
         return outputs
 
 
-#Model evaluation
+# Model evaluation
 def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-    # Verify on any dataset
     print("Checking on testing data")
-    # Checking
     num_correct = 0
     num_sample = 0
     model.eval()  
@@ -149,12 +128,12 @@ def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_av
         for image,label in loader:
             image= image.to(device)
             label= label.to(device)
-            # T x N x 2312 => N x 2312
+
             out_firing = model(image)
-            #64x10 output
-            _ , prediction = out_firing.max(1)  #64x1 (value in 2nd dimension)
+            _ , prediction = out_firing.max(1)  
             num_correct += (prediction==label).sum()
-            num_sample += prediction.size(0)  #64 (value in 1st dimension)
+            num_sample += prediction.size(0) 
+
         print(f'Got {num_correct}/{num_sample} with accuracy {float(num_correct)/float(num_sample)*100:.2f}')
-    model.train() #Set back to train mode
+    model.train() 
     return num_correct/num_sample    

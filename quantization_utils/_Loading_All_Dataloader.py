@@ -4,9 +4,9 @@ import random
 from torch.utils.data import DataLoader, Subset
 
 # PLEASE Input your path to your dataset
-# dataset_path = "./dataset" #DEFAULT
+# i.e. dataset_path = "./dataset/" #DEFAULT
 
-def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../../BSNN_Project/N-MNIST_TRAINING/dataset'):
+def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Please input YOUR PATH TO DATASET DIRECTORY'):
 
     if (target == "NMNIST"):
 
@@ -34,28 +34,6 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../.
         )
 
         return train_loader, test_loader
-
-    elif (target == "MNIST"):
-
-        transform = torchvision.transforms.Compose([
-                    torchvision.transforms.ToTensor(),  # convert PIL image to PyTorch tensor
-                    torchvision.transforms.Normalize((0.5,), (0.5,))
-                    ])  
-
-        trainset = torchvision.datasets.MNIST(root=dataset_path, train=True, download=True, transform=transform)
-        testset = torchvision.datasets.MNIST(root=dataset_path, train=False, download=True, transform=transform)
-        
-        train_loader = DataLoader(
-            dataset = trainset, 
-            batch_size=batch_size, 
-            shuffle=True)
-        
-        test_loader = DataLoader(
-            dataset=testset, 
-            batch_size=batch_size, 
-            shuffle=False)
-        
-        return train_loader, test_loader
     
     elif (target == "DVS128_Gesture"):
 
@@ -78,7 +56,7 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../.
             dataset = testset,
             batch_size= batch_size,
             collate_fn= tonic.collation.PadTensors(batch_first=False),
-            shuffle = False,
+            shuffle = True,
             drop_last=True
         )
 
@@ -86,11 +64,12 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = '../.
 
     else:
 
-        raise ValueError("choose_dataset: Target dataset not recognized. (NMNIST/MNIST)")
+        raise ValueError("choose_dataset: Target dataset not recognized. (NMNIST/DVS128)")
     
 
+# Loader for SNNGX Encryption
 
-def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,dataset_path = "../../BSNN_Project/N-MNIST_TRAINING/dataset"):
+def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,dataset_path = 'Please input YOUR PATH TO DATASET DIRECTORY'):
 
     if (target == "NMNIST"):
         #############################################
@@ -114,29 +93,6 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
             shuffle = False,
             drop_last=True
         )
-
-        return UNTARGETED_loader
-
-    elif (target == "MNIST"):
-        ############################################
-        transform = torchvision.transforms.Compose([
-                    torchvision.transforms.ToTensor(),  # convert PIL image to PyTorch tensor
-                    torchvision.transforms.Normalize((0.5,), (0.5,))
-                    ])  
-        test_set = torchvision.datasets.MNIST(root=dataset_path, train=False, download=True, transform=transform)
-        
-        ############################################
-        num_samples = num_images
-        num_total_samples = len(test_set)
-        random_indices = random.sample(range(num_total_samples), num_samples)
-        UNTARGETED_subset = Subset(test_set, random_indices)
-
-        ############################################
-        # No need tonic pad_fn
-        UNTARGETED_loader = DataLoader(dataset = UNTARGETED_subset, 
-                                       batch_size=batch_size, 
-                                       shuffle = False,
-                                       drop_last = True)        
 
         return UNTARGETED_loader
     
@@ -167,5 +123,5 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
     
     else:
 
-        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/MNIST)")
+        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/DVS128)")
 

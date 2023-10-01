@@ -1,6 +1,9 @@
 import torch 
 import torch.nn as nn
 
+# Fixed-point Nbit-quantization 
+# in 2's complement
+
 def float2bin(f, fixed_exp, nbits=8):
     s = torch.sign(f)
     f = f * s
@@ -30,13 +33,15 @@ def bin2float(b, fixed_exp, nbits=8, device=torch.device('cuda' if torch.cuda.is
     out *= e_decimal * 2 ** fixed_exp
     return out
 
+# Model's quantized weight Update
+
 def quantize_weights_nbits(model, nbits):
     for name, module in model.named_modules():
         if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
             print(f"The current layer is: {name}: ")
             weight = module.weight.data
             # step size
-            weight_max = torch.max(torch.abs(weight))
+            weight_max = torch.max(weight)
             fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
 
             # quantize to binary, and back to floating pt
@@ -48,13 +53,14 @@ def quantize_weights_nbits(model, nbits):
             print(f"finished quantized {name} weights to {nbits} BITs")
     return None
 
+# By-layer fixed-point Nbit-quantization 
+# in 2's complement
+
 def quantize_to_binary(weight, nbits):
 
     # get weights exponential 
-    weight_max = torch.max(torch.abs(weight))
+    weight_max = torch.max(weight)
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
-
-    # print(f"quantize_to_binary: {fixed_exp}")
 
     # quantize to binary
     binary = float2bin(weight,fixed_exp,nbits).to(torch.int8)
@@ -71,14 +77,11 @@ def quantize_to_binary(weight, nbits):
 
     return output_tensor, bit_shape    # output_tensor = [-1., +1., -1., -1., -1.,....], bit_shape = (Wm x Wn x nbits)
 
-
 def binary_to_weight32(weight, nbits, input_tensor, bit_shape):
 
     # get weights exponential (weight = layer.weight.data)
-    weight_max = torch.max(torch.abs(weight))
+    weight_max = torch.max(weight)
     fixed_exp = torch.ceil(torch.log2(weight_max/(2**(nbits-1)-1))) 
-
-    # print(f"binary_to_weight32: {fixed_exp}")
 
     # change the bin tensor from {-1,+1} to {0,1}
     input_tensor = ((input_tensor + 1)/2).to(torch.int8)
