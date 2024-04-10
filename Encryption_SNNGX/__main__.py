@@ -54,11 +54,16 @@ print(f"Current device is {device}!!")
 # MODEL 1
 if (target_dataset == "NMNIST"):
 
+    print("Loading Weights: ")
     weight_path = '../pretrained_weights_float32/pre_trained_normal-nmnist_snn_300e.t7'
     model = NMNIST_model(batch_size=batch_size).to(device)
     checkpoint = torch.load(weight_path,map_location=device)
     model.load_state_dict(checkpoint['net'])
     quantize_weights_nbits(model,quantized_bit)
+
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"total trainable parameters: {num_params/2**20:.3f}M")
+    print(f"This is a {quantized_bit}-bit quantized model: {num_params*quantized_bit/2**20:.3f}M bits")
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
@@ -71,6 +76,10 @@ elif (target_dataset == "DVS128_Gesture"):
     checkpoint = torch.load(weight_path,map_location=device)
     model.load_state_dict(checkpoint['net'])
     quantize_weights_nbits(model,quantized_bit)
+
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"total trainable parameters: {num_params/2**20:.3f}M")
+    print(f"This is a {quantized_bit}-bit quantized model: {num_params*quantized_bit/2**20:.3f}M bits")
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
@@ -95,7 +104,6 @@ print(datetime.datetime.now())
 final_result = check_accuracy(test_loader,adv_model)
 print(f"After Untargeted Attack: {final_result*100:.2f}% Accuracy, BITS Flipped:{advBIT} out of {numBIT}")
 print(f"Time = {end-start}")
-
 print(fitness)
 
 # Save adversarial model

@@ -1,5 +1,4 @@
 import tonic
-import torchvision
 import random
 from torch.utils.data import DataLoader, Subset
 
@@ -11,8 +10,8 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
     if (target == "NMNIST"):
 
         sensor_size = tonic.datasets.NMNIST.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
-                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
+                                                                             n_time_bins=T_BIN)])
 
         trainset = tonic.datasets.NMNIST(save_to=dataset_path,transform=frame_transform, train=True)    
         testset = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=False)
@@ -38,8 +37,8 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
     elif (target == "DVS128_Gesture"):
 
         sensor_size = tonic.datasets.DVSGesture.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
-                                            tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
+                                                                             n_time_bins=T_BIN)])
             
         trainset = tonic.datasets.DVSGesture(save_to=dataset_path,transform=frame_transform, train=True)
         testset = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
@@ -74,8 +73,8 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
     if (target == "NMNIST"):
         #############################################
         sensor_size = tonic.datasets.NMNIST.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
-                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
+                                                                             n_time_bins=T_BIN)])
         test_set = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=False)
 
         #############################################
@@ -99,8 +98,8 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
     elif (target == "DVS128_Gesture"):
         #############################################
         sensor_size = tonic.datasets.DVSGesture.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.Denoise(filter_time=10000),
-                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
+        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
+                                                                             n_time_bins=T_BIN)])
         test_set = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
             
         #############################################
@@ -123,5 +122,5 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
     
     else:
 
-        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/DVS128)")
+        raise ValueError("UNTARGETED_LOADER: Target dataset not recognized. (NMNIST/DVS128_Gesture)")
 
