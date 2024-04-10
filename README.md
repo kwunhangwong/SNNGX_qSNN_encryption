@@ -1,4 +1,4 @@
-# qSNN_encryption
+# SNNGX_qSNN_encryption
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
@@ -6,9 +6,9 @@
 
 ## Description
 
-**This project creates BIT-flip attack against binarised weight of deep neural network and other machine learning models with flipping minimum vulnerable BITs.** 
+**This project performs efficient BIT-flip encryption against quantized Spiking neural networks as an IP protection method and demonstrates UNIVERSAL UTILITY on SNN models** 
 
-**There are 3 attack methods in this repository and some pretrained binary weight models over NMNIST and MNIST.**
+**There are SNNGX implementation, random bit flip baseline and potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
 
 **Apart from random flipping tests, we proposed two more optimzation methods to attck the most vulnerable bits in the binarised ANN/SNN models: FGSM-based attack (gradient) and Genetic Algorithm-based attack (non-gradient) respectively.**
 
