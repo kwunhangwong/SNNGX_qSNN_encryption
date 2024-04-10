@@ -15,7 +15,7 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
     def __init__(self, model:nn.Module, UNTARGETED_loader:DataLoader,   # 
                  epsil=5000, n_generations=160, population_size=100,      # epsil = Hamming Distance bound
                  retain_best=0.6, mutate_chance=0.05, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
-                 BITS_by_layer:bool=False, qbits:int=8):  
+                 BITS_by_layer:bool=False, target_lay:int =0, qbits:int=8):  
 
         # Initialization
         self.model = model.to(device)
@@ -36,7 +36,8 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
         self.BITS_by_layer = BITS_by_layer
         self.qbits = qbits
         self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, qbits=self.qbits,
-                                                                                        BITS_by_layer=BITS_by_layer)
+                                                                                        BITS_by_layer=BITS_by_layer,
+                                                                                        target_lay=target_lay)
 
         # Reduced BIT length
         self.reduced_BIT_array = Only_kBits(self.BIT_array, qbits)
@@ -293,21 +294,24 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
         
         return self.model, self.L1_BIT(Curr_Pop[0]), len(Curr_Pop[0]), np.array(gen_evolution_score)
 
-def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False):
+def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False, target_lay=0):
 
     if (BITS_by_layer):
-        min_cnt = float('inf')
+        # min_cnt = float('inf')
+        cnt = 0
         target_layer = None
         for name,child in model.named_children():
             if isinstance(child, nn.Linear) or isinstance(child, nn.Conv2d):
-                layer_cnt = len(child.weight.data.view(-1))
-                print(layer_cnt)
-                if (layer_cnt < min_cnt):
-                    min_cnt = layer_cnt
+                # layer_cnt = len(child.weight.data.view(-1))
+                # print(layer_cnt)
+                # if (layer_cnt < min_cnt):
+                    # min_cnt = layer_cnt
+                    # target_layer = child
+                if (cnt == target_lay):
                     target_layer = child
 
         if target_layer is not None:
-            print("The minimum bits layer is:", target_layer)
+            print("The target layer is:", target_layer)
 
             # Transform to array
             weight = target_layer.weight.data
