@@ -3,7 +3,7 @@ import torch.nn as nn
 import numpy as np
 
 import sys
-sys.path.append('../quantization_utils')
+sys.path.append('../../quantization_utils')
 
 from quantization import *
 

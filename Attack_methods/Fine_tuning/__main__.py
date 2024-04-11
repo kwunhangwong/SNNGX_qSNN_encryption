@@ -7,7 +7,7 @@ import csv
 from Random_Flipping_BITver import Random_flipping_all_Layers, Random_flipping_single_layer
 
 import sys
-sys.path.append('../quantization_utils')
+sys.path.append('../../quantization_utils')
 
 from _Loading_All_Model import *
 from _Loading_All_Dataloader import * 
@@ -17,8 +17,6 @@ from quantization import *
 parser = argparse.ArgumentParser()
 
 # Required input: num_bit
-parser.add_argument('-nb','--numbit',type=int,metavar='number_of_changed_BITS',required=True,help='# Random BITS flipped') 
-parser.add_argument('-nt','--numtrial',type=int,metavar='number_of_random_trials',default=100,help='# Random Processes') 
 parser.add_argument('-q','--qbit',type=int,metavar='target_quantized_bits',default=8,help='quantize weight from float32 to q bits') 
 
 ###############
@@ -47,7 +45,7 @@ print(f"Current device is {device}!!")
 if (target_dataset == "NMNIST"):
 
     weight_path = '../pretrained_weights_float32/pre_trained_normal-nmnist_snn_300e.t7'
-    model = NMNIST_model().to(device)
+    model = NMNIST_model(batch_size=batch_size).to(device)
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
@@ -55,7 +53,7 @@ if (target_dataset == "NMNIST"):
 elif (target_dataset == "DVS128_Gesture"):
 
     weight_path = '../pretrained_weights_float32/pretrained_DVS_csnn_128e_91a.t7'
-    model = DVS128_model().to(device)
+    model = DVS128_model(batch_size=batch_size).to(device)
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
@@ -69,35 +67,45 @@ checkpoint = torch.load(weight_path,map_location=device)
 model.load_state_dict(checkpoint['net'])
 quantize_weights_nbits(model,quantized_bit)
 
-# Start testing with bits flipping
-print(f"Before random flipping {num_bit} BITs: {check_accuracy(test_loader,model)*100}% Accuracy")
-start = datetime.datetime.now()
-print(start)
+#Model Training
+max_acc=0
+Test_acc=[]
+for epoch in range(num_epochs):
+    
+    for batch_idx,(images, labels) in enumerate(train_loader):  #Each Batch # The enumerate() method adds a counter to an iterable
 
-acc_list = []
-for i in range(random_trial):
-    print(f"Flipping {i+1}th times: ")
+        model.zero_grad()
+        optimizer.zero_grad()
 
-    # All Layer
-    model = Random_flipping_all_Layers(num_bit,model,quantized_bit).to(device)
+        # Train on Cuda
+        images = images.float().to(device)
+        labels = labels.to(device)
 
-    # Single Layer
-    # model = Random_flipping_single_layer(num_bit,model,quantized_bit,nn.Linear,2).to(device)
+        #print(images.shape) #=> 4x32x2x34x34 = longest_time_seq_in_the_batch x batch_size x channels x height x width 
+        labels_onehot = F.one_hot(labels, 10).float()  # AABBBCC -> 100, 100, 010, 010, 010, 001, 001        
+        
+        # T x N x 2 x 34 x 34 => N x 10
+        out_firing = model(images)
 
-    acc_list+=[check_accuracy(test_loader,model).item()]
+        # Loss function => MSE so one_hots for L2 distance error
+        loss = criterion(out_firing, labels_onehot)
+        loss.backward()
+        optimizer.step() 
+    
+    # Check acc
+    print(f'Epoch Done: {epoch}')
+    curr_acc = check_accuracy(test_loader,model).item()
+    Test_acc +=[curr_acc]
 
-    # Restore the original weights 
-    model.load_state_dict(checkpoint['net'])
-    quantize_weights_nbits(model,quantized_bit)
+    if curr_acc >= max_acc:
+        max_acc = curr_acc
+        print("State-of-the-art saving......")
+        names = 'binarised-nmnist_snn_300e'
+        state = {
+            'net': model.state_dict(),
+            'epoch': epoch,
+            'acc_record': Test_acc,
+        }
+        torch.save(state, './pretrained_' + names +'.t7')
 
-
-end = datetime.datetime.now()
-print(end)
-print(f'Time: {end-start}')
-
-# Save file 
-name = f'flipping_{num_bit}_Conv_1'
-
-with open(name + '.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(acc_list)
+print("Finished Training!!")
