@@ -16,7 +16,7 @@ Currently restricted to internal usage only.**
 
 ## Quick Start
 
-pytorch>=1.10.0+cu111
+pytorch>=1.10.0+cu111  
 tonic>=1.4.3 
 
 ```
