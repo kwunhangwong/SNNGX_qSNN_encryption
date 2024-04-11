@@ -16,9 +16,14 @@ Currently restricted to internal usage only.**
 
 ## Quick Start
 
+pytorch>=1.10.0+cu111
+tonic>=1.4.3 
+
 ```
 git clone https://github.com/u3556440/SNNGX_qSNN_encryption.git
 ```
+
+torch, 
 
 ## Usage
 

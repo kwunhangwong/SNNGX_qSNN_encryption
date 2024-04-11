@@ -370,7 +370,3 @@ def Only_kBits(BIT_array:np,qbits:int):
     # selected_elements = BIT_array[np.logical_or((pos_array % qbits == 0),(pos_array % qbits == 1))]
 
     return selected_elements
-
-
-
-

@@ -1,5 +1,6 @@
 import torch
-import torch.nn as nn
+import numpy as np
+import random
 
 import datetime
 import argparse
@@ -11,6 +12,13 @@ sys.path.append('../quantization_utils')
 from _Loading_All_Model import *
 from _Loading_All_Dataloader import * 
 from quantization import *
+
+def setup_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
 
 ###############
 parser = argparse.ArgumentParser()
@@ -31,9 +39,11 @@ parser.add_argument('-b','--batch',type=int,metavar='batch_size',default=64,help
 parser.add_argument('--Dataset',type=str,metavar='Target dataset',default="NMNIST", 
                     help= 'Please input: 1. "NMNIST" 2. DVS_Gesture only, their corresponding models will be selected automatically') 
 parser.add_argument('--Dpath',type=str,metavar='path to dataset',default='../../BSNN_Project/N-MNIST_TRAINING/dataset', help='For dataset and model') 
+parser.add_argument('--seed',type=int,metavar='random seed',default=10, help='np, torch, random...') 
 
 ###############
 args = parser.parse_args()
+setup_seed(args.seed)
 
 epsil = args.epsil
 by_layer = args.by_layer

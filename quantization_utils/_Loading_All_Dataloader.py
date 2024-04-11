@@ -75,13 +75,13 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
         sensor_size = tonic.datasets.NMNIST.sensor_size
         frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
                                                                              n_time_bins=T_BIN)])
-        test_set = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=False)
+        train_set = tonic.datasets.NMNIST(save_to=dataset_path, transform=frame_transform, train=True)
 
         #############################################
         num_samples = num_images
-        num_total_samples = len(test_set)
+        num_total_samples = len(train_set)
         random_indices = random.sample(range(num_total_samples), num_samples)
-        UNTARGETED_subset = Subset(test_set, random_indices)
+        UNTARGETED_subset = Subset(train_set, random_indices)
 
         #############################################
         # Create a DataLoader for the subset
@@ -100,13 +100,13 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
         sensor_size = tonic.datasets.DVSGesture.sensor_size
         frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
                                                                              n_time_bins=T_BIN)])
-        test_set = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
+        train_set = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=True)
             
         #############################################
         num_samples = num_images
-        num_total_samples = len(test_set)
+        num_total_samples = len(train_set)
         random_indices = random.sample(range(num_total_samples), num_samples)
-        UNTARGETED_subset = Subset(test_set, random_indices)
+        UNTARGETED_subset = Subset(train_set, random_indices)
 
         #############################################
         # Create a DataLoader for the subset
