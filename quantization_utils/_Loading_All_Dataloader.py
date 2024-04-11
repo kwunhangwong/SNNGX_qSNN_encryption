@@ -21,7 +21,7 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
             batch_size= batch_size,
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = True,
-            drop_last=True
+            # drop_last=True
         )
 
         test_loader = DataLoader(
@@ -29,7 +29,7 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
             batch_size= batch_size,
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = False,
-            drop_last=True
+            # drop_last=True
         )
 
         return train_loader, test_loader
@@ -48,7 +48,7 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
             batch_size= batch_size,
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = True,
-            drop_last=True
+            # drop_last=True
         )
 
         test_loader = DataLoader(
@@ -56,7 +56,7 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
             batch_size= batch_size,
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = True,
-            drop_last=True
+            # drop_last=True
         )
 
         return train_loader, test_loader
@@ -90,7 +90,7 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
             batch_size= batch_size, 
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = False,
-            drop_last=True
+            # drop_last=True
         )
 
         return UNTARGETED_loader
@@ -115,7 +115,7 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
             batch_size= batch_size, 
             collate_fn= tonic.collation.PadTensors(batch_first=False),
             shuffle = False,
-            drop_last=True
+            # drop_last=True
         )
 
         return UNTARGETED_loader

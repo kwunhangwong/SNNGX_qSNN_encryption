@@ -31,11 +31,10 @@ def mem_update(fc, x, volt, spike):
 # Forward Model (FC,CSNN)
 class NMNIST_model(nn.Module):
     
-    def __init__(self,input_size=2*34*34,num_classes=10,batch_size=64,
+    def __init__(self,input_size=2*34*34,num_classes=10,
                  T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
         super(NMNIST_model,self).__init__()
 
-        self.batch_size = batch_size
         self.T_BIN = T_BIN
         self.device = device
         
@@ -44,13 +43,15 @@ class NMNIST_model(nn.Module):
 
     def forward(self,input):
 
+        T, batch_size, C, H, W = input.shape
+
         # Reseting Neurons
-        h1_volt = h1_spike = h1_sumspike = torch.zeros(self.batch_size, 512, device=self.device)
-        h2_volt = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 10, device=self.device)
+        h1_volt = h1_spike = h1_sumspike = torch.zeros(batch_size, 512, device=self.device)
+        h2_volt = h2_spike = h2_sumspike = torch.zeros(batch_size, 10, device=self.device)
 
         for i in range(self.T_BIN): 
 
-            x = input[i,:,:,:,:].reshape(self.batch_size, -1)
+            x = input[i,:,:,:,:].reshape(batch_size, -1)
 
             h1_volt, h1_spike = mem_update(self.fc1, x, h1_volt, h1_spike)
             h1_sumspike = h1_sumspike + h1_spike
@@ -64,11 +65,10 @@ class NMNIST_model(nn.Module):
 
 class DVS128_model(nn.Module):
 
-    def __init__(self,in_channels=2,num_classes=11,batch_size=8,
+    def __init__(self,in_channels=2,num_classes=11,
                  T_BIN = 15, device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
         super(DVS128_model,self).__init__()
 
-        self.batch_size = batch_size
         self.T_BIN = T_BIN
         self.device = device
 
@@ -84,14 +84,16 @@ class DVS128_model(nn.Module):
 
     def forward(self,input):
 
-        # Reseting Neurons
-        c0_mem = c0_spike = torch.zeros(self.batch_size, 64, 128, 128,device=self.device)
-        c1_mem = c1_spike = torch.zeros(self.batch_size, 128, 64, 64, device=self.device) 
-        c2_mem = c2_spike = torch.zeros(self.batch_size, 128, 32, 32, device=self.device)
-        c3_mem = c3_spike = torch.zeros(self.batch_size, 256, 8, 8,   device=self.device)
+        T, batch_size, C, H, W = input.shape
 
-        h1_mem = h1_spike = torch.zeros(self.batch_size, 1024, device=self.device)
-        h2_mem = h2_spike = h2_sumspike = torch.zeros(self.batch_size, 11, device=self.device)
+        # Reseting Neurons
+        c0_mem = c0_spike = torch.zeros(batch_size, 64, 128, 128,device=self.device)
+        c1_mem = c1_spike = torch.zeros(batch_size, 128, 64, 64, device=self.device) 
+        c2_mem = c2_spike = torch.zeros(batch_size, 128, 32, 32, device=self.device)
+        c3_mem = c3_spike = torch.zeros(batch_size, 256, 8, 8,   device=self.device)
+
+        h1_mem = h1_spike = torch.zeros(batch_size, 1024, device=self.device)
+        h2_mem = h2_spike = h2_sumspike = torch.zeros(batch_size, 11, device=self.device)
 
         for i in range(self.T_BIN): 
             x = input[i,:,:,:,:].to(self.device)
@@ -108,7 +110,7 @@ class DVS128_model(nn.Module):
             c3_mem, c3_spike = mem_update(self.conv3, p2_spike, c3_mem, c3_spike) 
             p3_spike = self.pool(c3_spike) 
 
-            x = p3_spike.view(self.batch_size, -1)
+            x = p3_spike.view(batch_size, -1)
 
             h1_mem, h1_spike = mem_update(self.fc1, x, h1_mem, h1_spike)
             h2_mem, h2_spike = mem_update(self.fc2, h1_spike, h2_mem, h2_spike)

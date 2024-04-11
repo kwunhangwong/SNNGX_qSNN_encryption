@@ -2,8 +2,9 @@
 
 # NMNIST 
 # Testset size = 10000 # subset = 128/10000, 8/10000
-python3 __main__.py --epsil 50 --name "example_fitness_function" --subset 128 --mutate 0.05 --qbit 8 --gen 160 -b 8 --Dataset "NMNIST" --Dpath '../../dataset/'
-python3 __main__.py --epsil 50 --name "example_fitness_function" --subset 8 --mutate 0.05 --qbit 8 --gen 160 -b 8 --Dataset "NMNIST" --Dpath '../../dataset/'
+python3 __main__.py --epsil 50 --subset 128 --mutate 0.05 --qbit 8 --gen 160 -b 8 --Dataset 'NMNIST' --Dpath '/home/edwin/code/dataset/'
+python3 __main__.py --epsil 50 --subset 8 --mutate 0.05 --qbit 8 --gen 160 -b 8 \
+    --Dataset 'NMNIST' --Dpath '/home/edwin/code/dataset/' --by_layer True --layer_idx 1
 
 # DVS_Gesture 
 # Testset size = 264 # subset = 16/264

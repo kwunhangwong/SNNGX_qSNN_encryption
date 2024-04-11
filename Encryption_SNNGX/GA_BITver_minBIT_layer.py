@@ -15,7 +15,7 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
     def __init__(self, model:nn.Module, UNTARGETED_loader:DataLoader,   # 
                  epsil=5000, n_generations=160, population_size=100,      # epsil = Hamming Distance bound
                  retain_best=0.6, mutate_chance=0.05, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
-                 BITS_by_layer:bool=False, target_lay:int =0, qbits:int=8):  
+                 BITS_by_layer:bool=False, layer_idx:int =0, qbits:int=8):  
 
         # Initialization
         self.model = model.to(device)
@@ -37,7 +37,7 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
         self.qbits = qbits
         self.BIT_array, self.dim_storage, self.list_sep, self.target_layer = BITS_To_1D(model, qbits=self.qbits,
                                                                                         BITS_by_layer=BITS_by_layer,
-                                                                                        target_lay=target_lay)
+                                                                                        layer_idx=layer_idx)
 
         # Reduced BIT length
         self.reduced_BIT_array = Only_kBits(self.BIT_array, qbits)
@@ -49,10 +49,9 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
     def init_Pop(self):
         
         adam_and_eve = []
-        for i in range(self.population_size):
+        for _ in range(self.population_size):
 
             # Part Two (All flipped weight)
-
             BIT_array_adv = (self.reduced_BIT_array.copy())
             BIT_array_adv *= -1
             BIT_array_adv = self.reduced_mutation(BIT_array_adv)
@@ -85,6 +84,8 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
             layer_weight = self.Only_kBits_Recov(layer_weight)
             weight1d = torch.from_numpy(layer_weight).to(self.device)
 
+            del layer_weight
+
             quantized_f = binary_to_weight32(weight, self.qbits, weight1d, self.dim_storage)
 
             if isinstance(self.target_layer, nn.Linear) or isinstance(self.target_layer, nn.Conv2d):
@@ -112,6 +113,8 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
                     
                     # to tensor
                     weight1d = torch.from_numpy(layer_weight).to(self.device)
+
+                    del layer_weight
 
                     # White-Box: Update weights
                     quantized_f = binary_to_weight32(weight, self.qbits, weight1d, self.dim_storage[pos])
@@ -210,7 +213,7 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
         child1[select_mask] = dad[select_mask]
         child2[select_mask] = mom[select_mask]
         
-        
+        del dad, mom
         return child1, child2
     
     def Only_kBits_Recov(self,r_adv_Arr:np): 
@@ -294,21 +297,22 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
         
         return self.model, self.L1_BIT(Curr_Pop[0]), len(Curr_Pop[0]), np.array(gen_evolution_score)
 
-def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False, target_lay=0):
+def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False, layer_idx=0):
 
     if (BITS_by_layer):
         # min_cnt = float('inf')
         cnt = 0
         target_layer = None
-        for name,child in model.named_children():
+        for name, child in model.named_children():
             if isinstance(child, nn.Linear) or isinstance(child, nn.Conv2d):
                 # layer_cnt = len(child.weight.data.view(-1))
                 # print(layer_cnt)
                 # if (layer_cnt < min_cnt):
                     # min_cnt = layer_cnt
                     # target_layer = child
-                if (cnt == target_lay):
+                if (cnt == layer_idx):
                     target_layer = child
+                cnt += 1
 
         if target_layer is not None:
             print("The target layer is:", target_layer)
@@ -318,6 +322,7 @@ def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False, target_lay=0):
             weight1d, bit_shape = quantize_to_binary(weight, qbits)
             new_BIT = weight1d.to('cpu').numpy().astype(np.float32)
 
+            del weight1d
             return new_BIT, bit_shape, None, target_layer
 
         else:
@@ -347,6 +352,7 @@ def BITS_To_1D(model:nn.Module, qbits:int, BITS_by_layer=False, target_lay=0):
         new_BIT = np.array(BIT_array).astype(np.float32)
         list_sep = np.array(list_sep).astype(np.int32)
 
+        del BIT_array
         return new_BIT, dim_storage, list_sep, None
 
 # Concern only worst precision bits, 
