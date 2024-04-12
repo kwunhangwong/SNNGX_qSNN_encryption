@@ -19,6 +19,8 @@ def setup_seed(seed):
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.enabled = True
 
 ###############
 parser = argparse.ArgumentParser()
@@ -68,7 +70,7 @@ if (target_dataset == "NMNIST"):
 
     print("Loading Weights: ")
     weight_path = '../pretrained_weights_float32/pre_trained_normal-nmnist_snn_300e.t7'
-    model = NMNIST_model().to(device)
+    model = NMNIST_model(T_BIN=15).to(device)
     checkpoint = torch.load(weight_path,map_location=device)
     model.load_state_dict(checkpoint['net'])
     quantize_weights_nbits(model,quantized_bit)
@@ -84,7 +86,7 @@ if (target_dataset == "NMNIST"):
 elif (target_dataset == "DVS128_Gesture"):
 
     weight_path = '../pretrained_weights_float32/pretrained_DVS_csnn_128e_91a.t7'
-    model = DVS128_model().to(device)
+    model = DVS128_model(T_BIN=15).to(device)
     checkpoint = torch.load(weight_path,map_location=device)
     model.load_state_dict(checkpoint['net'])
     quantize_weights_nbits(model,quantized_bit)
@@ -95,7 +97,7 @@ elif (target_dataset == "DVS128_Gesture"):
 
     # Dataset (TEST and Subset Loader)
     _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
 
 else:
     raise ValueError("GA main: Target dataset not recognized. (NMNIST/DVS128_Gesture)")

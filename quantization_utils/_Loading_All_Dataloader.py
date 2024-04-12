@@ -37,8 +37,14 @@ def choose_dataset(target:str,batch_size:int,T_BIN:int = 15,dataset_path = 'Plea
     elif (target == "DVS128_Gesture"):
 
         sensor_size = tonic.datasets.DVSGesture.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
-                                                                             n_time_bins=T_BIN)])
+        # 128 x 128 -> 32 x 32
+        reduction_factor = 4
+        spatial_factor = 1/reduction_factor
+        H, W, P = sensor_size
+        sensor_size = int(H/reduction_factor),int(W/reduction_factor), P        
+
+        frame_transform = tonic.transforms.Compose([tonic.transforms.Downsample(spatial_factor=spatial_factor),
+                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
             
         trainset = tonic.datasets.DVSGesture(save_to=dataset_path,transform=frame_transform, train=True)
         testset = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=False)
@@ -98,8 +104,15 @@ def UNTARGETED_loader(target:str,num_images:int,batch_size:int,T_BIN:int=15,data
     elif (target == "DVS128_Gesture"):
         #############################################
         sensor_size = tonic.datasets.DVSGesture.sensor_size
-        frame_transform = tonic.transforms.Compose([tonic.transforms.ToFrame(sensor_size=sensor_size, 
-                                                                             n_time_bins=T_BIN)])
+
+        # 128 x 128 -> 32 x 32
+        reduction_factor = 4
+        spatial_factor = 1/reduction_factor
+        H, W, P = sensor_size
+        sensor_size = int(H/reduction_factor),int(W/reduction_factor), P        
+
+        frame_transform = tonic.transforms.Compose([tonic.transforms.Downsample(spatial_factor=spatial_factor),
+                                                    tonic.transforms.ToFrame(sensor_size=sensor_size, n_time_bins=T_BIN)])
         train_set = tonic.datasets.DVSGesture(save_to=dataset_path, transform=frame_transform, train=True)
             
         #############################################
