@@ -3,7 +3,7 @@ import torch.nn as nn
 import numpy as np
 
 import sys
-sys.path.append('../../quantization_utils')
+sys.path.append('../quantization_utils')
 
 from quantization import *
 
@@ -28,7 +28,7 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
             
     new_BIT = np.array(BIT_array).astype(np.float32)
     raw_BIT = new_BIT.copy()
-    new_BIT = Only_kBits(new_BIT,qbits)
+    # new_BIT = Only_kBits(new_BIT,qbits)
 
     # Generate an array of integers from 0 to 1,000,000 BITS
     integers = np.arange(len(new_BIT))
@@ -41,7 +41,7 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     random_pos = integers[:num]
     new_BIT[random_pos] *= -1
 
-    new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
+    # new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
 
     head = 0
     pos = 0
@@ -81,7 +81,7 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         new_BIT = weight1d.to(torch.device('cpu')).numpy().astype(np.float32)
 
         raw_BIT = new_BIT.copy()
-        new_BIT = Only_kBits(new_BIT,qbits)
+        # new_BIT = Only_kBits(new_BIT,qbits)
 
         # Generate an array of integers from 0 to 1,000,000 BITS
         integers = np.arange(len(new_BIT))
@@ -95,7 +95,7 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         new_BIT[random_pos] *= -1
 
         # White-Box: Update weights
-        new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
+        # new_BIT = Only_kBits_Recov(raw_BIT,new_BIT,qbits)
 
         weight1d = torch.from_numpy(new_BIT).to(torch.device('cuda'))
         quantized_f = binary_to_weight32(weight, qbits, weight1d, bit_shape)

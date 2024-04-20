@@ -103,7 +103,7 @@ else:
     raise ValueError("GA main: Target dataset not recognized. (NMNIST/DVS128_Gesture)")
 
 
-print(f"Before Untargeted Attack: {check_accuracy(test_loader,model)*100}% Accuracy")
+print(f"Before Encryption: {check_accuracy(test_loader,model)*100}% Accuracy")
 start = datetime.datetime.now()
 print(datetime.datetime.now())
 
@@ -120,7 +120,7 @@ with torch.no_grad():   #no need to cal grad
 end = datetime.datetime.now()
 print(datetime.datetime.now())
 final_result = check_accuracy(test_loader,adv_model)
-print(f"After Untargeted Attack: {final_result*100:.2f}% Accuracy, BITS Flipped:{advBIT} out of {numBIT}")
+print(f"After Encryption: {final_result*100:.2f}% Accuracy, BITS Flipped:{advBIT} out of {numBIT}")
 print(f"Time = {end-start}")
 print(fitness)
 

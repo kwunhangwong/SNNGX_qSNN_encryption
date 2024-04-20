@@ -131,13 +131,15 @@ class DVS128_model(nn.Module):
 
 
 # Model evaluation
-def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+def check_accuracy(loader, model, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'), attack=False):
     print("Checking on testing data")
     num_correct = 0
     num_sample = 0
     model.eval()  
     with torch.no_grad():   #no need to cal grad
         for image,label in loader:
+            if attack:
+                image = torch.where(image > 0, torch.tensor(1.), torch.tensor(0.)) # For attack purpose, please remove for best ACC
             image= image.to(device)
             label= label.to(device)
 

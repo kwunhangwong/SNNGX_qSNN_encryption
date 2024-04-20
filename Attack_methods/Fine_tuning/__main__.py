@@ -71,18 +71,18 @@ if (target_dataset == "NMNIST"):
     model = NMNIST_model(T_BIN=15).to(device)
 
     # Dataset (TEST and Subset Loader)
-    _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
+    train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
     UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
     num_class = 10
 
 elif (target_dataset == "DVS128_Gesture"):
 
     encrypted_weight_path = '../pretrained_weights_float32/pretrained_DVS_csnn_128e_91a.t7'
-    model = DVS128_model(T_BIN=15).to(device)
+    model = DVS128_model(T_BIN=40).to(device)
 
     # Dataset (TEST and Subset Loader)
-    _ , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=15,dataset_path=dataset_path)
-    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=15,dataset_path =dataset_path)
+    train_loader , test_loader = choose_dataset(target=target_dataset,batch_size=batch_size,T_BIN=60,dataset_path=dataset_path)
+    UNTARGETED_loader = UNTARGETED_loader(target=target_dataset,num_images=num_images,batch_size=batch_size,T_BIN=60,dataset_path =dataset_path)
     num_class = 11
 
 else:
@@ -90,9 +90,9 @@ else:
 
 
 # quantized the model first after loading 
-checkpoint = torch.load(encrypted_weight_path,map_location=device)
-model.load_state_dict(checkpoint['net'])
-quantize_weights_nbits(model,quantized_bit)
+# checkpoint = torch.load(encrypted_weight_path,map_location=device)
+# model.load_state_dict(checkpoint['net'])
+# quantize_weights_nbits(model,quantized_bit)
 
 #Model Training
 criterion = nn.MSELoss()
@@ -106,8 +106,8 @@ max_acc=0
 Test_acc=[]
 for epoch in range(num_epochs):
     avg_loss=0
-    for batch_idx,(images, labels) in enumerate(UNTARGETED_loader):  #Each Batch # The enumerate() method adds a counter to an iterable
-
+    for batch_idx,(images, labels) in enumerate(train_loader):  #Each Batch # The enumerate() method adds a counter to an iterable
+        images = torch.where(images > 0, torch.tensor(1.), torch.tensor(0.)) # For attack purpose, please remove for best ACC
         model.zero_grad()
         optimizer.zero_grad()
 

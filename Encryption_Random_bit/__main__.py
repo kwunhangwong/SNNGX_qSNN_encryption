@@ -96,7 +96,7 @@ print(end)
 print(f'Time: {end-start}')
 
 # Save file 
-name = f'flipping_{num_bit}_Conv_1'
+name = f'flipping_{num_bit}_Bits'
 
 with open(name + '.csv', 'w', newline='') as file:
     writer = csv.writer(file)
