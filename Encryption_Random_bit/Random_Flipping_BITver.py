@@ -7,7 +7,7 @@ sys.path.append('../quantization_utils')
 
 from quantization import *
 
-def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
+def Random_flipping_all_Layers(num:float, model:nn.Module, qbits:int):
 
     dim_storage = []
     BIT_array = []
@@ -27,7 +27,7 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
             list_sep += [len(BIT_array)]
             
     new_BIT = np.array(BIT_array).astype(np.float32)
-    raw_BIT = new_BIT.copy()
+    # raw_BIT = new_BIT.copy()
     # new_BIT = Only_kBits(new_BIT,qbits)
 
     # Generate an array of integers from 0 to 1,000,000 BITS
@@ -38,6 +38,7 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     np.random.shuffle(integers)
 
     # Select the first (input) elements of the shuffled array
+    num = int(num*len(new_BIT))
     random_pos = integers[:num]
     new_BIT[random_pos] *= -1
 
@@ -62,15 +63,15 @@ def Random_flipping_all_Layers(num:int, model:nn.Module, qbits:int):
     return model
 
 
-def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type:nn.Module, layer_idx:int):
+def Random_flipping_single_layer(num:float, model:nn.Module, qbits:int, layer_idx:int):
 
     layer_cnt = 0 
     target_layer = None
     for child in model.children():
-        if isinstance(child, layer_type):
-            layer_cnt += 1
+        if isinstance(child, nn.Linear) or isinstance(child, nn.Conv2d):
             if (layer_cnt==layer_idx):
                 target_layer = child
+            layer_cnt += 1
 
     if target_layer is not None:
         print("The current layer is:", target_layer)
@@ -80,7 +81,7 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         weight1d, bit_shape = quantize_to_binary(weight, qbits)
         new_BIT = weight1d.to(torch.device('cpu')).numpy().astype(np.float32)
 
-        raw_BIT = new_BIT.copy()
+        # raw_BIT = new_BIT.copy()
         # new_BIT = Only_kBits(new_BIT,qbits)
 
         # Generate an array of integers from 0 to 1,000,000 BITS
@@ -91,6 +92,7 @@ def Random_flipping_single_layer(num:int, model:nn.Module, qbits:int, layer_type
         np.random.shuffle(integers)
 
         # Select the first (input) elements of the shuffled array
+        num = int(num*len(new_BIT))
         random_pos = integers[:num]
         new_BIT[random_pos] *= -1
 

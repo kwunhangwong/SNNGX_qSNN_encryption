@@ -27,7 +27,7 @@ parser = argparse.ArgumentParser()
 
 # Required input: num_bit
 parser.add_argument('--epsil',type=int,metavar='GA_epsilon',default=10,help = 'The final number of bits to be converge by GA') 
-parser.add_argument('--by_layer',type=bool,metavar='encrypt by layer',default=True,help = 'Encryption on only one layer or whole model') 
+parser.add_argument('--by_layer',action="store_true", help = 'Encryption on only one layer or whole model') 
 parser.add_argument('--layer_idx',type=int,metavar='layer index',default=0,help = 'Encryption target layer if only one layer (ranked by nn.Linear and nn.Conv2d)') 
 parser.add_argument('-q','--qbit',type=int,metavar='target_quantized_bits',default=8,help='quantize weight from float32 to q bits') 
 
