@@ -1,18 +1,17 @@
-# SNNGX_qSNN_encryption
+# SNNGX Genetic Alogrithm
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
 
 ## Description
 
-**This project performs efficient SNNGX weight-bit (MSB) encryption against quantized Spiking neural networks as an IP protection method and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models** 
+**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models** 
 
 **There are SNNGX Encryption implementation, Random bit Encrpytioin baseline and Potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
 
 ![FGSM_GA_illustration_v2](https://github.com/u3556440/SNN_security/assets/56315946/976bca55-fb5a-4f1a-bd0e-18a3aa95ad84)
 
-**This project was supported by the University of Hong Kong, EEE. \
-Currently restricted to internal usage only.**
+**This project was supported by AI Chip Center for Emerging Smart Systems (ACCESS) and the University of Hong Kong, EEE. Currently restricted to internal usage only.**
 
 ## Quick Start
 
@@ -39,16 +38,18 @@ cd Encryption_SNNGX
 python3 __main__.py [-b] [--epsil] [--name] [--subset] [--mutate] [--gen] [--Dataset] [--Dpath]
 ```
 
-Flag | Metavar | Help
+Flag | VarType | Help
 --- | --- | --- 
-`-b`/`--batch` | batch_size | Batch size for dataset, model, GA-subset
-`--epsil` | GA_epsilon | Final number of bits to be converged by GA
-`--name` | Documenting_fitness | Recording the best fitness function per generation 
-`--subset` | number_of_subset_images | No. of Samples for calculating fitness loss function
-`--mutate` | GA_mutate_chance | pixel-wise mutation probability (p=0.05) 
-`--gen` | GA_generations | # of GA_generations
-`--Dataset` | Dataset_Target | Available Dataset: NMNIST/MNIST
-`--Dpath` | Dataset_Path | Please input your local path to the dataset
+`--epsil` | int | Final number of bits to be converged by GA
+`--by_layer` | bool | Boolean Flag (True for Layer-wise/All layer Encryption)
+`--layer_idx` | int | Layer idx (from 0) for Layer-wise Encryption 
+`-q`/`--qbit` | int | Quantized bit width of SNN (default: 8bit)
+`-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
+`--subset` | int | Total No. of Samples for encryption dataset
+`--mutate` | float | pixel-wise mutation probability (p=0.05) 
+`--gen` | int | No. of GA_generations
+`--Dataset` | str | Available Dataset: NMNIST/MNIST
+`--Dpath` | str | Please input your local path to the dataset
 
 You may wish to modify the follwing # commented code in __main__.py to change the search space 
 from all layer to single target layer, and vice versa.
