@@ -1,11 +1,11 @@
 # SNNGX Genetic Alogrithm (Simulation Encryption)
 
-![commit badge](https://img.shields.io/badge/private-8A2BE2)
+![commit badge](./_img_src/SNNGX_result.png)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
 
-## Description
+## Software Description
 
-**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models** 
+**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models.** 
 
 **There are SNNGX Encryption implementation, Random bit Encrpytioin baseline and Potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
 
@@ -45,9 +45,9 @@ Flag | VarType | Help
 `--layer_idx` | int | Layer idx (starting from 0) for Layer-wise Encryption 
 `-q`/`--qbit` | int | Quantized bit width of SNN (default: 8bit)
 `--subset` | int | Total No. of Samples for encryption dataset
+`-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--mutate` | float | pixel-wise mutation probability (default: 0.05) 
 `--gen` | int | No. of GA_generations
-`-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--Dataset` | str | Available Dataset: NMNIST/MNIST
 `--Dpath` | str | Please input your local path to the dataset
 `--seed` | int | Random Seed for Repeatable Experimental Result
