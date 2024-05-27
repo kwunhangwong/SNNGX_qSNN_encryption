@@ -1,4 +1,4 @@
-# SNNGX Intellectual Property Protection
+# SNNGX IP Protection Framework
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-blue)
@@ -16,8 +16,8 @@
 
 ## Quick Start
 
-pytorch>=1.10.0+cu111  
-tonic>=1.4.3 
+*pytorch>=1.10.0+cu111*
+*tonic>=1.4.3*
 
 ```
 git clone https://github.com/u3556440/SNNGX_qSNN_encryption.git
@@ -27,7 +27,7 @@ git clone https://github.com/u3556440/SNNGX_qSNN_encryption.git
 ## Usage
 
 *Dataset is not included in our repository. \
-Please indicate your path to the Dataset (NMNIST/MNIST) in the below bash commands.*
+Please indicate your path to the Dataset (NMNIST/DVS128_Gesture) in the below bash commands.*
 
 
 1. SNNGX Encryption (Genetic Algorithm):
@@ -49,7 +49,7 @@ Flag | VarType | Help
 `-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--mutate` | float | pixel-wise mutation probability (default: 0.05) 
 `--gen` | int | No. of GA_generations
-`--Dataset` | str | Available Dataset: NMNIST/MNIST
+`--Dataset` | str | Available Dataset: NMNIST/DVS128_Gesture
 `--Dpath` | str | Please input your local path to the dataset
 `--seed` | int | Random Seed for Repeatable Experimental Result
 
@@ -67,13 +67,13 @@ cd Encryption_Random_bit
 python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
 ```
 
-Flag | Metavar | Help
+Flag | VarType | Help
 --- | --- | --- 
-`-b`/`--batch` | batch_size | Batch size for dataset and model
-`-nb`/`--numbit` | number_of_flipped_BITS | # of Random BITS flipped
-`-nt`/`--numtrial` | number_of_random_trials | # of trial repetition
-`--Dataset` | Dataset_Target | Available Dataset: "NMNIST"/"DVS128_Gesture"
-`--Dpath` | Dataset_Path | Please input your local path to the dataset
+`-b`/`--batch` | int | Batch size for dataset and model
+`-nb`/`--numbit` | int | No. of Random BITS flipped
+`-nt`/`--numtrial` | int | No. of trial repetition
+`--Dataset` | str | Available Dataset: "NMNIST"/"DVS128_Gesture"
+`--Dpath` | str | Please input your local path to the dataset
 
 You may wish to modify the follwing # commented code in __main__.py to change the search space 
 from all layer to single target layer, and vice versa.
