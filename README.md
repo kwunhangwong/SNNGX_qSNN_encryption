@@ -1,4 +1,4 @@
-# SNNGX Genetic Alogrithm (Software Encryption)
+# SNNGX Genetic Alogrithm (Simulation Encryption)
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
@@ -42,10 +42,10 @@ Flag | VarType | Help
 --- | --- | --- 
 `--epsil` | int | Final number of bits to be converged by GA
 `--by_layer` | bool | Boolean Flag (True for Layer-wise Encryption / False for All layers Encryption)
-`--layer_idx` | int | Layer idx (from 0) for Layer-wise Encryption 
+`--layer_idx` | int | Layer idx (starting from 0) for Layer-wise Encryption 
 `-q`/`--qbit` | int | Quantized bit width of SNN (default: 8bit)
 `--subset` | int | Total No. of Samples for encryption dataset
-`--mutate` | float | pixel-wise mutation probability (p=0.05) 
+`--mutate` | float | pixel-wise mutation probability (default: 0.05) 
 `--gen` | int | No. of GA_generations
 `-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--Dataset` | str | Available Dataset: NMNIST/MNIST
