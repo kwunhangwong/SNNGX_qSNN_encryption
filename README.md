@@ -1,6 +1,6 @@
 # SNNGX Genetic Alogrithm (Simulation Encryption)
 
-![commit badge](./_img_src/SNNGX_result.png)
+![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
 
 ## Software Description
@@ -9,7 +9,7 @@
 
 **There are SNNGX Encryption implementation, Random bit Encrpytioin baseline and Potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
 
-![FGSM_GA_illustration_v2](https://github.com/u3556440/SNN_security/assets/56315946/976bca55-fb5a-4f1a-bd0e-18a3aa95ad84)
+![FGSM_GA_illustration_v2](./_img_src/SNNGX_result.png)
 
 **This project was supported by AI Chip Center for Emerging Smart Systems (ACCESS) and the University of Hong Kong, EEE. Currently restricted to internal usage only.**
 
