@@ -1,4 +1,4 @@
-# SNNGX Genetic Alogrithm (XOR Encryption)
+# SNNGX Genetic XOR Encryption 
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
