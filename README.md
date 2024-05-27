@@ -1,13 +1,13 @@
-# SNNGX Genetic Alogrithm (Simulation Encryption)
+# SNNGX Genetic Alogrithm (XOR Encryption)
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
 
-## Software Description
+## Simulation Description
 
 **This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models.** 
 
-**There are SNNGX Encryption implementation, Random bit Encrpytioin baseline and Potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
+**We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections.**
 
 ![FGSM_GA_illustration_v2](./_img_src/SNNGX_result.png)
 
