@@ -1,7 +1,7 @@
 # SNNGX IP Protection Framework
 
 ![commit badge](https://img.shields.io/badge/private-orange)
-![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-blue)
+![commit badge](https://img.shields.io/badge/Spiking-red-Neural%20Network-blue)
 ![FGSM_GA_illustration_v2](./_img_src/SNNGX_cover.png)
 
 ## Encryption Simulation Description
