@@ -1,4 +1,4 @@
-# SNNGX Genetic Alogrithm
+# SNNGX Genetic Alogrithm (Software Encryption)
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
@@ -41,15 +41,16 @@ python3 __main__.py [-b] [--epsil] [--name] [--subset] [--mutate] [--gen] [--Dat
 Flag | VarType | Help
 --- | --- | --- 
 `--epsil` | int | Final number of bits to be converged by GA
-`--by_layer` | bool | Boolean Flag (True for Layer-wise/All layer Encryption)
+`--by_layer` | bool | Boolean Flag (True for Layer-wise Encryption / False for All layers Encryption)
 `--layer_idx` | int | Layer idx (from 0) for Layer-wise Encryption 
 `-q`/`--qbit` | int | Quantized bit width of SNN (default: 8bit)
-`-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--subset` | int | Total No. of Samples for encryption dataset
 `--mutate` | float | pixel-wise mutation probability (p=0.05) 
 `--gen` | int | No. of GA_generations
+`-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--Dataset` | str | Available Dataset: NMNIST/MNIST
 `--Dpath` | str | Please input your local path to the dataset
+`--seed` | int | Random Seed for Repeatable Experimental Result
 
 You may wish to modify the follwing # commented code in __main__.py to change the search space 
 from all layer to single target layer, and vice versa.
