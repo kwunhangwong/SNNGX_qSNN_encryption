@@ -5,7 +5,7 @@
 
 ## Description
 
-**This project performs efficient BIT-flip encryption against quantized Spiking neural networks as an IP protection method and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models** 
+**This project performs efficient SNNGX weight-bit (MSB) encryption against quantized Spiking neural networks as an IP protection method and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models** 
 
 **There are SNNGX Encryption implementation, Random bit Encrpytioin baseline and Potential attack threats in this repository and some pretrained weights over NMNIST and DVS128Gesture.**
 
@@ -23,7 +23,6 @@ tonic>=1.4.3
 git clone https://github.com/u3556440/SNNGX_qSNN_encryption.git
 ```
 
-torch, 
 
 ## Usage
 
