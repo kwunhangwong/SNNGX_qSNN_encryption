@@ -5,7 +5,9 @@
 
 ## Simulation Description
 
-**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models. We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections. Please refer to paper[link]**
+**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models.** 
+
+**We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections. Please refer to paper[link]**
 
 ![FGSM_GA_illustration_v2](./_img_src/SNNGX_result.png)
 
