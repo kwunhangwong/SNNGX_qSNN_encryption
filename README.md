@@ -2,6 +2,7 @@
 
 ![commit badge](https://img.shields.io/badge/private-8A2BE2)
 ![commit badge](https://img.shields.io/badge/Binary-Neural%20Network-blue)
+![FGSM_GA_illustration_v2](./_img_src/SNNGX_cover.png)
 
 ## Simulation Description
 
