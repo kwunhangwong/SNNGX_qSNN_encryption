@@ -64,7 +64,7 @@ from all layer to single target layer, and vice versa.
 cd Encryption_Random_bit
 ```
 ```
-python3 __main__.py [-b] [-nb] [-nt] [--Dataset] [--Dpath]
+python3 __main__.py [-nb] [-nt] [--by_layer] [--layer_idx] [--qbit] [-b] [--Dataset] [--Dpath] [--seed]
 ```
 
 Flag | VarType | Help
