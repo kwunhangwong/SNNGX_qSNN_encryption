@@ -36,7 +36,7 @@ Please indicate your path to the Dataset (NMNIST/DVS128_Gesture) in the below ba
 cd Encryption_SNNGX
 ```
 ```
-python3 __main__.py [-b] [--epsil] [--name] [--subset] [--mutate] [--gen] [--Dataset] [--Dpath]
+python3 __main__.py [--epsil] [--by_layer] [--layer_idx] [--qbit] [--subset] [-b] [--mutate]  [--gen] [--Dataset] [--Dpath] [--seed]
 ```
 
 Flag | VarType | Help
