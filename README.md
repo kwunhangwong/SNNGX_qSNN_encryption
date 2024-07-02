@@ -9,7 +9,6 @@
 **This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently pretrained SNN models and overcome gradient insensitivity problems.** 
 
 
-
 ![Protection_Performance](./_img_src/SNNGX_result.png)
 
 **This research was supported by ACCESS - AI Chip Center for Emerging Smart Systems, sponsored by InnoHK funding, Hong Kong SAR**
