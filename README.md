@@ -3,12 +3,12 @@
 ![commit badge](https://img.shields.io/badge/private-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
+**We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections. Please refer to paper[link]**
 
 ## Encryption Simulation Description
+**This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently pretrained SNN models and overcome gradient insensitivity problems.** 
 
-**This code performs quantization on float32 Spiking neural networks(SNNs) and demonstrates efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently trained SNN models and overcome gradient insensitivity problems.** 
 
-**We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections. Please refer to paper[link]**
 
 ![Protection_Performance](./_img_src/SNNGX_result.png)
 
