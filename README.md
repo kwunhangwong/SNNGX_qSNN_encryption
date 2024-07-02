@@ -3,7 +3,7 @@
 ![commit badge](https://img.shields.io/badge/private-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
-**We design an RRAM decryptor accelerator for secure neuromorphic SNN as intellectual property (IP) and protect pretrained weights on non-volatile CIM devices. Please refer to paper[link]**
+**We design an RRAM decryptor accelerator and protect pretrained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP) . Please refer to paper[link]**
 
 ## Encryption Simulation Description
 **This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently pretrained SNN models and overcome gradient insensitivity problems.** 
