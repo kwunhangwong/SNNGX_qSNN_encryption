@@ -2,17 +2,17 @@
 
 ![commit badge](https://img.shields.io/badge/private-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
-![FGSM_GA_illustration_v2](./_img_src/SNNGX_cover.png)
+![SNNGX_illustration](./_img_src/SNNGX_cover.png)
 
 ## Encryption Simulation Description
 
-**This code performs efficient SNNGX weight-bit (MSB) encryption and quantization on float32 Spiking neural networks and demonstrates biologically-plausible UNIVERSAL UTILITY on SNN models.** 
+**This code performs quantization on float32 Spiking neural networks(SNNs) and demonstrates efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently trained SNN models and overcome gradient insensitivity problems.** 
 
 **We design an RRAM decryptor accelerator for secure neuromorphic SNN intellectual property (IP) and weight protections. Please refer to paper[link]**
 
-![FGSM_GA_illustration_v2](./_img_src/SNNGX_result.png)
+![Protection_Performance](./_img_src/SNNGX_result.png)
 
-**This project was supported by AI Chip Center for Emerging Smart Systems (ACCESS) and the University of Hong Kong, EEE. Currently restricted to internal usage only.**
+**This research was supported by ACCESS - AI Chip Center for Emerging Smart Systems, sponsored by InnoHK funding, Hong Kong SAR**
 
 ## Quick Start
 
@@ -49,7 +49,7 @@ Flag | VarType | Help
 `-b`/`--batch` | int | Batch size for dataset, model, encryption dataset
 `--mutate` | float | pixel-wise mutation probability (default: 0.05) 
 `--gen` | int | No. of GA_generations
-`--Dataset` | str | Available Dataset: NMNIST/DVS128_Gesture
+`--Dataset` | str | Available Dataset: "NMNIST"/"DVS128_Gesture"
 `--Dpath` | str | Please input your local path to the dataset
 `--seed` | int | Random Seed for Repeatable Experimental Result
 
@@ -69,11 +69,15 @@ python3 __main__.py [-nb] [-nt] [--by_layer] [--layer_idx] [--qbit] [-b] [--Data
 
 Flag | VarType | Help
 --- | --- | --- 
+`-nb`/`--numbit` | int | Random BITS flipped %
+`-nt`/`--numtrial` | int | No. of trial repetition 
+`--by_layer` | bool | Boolean Flag (True for Layer-wise Encryption / False for All layers Encryption)
+`--layer_idx` | int | Layer idx (starting from 0) for Layer-wise Encryption 
+`-q`/`--qbit` | int | Quantized bit width of SNN (default: 8bit)
 `-b`/`--batch` | int | Batch size for dataset and model
-`-nb`/`--numbit` | int | No. of Random BITS flipped
-`-nt`/`--numtrial` | int | No. of trial repetition
 `--Dataset` | str | Available Dataset: "NMNIST"/"DVS128_Gesture"
 `--Dpath` | str | Please input your local path to the dataset
+`--seed` | int | Random Seed for Repeatable Experimental Result
 
 You may wish to modify the follwing # commented code in __main__.py to change the search space 
 from all layer to single target layer, and vice versa.
