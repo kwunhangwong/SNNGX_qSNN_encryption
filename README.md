@@ -1,6 +1,6 @@
 # SNNGX IP Protection Framework
 
-![commit badge](https://img.shields.io/badge/private-orange)
+![commit badge](https://img.shields.io/badge/public-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
 **An RRAM decryptor accelerator was designed to protect pre-trained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP). Please refer to the paper[link], ICCAD'24.**
