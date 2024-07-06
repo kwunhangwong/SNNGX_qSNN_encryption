@@ -62,6 +62,11 @@ Flag | VarType | Help
 ```
 cd Encryption_Random_bit
 ```
+Example code: 
+```
+bash __terminal__.sh
+```
+Full python argument: 
 ```
 python3 __main__.py [-nb] [-nt] [--by_layer] [--layer_idx] [--qbit] [-b] [--Dataset] [--Dpath] [--seed]
 ```
