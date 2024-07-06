@@ -3,10 +3,10 @@
 ![commit badge](https://img.shields.io/badge/private-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
-**We design an RRAM decryptor accelerator and protect pretrained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP) . Please refer to our paper[link], ICCAD'24.**
+**An RRAM decryptor accelerator was designed to protect pre-trained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP). Please refer to the paper[link], ICCAD'24.**
 
 ## Encryption Simulation Description
-**This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. SNNGX method is universally applicable on differently pretrained SNN models and overcome gradient insensitivity problems.** 
+**This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. The SNNGX method universally applies to differently pretrained SNN models and overcomes gradient insensitivity problems.** 
 
 
 ![Protection_Performance](./_img_src/SNNGX_result.png)
@@ -34,10 +34,14 @@ Please indicate your path to the Dataset (NMNIST/DVS128_Gesture) in the below ba
 ```
 cd Encryption_SNNGX
 ```
+Example code: 
+```
+bash __terminal__.sh
+```
+Full python argument: 
 ```
 python3 __main__.py [--epsil] [--by_layer] [--layer_idx] [--qbit] [--subset] [-b] [--mutate]  [--gen] [--Dataset] [--Dpath] [--seed]
 ```
-
 Flag | VarType | Help
 --- | --- | --- 
 `--epsil` | int | Final number of bits to be converged by GA
