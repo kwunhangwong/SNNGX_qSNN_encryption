@@ -3,10 +3,11 @@
 ![commit badge](https://img.shields.io/badge/public-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
-**An RRAM decryptor accelerator was designed to protect pre-trained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP). Please cite my paper for the code usage, in ICCAD'24.**
+
 
 ## Abstract
 Biologically plausible Spiking Neural Networks (SNNs), characterized by spike sparsity, are growing tremendous attention over intellectual edge devices and critical bio-medical applications as compared to artificial neural networks (ANNs). However, there is a considerable risk from malicious attempts to extract white-box information (i.e., weights) from SNNs, as attackers could exploit well-trained SNNs for profit and white-box adversarial concerns. There is a dire need for intellectual property (IP) protective measures. In this paper, we present a novel secure software-hardware co-designed RRAM-based neuromorphic accelerator for protecting the IP of SNNs. Software-wise, we design a tailored genetic algorithm with classic XOR encryption to target the least number of weights that need encryption. From a hardware perspective, we develop a low-energy decryption module, meticulously designed to provide zero decryption latency. Extensive results from various datasets, including NMNIST, DVSGesture, EEGMMIDB, Braille Letter, and SHD, demonstrate that our proposed method effectively secures SNNs by encrypting a minimal fraction of stealthy weights, only 0.00005% to 0.016% weight bits. Additionally, it achieves a substantial reduction in energy consumption, ranging from X59 to X6780, and significantly lowers decryption latency, ranging from $\times175$ to $\times4250$. Moreover, our method requires as little as one sample per class in dataset for encryption and addresses hessian/gradient-based search insensitive problems. This strategy offers a highly efficient and flexible solution for securing SNNs in diverse applications
+
 
 ## Encryption Simulation Result
 **This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. The SNNGX method universally applies to differently pretrained SNN models and overcomes gradient insensitivity problems.** 
@@ -85,3 +86,5 @@ Flag | VarType | Help
 `--Dataset` | str | Available Dataset: "NMNIST"/"DVS128_Gesture"
 `--Dpath` | str | Please input your local path to the dataset
 `--seed` | int | Random Seed for Repeatable Experimental Result
+
+
