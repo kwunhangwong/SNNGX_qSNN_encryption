@@ -1,4 +1,4 @@
-# SNNGX: Securing Spiking Neural Networks with Genetic XOR Encryption on RRAM-based Neuromorphic Accelerator [PDF](www.google.com)
+# SNNGX: Securing Spiking Neural Networks with Genetic XOR Encryption on RRAM-based Neuromorphic Accelerator [[PDF]](www.google.com)
 
 ![commit badge](https://img.shields.io/badge/public-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
