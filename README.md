@@ -1,9 +1,9 @@
-# SNNGX IP Protection Framework
+# SNNGX: Securing Spiking Neural Networks with Genetic XOR Encryption on RRAM-based Neuromorphic Accelerator [PDF](www.google.com)
 
 ![commit badge](https://img.shields.io/badge/public-orange)
 ![commit badge](https://img.shields.io/badge/Spiking-Neural%20Network-red)
 ![SNNGX_illustration](./_img_src/SNNGX_cover.png)
-**An RRAM decryptor accelerator was designed to protect pre-trained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP). Please cite my paper for the code usage [link]!! , in ICCAD'24.**
+**An RRAM decryptor accelerator was designed to protect pre-trained weights on non-volatile CIM devices for secure neuromorphic SNN as intellectual property (IP). Please cite my paper for the code usage, in ICCAD'24.**
 
 ## Encryption Simulation Description
 **This code performs efficient SNNGX genetic weight-bit (MSB) encryption for low overhead on neuromorphic accelerators. The SNNGX method universally applies to differently pretrained SNN models and overcomes gradient insensitivity problems.** 
