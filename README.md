@@ -30,7 +30,7 @@ git clone https://github.com/u3556440/SNNGX_qSNN_encryption.git
 ## Usage :rocket::rocket:
 
 *The following datasets are not included in this repository. \
-Please indicate your path to the Dataset (NMNIST/DVS128_Gesture) in the below \_\_terminal\_\_.sh file.*
+Please indicate your path to the Dataset (NMNIST/DVS128_Gesture) in the below `\_\_terminal\_\_.sh` file.*
 
 
 1. SNNGX Encryption (Genetic Algorithm):
