@@ -251,7 +251,7 @@ class SNNGX_BIT_Encryption: #Untargeted: Gen 160, mut 0.05
 
             # Only best Male and Female can give birth
             males_parent = np.array(Pop[:split_Pop])  #np.type
-            females_parent = np.array(Curr_Pop[split_Pop:])  #np.type
+            females_parent = np.array(Pop[split_Pop:])  #np.type
 
             # Random swap 5/15 elements between males and females (transgender: male too strong gene)
             # Generate 5 random position indices to swap
