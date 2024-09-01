@@ -88,7 +88,7 @@ Flag | VarType | Help
 `--seed` | int | Random Seed for Repeatable Experimental Result
 
 ## Citation 
-If you find SNNGX code useful and helpful to your work, please kindly cite the paper:
+If you find SNNGX code useful and helpful to your work, please kindly cite the paper :fire: :fire:
 ```
 @article{wong2024snngx,
   title={SNNGX: Securing Spiking Neural Networks with Genetic XOR Encryption on RRAM-based Neuromorphic Accelerator},
